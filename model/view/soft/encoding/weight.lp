@@ -1,0 +1,10 @@
+encoding_weight(encoding_field,6).
+encoding_weight(aggregate,4).
+encoding_weight(bin,2).
+encoding_weight(same_field_2,8).
+encoding_weight(count_twice,50).
+encoding_weight(quant_bin_weight,1).
+encoding_weight(non_positional_pref,10).
+encoding_weight(aggregate_group_by_raw,10).
+encoding_weight(agg_dim,2).
+encoding_weight(x_y_raw,1).
