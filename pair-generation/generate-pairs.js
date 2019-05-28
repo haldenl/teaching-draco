@@ -34,8 +34,8 @@ function generatePairs(constraintPairs) {
         info: "UNSAT"
       });
     } else {
-      const models = Result.toModels(result);
-      const specs = Model.toVegaLiteSpecDictionary(models[0]);
+      const resultModels = Result.toModels(result);
+      const specs = Model.toVegaLiteSpecDictionary(resultModels[0]);
 
       info.push({
         ...compObj,
@@ -44,7 +44,7 @@ function generatePairs(constraintPairs) {
 
       models.push({
         ...compObj,
-        model: models[0]
+        model: resultModels[0]
       });
 
       specPairs.push({

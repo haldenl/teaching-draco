@@ -27,6 +27,8 @@ if (cluster.isMaster) {
     }
   }
 
+  // constraintPairs = constraintPairs.slice(0, 50);
+
   const cores = os.cpus().length;
 
   const step = Math.floor(constraintPairs.length / cores);
@@ -34,6 +36,28 @@ if (cluster.isMaster) {
   let specPairs = [];
   let models = [];
   let info = [];
+
+  const workersFinished = [];
+
+  setInterval(() => {
+    if (workersFinished.every(i => i)) {
+      console.log("all done");
+      fs.writeFileSync(
+        path.join(__dirname, "out/models.json"),
+        JSON.stringify(models, null, 2)
+      );
+      fs.writeFileSync(
+        path.join(__dirname, "out/pairs.json"),
+        JSON.stringify(specPairs, null, 2)
+      );
+      fs.writeFileSync(
+        path.join(__dirname, "out/info.json"),
+        JSON.stringify(info, null, 2)
+      );
+
+      process.exit(0);
+    }
+  }, 1000);
 
   for (let i = 0; i < cores; i += 1) {
     let slice;
@@ -46,28 +70,19 @@ if (cluster.isMaster) {
     const worker = cluster.fork({
       slice: JSON.stringify(slice)
     });
+    workersFinished.push(false);
+
+    worker.on("exit", () => {
+      workersFinished[i] = true;
+    });
 
     worker.on("message", msg => {
-      console.log(msg);
       if (msg.cmd === "results") {
         const result = JSON.parse(msg.result);
 
         specPairs = specPairs.concat(result.specPairs);
         models = models.concat(result.models);
         info = info.concat(result.info);
-
-        fs.writeFileSync(
-          path.join(__dirname, "models.json"),
-          JSON.stringify(models, null, 2)
-        );
-        fs.writeFileSync(
-          path.join(__dirname, "pairs.json"),
-          JSON.stringify(specPairs, null, 2)
-        );
-        fs.writeFileSync(
-          path.join(__dirname, "info.json"),
-          JSON.stringify(info, null, 2)
-        );
       }
     });
   }
@@ -75,6 +90,7 @@ if (cluster.isMaster) {
   const constraintPairs = JSON.parse(process.env.slice);
   const result = JSON.stringify(generatePairs(constraintPairs));
 
-  process.send({ cmd: "results", result });
-  process.exit(0);
+  process.send({ cmd: "results", result }, undefined, undefined, () =>
+    process.exit(0)
+  );
 }
