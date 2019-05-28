@@ -28,6 +28,10 @@ export class Constraint {
     return constraint.type === Constraint.SOFT_TYPE;
   }
 
+  static toUniqueName(constraint: ConstraintObject): string {
+    return `${constraint.type}-${constraint.subtype}-${constraint.name}`;
+  }
+
   static fromPrefAsp(asp: string): ConstraintObject {
     const matches = doesMatchRegex(asp, PREF_ASP_REGEX);
     if (!matches) {

@@ -46,10 +46,11 @@ export class ConstraintDictionary {
       const singleWeightAsps = weightAsp.match(WEIGHT_REGEX);
       weightDictionary = singleWeightAsps.reduce(
         (dict, asp) => {
-          const [fullMatch, name, weight] = WEIGHT_REGEX.exec(asp);
+          const [fullMatch, subtype, name, weight] = WEIGHT_REGEX.exec(asp);
           WEIGHT_REGEX.lastIndex = 0;
 
-          dict[name] = +weight;
+          const uniqueName = `soft-${subtype}-${name}`;
+          dict[uniqueName] = +weight;
 
           return dict;
         },
@@ -65,11 +66,13 @@ export class ConstraintDictionary {
     const result = singlePrefAsps.reduce(
       (dict, asp) => {
         const constraint = Constraint.fromPrefAsp(asp);
+        const uniqueName = Constraint.toUniqueName(constraint);
+
         if (!!weightDictionary) {
-          (constraint as SoftConstraintObject).weight = weightDictionary[constraint.name];
+          (constraint as SoftConstraintObject).weight = weightDictionary[uniqueName];
         }
 
-        dict[constraint.name] = constraint;
+        dict[uniqueName] = constraint;
         return dict;
       },
       {} as ConstraintDictionaryObject
@@ -80,4 +83,4 @@ export class ConstraintDictionary {
 }
 
 const PREF_REGEX = /%\s*@constraint(?:(?:.+)\n?)+/g;
-const WEIGHT_REGEX = /soft_weight\((\w+),(\d+)\).*/g;
+const WEIGHT_REGEX = /soft_weight\((\w+),(\w+),(\d+)\).*/g;

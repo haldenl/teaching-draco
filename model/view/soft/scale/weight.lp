@@ -1,7 +1,7 @@
-scale_weight(log,1).
-scale_weight(zero,1).
-scale_weight(zero_bin,1).
-scale_weight(zero_size,3).
-scale_weight(zero_positional,1).
-scale_weight(zero_skew,5).
-scale_weight(includes_zero,1).
+soft_weight(scale,log,1).
+soft_weight(scale,zero,1).
+soft_weight(scale,zero_bin,1).
+soft_weight(scale,zero_size,3).
+soft_weight(scale,zero_positional,1).
+soft_weight(scale,zero_skew,5).
+soft_weight(scale,includes_zero,1).

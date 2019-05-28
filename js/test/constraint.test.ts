@@ -2,7 +2,7 @@ import { Constraint, ConstraintObject } from '../src/constraint';
 
 describe('Constraint Tests', () => {
   describe('ASP to Constraint', () => {
-    test('Parses ASP to ConstraintObject correctly (soft)', () => {
+    test('soft constraint', () => {
       expect(Constraint.fromPrefAsp(SOFT_CONSTRAINT.asp)).toEqual(SOFT_CONSTRAINT.constraintObject);
     });
 

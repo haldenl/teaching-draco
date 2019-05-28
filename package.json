@@ -1,6 +1,6 @@
 {
   "name": "ndraco-core",
-  "main": "build/bundle.js",
+  "main": "./js/build/bundle.js",
   "dependencies": {
     "tmp": "^0.1.0",
     "vega": "5.3.3",

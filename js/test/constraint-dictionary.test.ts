@@ -24,11 +24,11 @@ soft(subtype,name1,view,parameters) :- definition(one).
 % @constraint description2
 soft(subtype,name2,view,parameters) :- definition(two).
 `,
-  weightAsp: `soft_weight(name1,1).
-soft_weight(name2,2).`,
+  weightAsp: `soft_weight(subtype,name1,1).
+soft_weight(subtype,name2,2).`,
 
   constraintDictionary: {
-    name1: {
+    'soft-subtype-name1': {
       type: 'soft',
       description: 'description1',
       subtype: 'subtype',
@@ -38,7 +38,7 @@ soft_weight(name2,2).`,
       definitions: ['definition(one).', 'definition(one).'],
       weight: 1,
     },
-    name2: {
+    'soft-subtype-name2': {
       type: 'soft',
       description: 'description2',
       subtype: 'subtype',
@@ -61,7 +61,7 @@ hard(subtype,name2,view,parameters) :- definition(two).
 `,
 
   constraintDictionary: {
-    name1: {
+    'hard-subtype-name1': {
       type: 'hard',
       description: 'description1',
       subtype: 'subtype',
@@ -70,7 +70,7 @@ hard(subtype,name2,view,parameters) :- definition(two).
       parameters: 'parameters',
       definitions: ['definition(one).', 'definition(one).'],
     },
-    name2: {
+    'hard-subtype-name2': {
       type: 'hard',
       description: 'description2',
       subtype: 'subtype',
