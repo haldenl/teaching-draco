@@ -1,29 +1,31 @@
 import { TopLevelUnitSpec } from 'vega-lite/src/spec/unit';
 import { doesMatchRegex } from './util';
-
-export type VegaLiteSpecDictionary = { [name: string]: TopLevelUnitSpec };
+import { VegaLiteSpecDictionaryObject } from './model';
 
 const VIEW_REGEX_CAPTURE = /view\((.*)\)./;
 const FACT_REGEX = /(\w+)\(([\w\.\/]+)(,([\w\.]+))?(,([\w\.]+))?\)/;
 
-export default function asp2vl(facts: string[]): VegaLiteSpecDictionary {
-  const views = facts.filter(fact => {
-    return doesMatchRegex(fact, VIEW_REGEX_CAPTURE);
-  })
-  .map(fact => {
-    const extract = VIEW_REGEX_CAPTURE.exec(fact);
-    if (extract) {
-      const [_, name] = extract;
-      return name;
-    } else {
+export default function asp2vl(facts: string[]): VegaLiteSpecDictionaryObject {
+  const views = facts
+    .filter(fact => {
+      return doesMatchRegex(fact, VIEW_REGEX_CAPTURE);
+    })
+    .map(fact => {
+      const extract = VIEW_REGEX_CAPTURE.exec(fact);
+      if (extract) {
+        const [_, name] = extract;
+        return name;
+      }
       throw new Error(`Invalid view statement: ${fact}.`);
-    }
-  });
+    });
 
-  const result = views.reduce((dict, v) => {
-    dict[v] = asp2vl_view(facts, v);
-    return dict;
-  }, {} as any);
+  const result = views.reduce(
+    (dict, v) => {
+      dict[v] = asp2vl_view(facts, v);
+      return dict;
+    },
+    {} as any
+  );
 
   return result;
 }
@@ -80,7 +82,7 @@ function asp2vl_view(facts: string[], view: string): TopLevelUnitSpec {
       ...(enc.stack ? { stack: enc.stack } : {}),
       ...(enc.bin ? { bin: true } : {}),
       ...scale,
-    }
+    };
   }
 
   const spec = {

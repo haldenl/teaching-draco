@@ -5,14 +5,16 @@
     "moduleResolution": "node",
     "declaration": true,
     "strict": false,
-    "outDir": "./build",
+    "outDir": "./js/build",
     "inlineSourceMap": true,
     "importHelpers": true,
     "suppressImplicitAnyIndexErrors": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "types": ["jest", "node"]
   },
-  "files": ["src/index.ts"]
+  "files": ["js/src/index.ts"],
+  "exclude": ["**/*.js"]
 }

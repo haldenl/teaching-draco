@@ -1,3 +1,6 @@
+% @constraint Prefer to use fewer encodings in general.
+encoding_pref(encoding,V,E) :- encoding(V,E).
+
 % @constraint Prefer to use fewer encodings with fields (count does not have a field).
 encoding_pref(encoding_field,V,E) :- field(V,E,_).
 
@@ -30,3 +33,9 @@ encoding_pref(agg_dim,V) :- aggregate(V,_,_), not discrete(V,_).
 
 % @constraint Prefer not to use plot with both x and y discrete and no aggregate as it leads to occlusion.
 encoding_pref(x_y_raw,V,E) :- channel(V,EX,x), encoding_fact(discrete,V,EX), channel(V,EY,y), encoding_fact(discrete,V,EY), encoding(V,E), not aggregate(V,E,_), encoding_fact(continuous,V,E).
+
+% @constraint Zero base for stack op.
+encoding_pref(stack_zero,V) :- stack(V,zero).
+
+% @constraint Normalize between groupbys as stack op.
+encoding_pref(stack_normalize,V) :- stack(V,normalize).

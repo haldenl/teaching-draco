@@ -8,5 +8,6 @@
 #include "show.lp".
 #include "silence.lp".
 #include "define.lp".
+#include "optimize.lp".
 
 % #include "hard_integrity.lp".  % strict hard

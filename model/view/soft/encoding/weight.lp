@@ -8,3 +8,5 @@ encoding_weight(non_positional_pref,10).
 encoding_weight(aggregate_group_by_raw,10).
 encoding_weight(agg_dim,2).
 encoding_weight(x_y_raw,1).
+encoding_weight(stack_zero_weight,0).
+encoding_weight(stack_normalize_weight,1).
