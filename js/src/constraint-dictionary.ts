@@ -66,7 +66,7 @@ export class ConstraintDictionary {
     const result = singlePrefAsps.reduce(
       (dict, asp) => {
         const constraint = Constraint.fromPrefAsp(asp);
-        const uniqueName = Constraint.toUniqueName(constraint);
+        const uniqueName = Constraint.getUniqueName(constraint);
 
         if (!!weightDictionary) {
           (constraint as SoftConstraintObject).weight = weightDictionary[uniqueName];

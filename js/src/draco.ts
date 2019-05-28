@@ -4,11 +4,12 @@ import { ResultObject } from './result';
 const tmp = require('tmp');
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 const { spawnSync } = require('child_process');
 tmp.setGracefulCleanup();
 
 export class Draco {
-  static run(program?: string, files?: string[]): ResultObject {
+  static run(program?: string, files?: string[]): Promise<ResultObject> {
     let resolvedFiles = files
       ? files.map(file => path.resolve(__dirname, '../../model/', file))
       : [];

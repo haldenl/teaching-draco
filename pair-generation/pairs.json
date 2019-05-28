@@ -1,0 +1,268 @@
+[
+  {
+    "left": {
+      "constraint": "soft-aggregate-count",
+      "vlSpec": {
+        "mark": "text",
+        "encoding": {
+          "text": {
+            "type": "quantitative",
+            "aggregate": "count",
+            "bin": true
+          },
+          "y": {
+            "type": "ordinal",
+            "aggregate": "mean",
+            "field": "10"
+          }
+        }
+      }
+    },
+    "right": {
+      "constraint": "soft-aggregate-mean",
+      "vlSpec": {
+        "mark": "text",
+        "encoding": {
+          "text": {
+            "type": "quantitative",
+            "aggregate": "count",
+            "bin": true
+          },
+          "y": {
+            "type": "ordinal",
+            "aggregate": "mean",
+            "field": "10"
+          }
+        }
+      }
+    }
+  },
+  {
+    "left": {
+      "constraint": "soft-aggregate-count",
+      "vlSpec": {
+        "mark": "text",
+        "encoding": {
+          "text": {
+            "type": "quantitative",
+            "aggregate": "count",
+            "bin": true
+          },
+          "y": {
+            "type": "ordinal",
+            "aggregate": "max",
+            "field": "10"
+          }
+        }
+      }
+    },
+    "right": {
+      "constraint": "soft-aggregate-max",
+      "vlSpec": {
+        "mark": "text",
+        "encoding": {
+          "text": {
+            "type": "quantitative",
+            "aggregate": "count",
+            "bin": true
+          },
+          "y": {
+            "type": "ordinal",
+            "aggregate": "max",
+            "field": "10"
+          }
+        }
+      }
+    }
+  },
+  {
+    "left": {
+      "constraint": "soft-aggregate-count",
+      "vlSpec": {
+        "mark": "text",
+        "encoding": {
+          "text": {
+            "type": "quantitative",
+            "aggregate": "count",
+            "bin": true
+          },
+          "y": {
+            "type": "ordinal",
+            "aggregate": "min",
+            "field": "10"
+          }
+        }
+      }
+    },
+    "right": {
+      "constraint": "soft-aggregate-min",
+      "vlSpec": {
+        "mark": "text",
+        "encoding": {
+          "text": {
+            "type": "quantitative",
+            "aggregate": "count",
+            "bin": true
+          },
+          "y": {
+            "type": "ordinal",
+            "aggregate": "min",
+            "field": "10"
+          }
+        }
+      }
+    }
+  },
+  {
+    "left": {
+      "constraint": "soft-aggregate-count",
+      "vlSpec": {
+        "mark": "text",
+        "encoding": {
+          "text": {
+            "type": "quantitative",
+            "aggregate": "count",
+            "bin": true
+          },
+          "y": {
+            "type": "ordinal",
+            "aggregate": "sum",
+            "field": "10"
+          }
+        }
+      }
+    },
+    "right": {
+      "constraint": "soft-aggregate-sum",
+      "vlSpec": {
+        "mark": "text",
+        "encoding": {
+          "text": {
+            "type": "quantitative",
+            "aggregate": "count",
+            "bin": true
+          },
+          "y": {
+            "type": "ordinal",
+            "aggregate": "sum",
+            "field": "10"
+          }
+        }
+      }
+    }
+  },
+  {
+    "left": {
+      "constraint": "soft-aggregate-count",
+      "vlSpec": {
+        "mark": "text",
+        "encoding": {
+          "text": {
+            "type": "quantitative",
+            "aggregate": "count",
+            "bin": true
+          },
+          "y": {
+            "type": "ordinal",
+            "aggregate": "stdev",
+            "field": "10"
+          }
+        }
+      }
+    },
+    "right": {
+      "constraint": "soft-aggregate-stdev",
+      "vlSpec": {
+        "mark": "text",
+        "encoding": {
+          "text": {
+            "type": "quantitative",
+            "aggregate": "count",
+            "bin": true
+          },
+          "y": {
+            "type": "ordinal",
+            "aggregate": "stdev",
+            "field": "10"
+          }
+        }
+      }
+    }
+  },
+  {
+    "left": {
+      "constraint": "soft-aggregate-count",
+      "vlSpec": {
+        "mark": "text",
+        "encoding": {
+          "text": {
+            "type": "quantitative",
+            "aggregate": "count",
+            "bin": true
+          },
+          "y": {
+            "type": "ordinal",
+            "aggregate": "median",
+            "field": "10"
+          }
+        }
+      }
+    },
+    "right": {
+      "constraint": "soft-aggregate-median",
+      "vlSpec": {
+        "mark": "text",
+        "encoding": {
+          "text": {
+            "type": "quantitative",
+            "aggregate": "count",
+            "bin": true
+          },
+          "y": {
+            "type": "ordinal",
+            "aggregate": "median",
+            "field": "10"
+          }
+        }
+      }
+    }
+  },
+  {
+    "left": {
+      "constraint": "soft-aggregate-count",
+      "vlSpec": {
+        "mark": "text",
+        "encoding": {
+          "y": {
+            "type": "quantitative",
+            "aggregate": "count",
+            "zero": true
+          },
+          "text": {
+            "type": "ordinal",
+            "field": "10",
+            "bin": true
+          }
+        }
+      }
+    },
+    "right": {
+      "constraint": "soft-encoding-bin",
+      "vlSpec": {
+        "mark": "text",
+        "encoding": {
+          "y": {
+            "type": "quantitative",
+            "aggregate": "count",
+            "zero": true
+          },
+          "text": {
+            "type": "ordinal",
+            "field": "10",
+            "bin": true
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,2 +1,2 @@
 c1(aggregate,count).
-c2(aggregate,sum).
+c2(encoding,multiple_non_pos).

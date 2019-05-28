@@ -30,8 +30,8 @@ same_type(F,v1,E1,v2,E2) :- field(v1,E1,F), field(v2,E2,F), type(v1,E1,T1), type
 
 #minimize { 1@1,TYPE1,TYPE2,NAME1,NAME2,X1,X2: soft(TYPE1,NAME1,v1,X1), soft(TYPE2,NAME2,v2,X2), TYPE1 != TYPE2, NAME1 != NAME2 }.
 #minimize { W@2,TYPE,NAME,VIEW: soft(TYPE,NAME,VIEW), soft_weight(TYPE,NAME,W) }.
-% #minimize { 1@2,PROP,V,X: spec(PROP,V,X) }.
-#minimize { 1@3,F: field_id(F) }.
+#minimize { 1@3,PROP: spec(PROP,V1,X), spec(PROP,V2,Y), V1 != V2, X < Y }.
+% #minimize { 1@4,F: field_id(F) }.
 
 
 #show soft/4.

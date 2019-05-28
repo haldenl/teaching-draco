@@ -1,8 +1,8 @@
 import { TopLevelUnitSpec } from 'vega-lite/src/spec/unit';
-import { doesMatchRegex } from './util';
 import { VegaLiteSpecDictionaryObject } from './model';
+import { doesMatchRegex } from './util';
 
-const VIEW_REGEX_CAPTURE = /view\((.*)\)./;
+const VIEW_REGEX_CAPTURE = /view\((.*)\)/;
 const FACT_REGEX = /(\w+)\(([\w\.\/]+)(,([\w\.]+))?(,([\w\.]+))?\)/;
 
 export default function asp2vl(facts: string[]): VegaLiteSpecDictionaryObject {
@@ -37,7 +37,7 @@ function asp2vl_view(facts: string[], view: string): TopLevelUnitSpec {
   for (const value of facts) {
     const extract = FACT_REGEX.exec(value);
     if (!extract) {
-      throw new Error(`Invalid fact: ${value}`);
+      continue;
     }
 
     const [_, predicate, viz, __, first, ___, second] = extract;

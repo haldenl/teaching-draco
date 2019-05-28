@@ -28,7 +28,7 @@ export class Constraint {
     return constraint.type === Constraint.SOFT_TYPE;
   }
 
-  static toUniqueName(constraint: ConstraintObject): string {
+  static getUniqueName(constraint: ConstraintObject): string {
     return `${constraint.type}-${constraint.subtype}-${constraint.name}`;
   }
 
