@@ -1,4 +1,4 @@
-import { Constraint, ConstraintObject } from '../src/constraint';
+import { Constraint, ConstraintObject } from '../../js/src/constraint';
 
 describe('Constraint Tests', () => {
   describe('ASP to Constraint', () => {

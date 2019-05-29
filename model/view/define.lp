@@ -1,3 +1,6 @@
+% view
+view(V) :- view(V).
+
 % @primitive mark
 mark(V,M) :- mark(V,M).
 

@@ -29,7 +29,7 @@ soft(encoding,multiple_non_pos,V,true) :- view(V), { channel(V,_,C): channel_def
 soft(encoding,aggregate_group_by_raw,V,E) :- aggregate(V,_,_), encoding_fact(continuous,V,E), not aggregate(V,E,_).
 
 % @constraint Aggregate should also have a discrete encoding to group by.
-soft(encoding,agg_dim,V,true) :- aggregate(V,_,_), not discrete(V,_).
+soft(encoding,agg_dim,V,true) :- aggregate(V,_,_), not encoding_fact(discrete,V,_).
 
 % @constraint Prefer not to use plot with both x and y discrete and no aggregate as it leads to occlusion.
 soft(encoding,x_y_raw,V,E) :- channel(V,EX,x), encoding_fact(discrete,V,EX), channel(V,EY,y), encoding_fact(discrete,V,EY), encoding(V,E), not aggregate(V,E,_), encoding_fact(continuous,V,E).

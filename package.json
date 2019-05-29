@@ -27,7 +27,8 @@
   },
   "scripts": {
     "build": "rm -rf build && tsc && rollup -c",
-    "format": "tslint -p . --fix && prettier --write '{src,test}/**/*.ts'"
+    "format": "tslint -p . --fix && prettier --write '{src,test}/**/*.ts'",
+    "test": "jest"
   },
   "jest": {
     "transform": {
@@ -40,7 +41,8 @@
       "js",
       "jsx",
       "json",
-      "node"
+      "node",
+      "lp"
     ],
     "testPathIgnorePatterns": [
       "node_modules",

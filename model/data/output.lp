@@ -3,7 +3,7 @@ fieldtype(F,T) :- fieldtype(F,T).
 field(F) :- fieldtype(F,_).
 
 % rows
-data_fact(rows_high,true) :- num_rows(S), S >= 1000, not data_fact(rows_very_high,true).
+data_fact(rows_high,true) :- num_rows(S), S >= 1000.
 
 data_fact(rows_medium,true) :- num_rows(S), S >= 100, not data_fact(rows_high,true).
 
