@@ -1,4 +1,4 @@
-import { ConstraintDictionary } from '../../js/src/constraint-dictionary';
+import { ConstraintDictionary } from '../../src';
 
 describe('ConstraintDictionary', () => {
   describe('ASP to ConstraintDictionary', () => {

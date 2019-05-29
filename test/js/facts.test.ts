@@ -1,4 +1,4 @@
-import { Facts } from '../../js/src/facts';
+import { Facts } from '../../src';
 
 describe('Facts', () => {
   describe('ASP -> VL', () => {

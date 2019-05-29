@@ -6,7 +6,6 @@
 #include "generate.lp".
 #include "grammar.lp".
 #include "show.lp".
-#include "silence.lp".
 #include "define.lp".
 #include "optimize.lp".
 

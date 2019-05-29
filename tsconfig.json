@@ -15,6 +15,6 @@
     "strictNullChecks": false,
     "types": ["jest", "node"]
   },
-  "files": ["js/src/index.ts"],
+  "files": ["src/index.ts"],
   "exclude": ["**/*.js"]
 }

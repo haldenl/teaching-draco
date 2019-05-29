@@ -1,6 +1,6 @@
 {
   "name": "ndraco-core",
-  "main": "./js/build/bundle.js",
+  "main": "./build/bundle.js",
   "dependencies": {
     "random-words": "^1.1.0",
     "run-parallel": "^1.1.9",
