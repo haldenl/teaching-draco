@@ -33,7 +33,6 @@ if (cluster.isMaster) {
 
   const step = Math.floor(constraintPairs.length / cores);
 
-  let specPairs = [];
   let models = [];
   let info = [];
 
@@ -46,10 +45,7 @@ if (cluster.isMaster) {
         path.join(__dirname, "out/models.json"),
         JSON.stringify(models, null, 2)
       );
-      fs.writeFileSync(
-        path.join(__dirname, "out/pairs.json"),
-        JSON.stringify(specPairs, null, 2)
-      );
+
       fs.writeFileSync(
         path.join(__dirname, "out/info.json"),
         JSON.stringify(info, null, 2)
@@ -80,7 +76,6 @@ if (cluster.isMaster) {
       if (msg.cmd === "results") {
         const result = JSON.parse(msg.result);
 
-        specPairs = specPairs.concat(result.specPairs);
         models = models.concat(result.models);
         info = info.concat(result.info);
       }

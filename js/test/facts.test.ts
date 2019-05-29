@@ -1,12 +1,32 @@
-import asp2vl from '../src/asp2vl';
+import { Facts } from '../src/facts';
 
-describe('ASP <-> VegaLite', () => {
+describe('Facts', () => {
   describe('ASP -> VL', () => {
     test('Scatterplot', () => {
-      expect(asp2vl(SCATTER.facts)).toEqual(SCATTER.specs);
+      expect(Facts.toVegaLiteSpecDictionary(SCATTER.facts)).toEqual(SCATTER.specs);
+    });
+  });
+
+  describe('ASP -> Views', () => {
+    test('One view', () => {
+      expect(Facts.toViews(ONE_VIEW.facts)).toEqual(ONE_VIEW.views);
+    });
+
+    test('Two views', () => {
+      expect(Facts.toViews(TWO_VIEWS.facts)).toEqual(TWO_VIEWS.views);
     });
   });
 });
+
+const ONE_VIEW = {
+  facts: ['view(v1)'],
+  views: ['v1'],
+};
+
+const TWO_VIEWS = {
+  facts: ['view(v1)', 'view(v2)'],
+  views: ['v1', 'v2'],
+};
 
 const SCATTER = {
   facts: [
@@ -31,7 +51,7 @@ const SCATTER = {
     'channel(v2,e1,x)',
     'channel(v2,e2,y)',
     'mark(v1,point)',
-    'mark(v2,point)',
+    'mark(v2,square)',
     'soft(subtype,name,v1,param)',
     'soft(subtype,name,v2,param)',
   ],
@@ -50,7 +70,7 @@ const SCATTER = {
       },
     },
     v2: {
-      mark: 'point',
+      mark: 'square',
       encoding: {
         x: {
           field: 'f1',

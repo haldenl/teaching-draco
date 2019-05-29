@@ -1,11 +1,51 @@
 import { TopLevelUnitSpec } from 'vega-lite/src/spec/unit';
-import { VegaLiteSpecDictionaryObject } from './model';
 import { doesMatchRegex } from './util';
+
+export type VegaLiteSpecDictionaryObject = { [name: string]: TopLevelUnitSpec };
+
+export type FactsObject = string[];
+
+export class Facts {
+  static toVegaLiteSpecDictionary(facts: FactsObject): VegaLiteSpecDictionaryObject {
+    return facts2vl(facts);
+  }
+
+  static toViews(facts: FactsObject): string[] {
+    const views = facts
+      .filter(fact => {
+        return doesMatchRegex(fact, VIEW_REGEX_CAPTURE);
+      })
+      .map(fact => {
+        const extract = VIEW_REGEX_CAPTURE.exec(fact);
+        if (extract) {
+          const [_, name] = extract;
+          return name;
+        }
+        throw new Error(`Invalid view statement: ${fact}.`);
+      });
+
+    return views;
+  }
+}
 
 const VIEW_REGEX_CAPTURE = /view\((.*)\)/;
 const FACT_REGEX = /(\w+)\(([\w\.\/]+)(,([\w\.]+))?(,([\w\.]+))?\)/;
 
-export default function asp2vl(facts: string[]): VegaLiteSpecDictionaryObject {
+function facts2vl(facts: string[]): VegaLiteSpecDictionaryObject {
+  const views = facts2views(facts);
+
+  const result = views.reduce(
+    (dict, v) => {
+      dict[v] = facts2vl_single(facts, v);
+      return dict;
+    },
+    {} as any
+  );
+
+  return result;
+}
+
+function facts2views(facts: string[]): string[] {
   const views = facts
     .filter(fact => {
       return doesMatchRegex(fact, VIEW_REGEX_CAPTURE);
@@ -19,18 +59,10 @@ export default function asp2vl(facts: string[]): VegaLiteSpecDictionaryObject {
       throw new Error(`Invalid view statement: ${fact}.`);
     });
 
-  const result = views.reduce(
-    (dict, v) => {
-      dict[v] = asp2vl_view(facts, v);
-      return dict;
-    },
-    {} as any
-  );
-
-  return result;
+  return views;
 }
 
-function asp2vl_view(facts: string[], view: string): TopLevelUnitSpec {
+function facts2vl_single(facts: string[], view: string): TopLevelUnitSpec {
   let mark;
   const encodings: { [enc: string]: any } = {};
 
@@ -41,6 +73,10 @@ function asp2vl_view(facts: string[], view: string): TopLevelUnitSpec {
     }
 
     const [_, predicate, viz, __, first, ___, second] = extract;
+
+    if (viz !== view) {
+      continue;
+    }
 
     if (predicate === 'view') {
       continue;
@@ -75,7 +111,7 @@ function asp2vl_view(facts: string[], view: string): TopLevelUnitSpec {
       ...(enc.scale === 'zero' ? { zero: true } : {}),
     };
 
-    encoding[enc.channel] = {
+    const insert = {
       type: enc.type,
       ...(enc.aggregate ? { aggregate: enc.aggregate } : {}),
       ...(enc.field ? { field: enc.field } : {}),
@@ -83,6 +119,12 @@ function asp2vl_view(facts: string[], view: string): TopLevelUnitSpec {
       ...(enc.bin ? { bin: true } : {}),
       ...scale,
     };
+
+    if (enc.aggregate) {
+      encoding;
+    }
+
+    encoding[enc.channel] = insert;
   }
 
   const spec = {

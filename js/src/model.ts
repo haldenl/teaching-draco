@@ -1,15 +1,12 @@
-import { TopLevelUnitSpec } from 'vega-lite/build/src/spec/unit';
-import asp2vl from './asp2vl';
+import { Facts, FactsObject, VegaLiteSpecDictionaryObject } from './facts';
 
 export interface ModelObject {
   costs: number[];
-  facts: string[];
+  facts: FactsObject;
 }
-
-export type VegaLiteSpecDictionaryObject = { [name: string]: TopLevelUnitSpec };
 
 export class Model {
   static toVegaLiteSpecDictionary(model: ModelObject): VegaLiteSpecDictionaryObject {
-    return asp2vl(model.facts);
+    return Facts.toVegaLiteSpecDictionary(model.facts);
   }
 }

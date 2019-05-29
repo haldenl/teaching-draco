@@ -2,7 +2,9 @@
   "name": "ndraco-core",
   "main": "./js/build/bundle.js",
   "dependencies": {
+    "random-words": "^1.1.0",
     "run-parallel": "^1.1.9",
+    "string-hash": "^1.1.3",
     "tmp": "^0.1.0",
     "vega": "5.3.3",
     "vega-lite": "3.1.0"

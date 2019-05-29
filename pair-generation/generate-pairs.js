@@ -5,7 +5,6 @@ const path = require("path");
 const { Draco, Result, Model, Constraint } = draco;
 
 function generatePairs(constraintPairs) {
-  const specPairs = [];
   const models = [];
   const info = [];
 
@@ -35,7 +34,6 @@ function generatePairs(constraintPairs) {
       });
     } else {
       const resultModels = Result.toModels(result);
-      const specs = Model.toVegaLiteSpecDictionary(resultModels[0]);
 
       info.push({
         ...compObj,
@@ -46,23 +44,11 @@ function generatePairs(constraintPairs) {
         ...compObj,
         model: resultModels[0]
       });
-
-      specPairs.push({
-        left: {
-          constraint: compObj.c1,
-          vlSpec: specs["v1"]
-        },
-        right: {
-          constraint: compObj.c2,
-          vlSpec: specs["v2"]
-        }
-      });
     }
   });
 
   return {
     models,
-    specPairs,
     info
   };
 }

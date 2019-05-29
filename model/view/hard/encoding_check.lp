@@ -3,7 +3,7 @@ encoding_check(fieldtype_valid,V,E) :- type(V,E,quantitative), field(V,E,F), fie
 encoding_check(fieldtype_valid,V,E) :- type(V,E,temporal), field(V,E,F), not fieldtype(F,datetime).
 
 % @constraint Can only bin quantitative or ordinal.
-encoding_check(bin_quant_or_ord,V,E) :- type(V,E,T), bin(V,E,_), T != quantitative, T != ordinal.
+encoding_check(bin_quant_or_ord,V,E) :- type(V,E,T), bin(V,E,true), T != quantitative, T != ordinal.
 
 % @constraint Can only use log with quantitative.
 encoding_check(log_quant,V,E) :- scale(V,E,log), not type(V,E,quantitative).
@@ -18,10 +18,10 @@ encoding_check(log_discrete,V,E) :- scale(V,E,zero), encoding_fact(discrete,V,E)
 encoding_check(log_zero,V,E) :- scale(V,E,log), scale(V,E,zero).
 
 % @constraint Cannot use log if the data is negative or zero.
-encoding_check(log_non_positive,V,E) :- scale(V,E,log), field(V,E,F), data_fact(field,negative_or_zero_min,F).
+encoding_check(log_non_positive,V,E) :- scale(V,E,log), field(V,E,F), data_fact(negative_or_zero_min,F).
 
 % @constraint Cannot bin and aggregate.
-encoding_check(bin_and_aggregate,V,E) :- aggregate(V,E,_), scale(V,E,bin).
+encoding_check(bin_and_aggregate,V,E) :- aggregate(V,E,_), bin(V,E,true).
 
 % @constraint Oridnal only supports min, max, and median.
 encoding_check(aggregate_o_valid,V,E,A) :- aggregate(V,E,A), type(V,E,ordinal), A != min, A != max, A != median.
@@ -49,7 +49,7 @@ encoding_check(detail_non_ordered,V,E) :- channel(V,E,detail), not type(V,E,nomi
 encoding_check(size_nominal,V,E) :- channel(V,E,size), type(V,E,nominal).
 
 % % @constraint Do not use size when data is negative as size implies that data is positive.
-% encoding_check(size_negative,V,E) :- channel(V,E,size), encoding_fact(extent,V,(E,MIN,MAX)), MIN < 0, MAX > 0.
+encoding_check(size_negative,V,E) :- channel(V,E,size), field(V,E,F), data_fact(negative_min,F).
 
 % === Across encodings and between encodings and marks ===
 
