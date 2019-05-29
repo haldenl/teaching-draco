@@ -5,4 +5,5 @@ addons:
   homebrew:
     packages:
       - clingo
+      - python
     update: true
