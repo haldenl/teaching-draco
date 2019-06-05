@@ -49,7 +49,7 @@ if (cluster.isMaster) {
       slice = models.slice(i * step);
     }
 
-    const worker = cluster.fork();
+    const worker = cluster.fork({ id: i });
     workersFinished.push(false);
     worker.send({
       slice: JSON.stringify(slice),
@@ -96,14 +96,14 @@ if (cluster.isMaster) {
 function parseModels(models) {
   let i = 0;
   for (const model of models) {
-    const c1 = model.c1;
-    const c2 = model.c2;
+    // const c1 = model.c1;
+    // const c2 = model.c2;
     const facts = model.model.facts;
 
     const specs = Facts.toVegaLiteSpecDictionary(facts);
     const data = facts2data(facts);
 
-    const hash = stringHash(JSON.stringify(data));
+    // const hash = stringHash(JSON.stringify(data));
     // if (!datas.hasOwnProperty(hash)) {
     //   datas[hash] = data;
     // }
@@ -133,15 +133,23 @@ function parseModels(models) {
       hconcat: [specs["v1"], specs["v2"]]
     };
 
-    const specOut = path.resolve(__dirname, `out/pairs/${id}.json`);
+    const specOut = path.resolve(
+      __dirname,
+      `out/pairs/${process.env.id}_${i}.json`
+    );
     fs.writeFile(specOut, JSON.stringify(concat, null, 2), {}, () => {});
 
-    const pngOut = path.resolve(__dirname, `out/png/${id}.png`);
+    const pngOut = path.resolve(
+      __dirname,
+      `out/png/${process.env.id}_${i}.png`
+    );
     spawnSync("yarn", ["vl2png", specOut, pngOut]);
 
     process.send({
       cmd: "update"
     });
+
+    i += 1;
   }
 }
 
