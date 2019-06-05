@@ -8,16 +8,7 @@ function generatePairs(constraintPairs) {
   const models = [];
   const info = [];
 
-  process.stdout.write("Generating pairs...\n");
   constraintPairs.forEach(([c1, c2], i) => {
-    process.stdout.clearLine();
-    process.stdout.cursorTo(0);
-    process.stdout.write(
-      `${i} / ${constraintPairs.length} | ${c1.subtype}-${c1.name} : ${
-        c2.subtype
-      }-${c2.name}`
-    );
-
     const program = `c1(${c1.subtype},${c1.name}).
   c2(${c2.subtype},${c2.name}).`;
 
@@ -48,6 +39,10 @@ function generatePairs(constraintPairs) {
         model: resultWitnesses[0]
       });
     }
+
+    process.send({
+      cmd: "update"
+    });
   });
 
   return {

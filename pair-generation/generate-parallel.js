@@ -53,6 +53,8 @@ if (cluster.isMaster) {
     }
   }, 1000);
 
+  let completed = 0;
+
   for (let i = 0; i < cores; i += 1) {
     let slice;
     if (i < cores - 1) {
@@ -78,6 +80,15 @@ if (cluster.isMaster) {
 
         models = models.concat(result.models);
         info = info.concat(result.info);
+      }
+    });
+
+    worker.on("message", msg => {
+      if (msg.cmd === "update") {
+        completed += 1;
+        process.stdout.clearLine();
+        process.stdout.cursorTo(0);
+        process.stdout.write(`${completed} / ${constraintPairs.length}`);
       }
     });
   }
