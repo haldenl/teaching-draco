@@ -140,17 +140,15 @@ function parseModels(models) {
       hconcat: [specs["v1"], specs["v2"]]
     };
 
-    const specOut = path.resolve(
-      __dirname,
-      `out/pairs/${id}.json`
-    );
-    fs.writeFile(specOut, JSON.stringify(concat, null, 2), {}, () => {});
+    const specOut = path.resolve(__dirname, `out/pairs/${id}.json`);
+    fs.writeFileSync(specOut, JSON.stringify(concat, null, 2), {}, () => {});
 
-    const pngOut = path.resolve(
-      __dirname,
-      `out/png/${id}.png`
-    );
-    spawnSync("yarn", ["vl2png", specOut, pngOut]);
+    const pngOut = path.resolve(__dirname, `out/png/${id}.png`);
+    spawnSync("sh", [
+      path.resolve(__dirname, "../node_modules/vega-lite/bin/vl2png"),
+      specOut,
+      pngOut
+    ]);
 
     process.send({
       cmd: "update"
