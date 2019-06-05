@@ -12,9 +12,16 @@ const { Draco, Result, Model, Facts, Constraint } = draco;
 
 if (cluster.isMaster) {
   const modelsPath = path.resolve(__dirname, "out/models.json");
-  const models = JSON.parse(fs.readFileSync(modelsPath)).sort(
-    () => Math.random() - 0.5
-  );
+  let models = JSON.parse(fs.readFileSync(modelsPath));
+
+  models = models.map((m, i) => {
+    return {
+      id: i,
+      model: m
+    };
+  });
+
+  models.sort(() => Math.random() - 0.5);
 
   if (!fs.existsSync(path.resolve(__dirname, "out/pairs"))) {
     fs.mkdirSync(path.resolve(__dirname, "out/pairs"));
@@ -95,7 +102,7 @@ if (cluster.isMaster) {
 
 function parseModels(models) {
   let i = 0;
-  for (const model of models) {
+  for (const { id, model } of models) {
     // const c1 = model.c1;
     // const c2 = model.c2;
     const facts = model.model.facts;
@@ -135,13 +142,13 @@ function parseModels(models) {
 
     const specOut = path.resolve(
       __dirname,
-      `out/pairs/${process.env.id}_${i}.json`
+      `out/pairs/${id}.json`
     );
     fs.writeFile(specOut, JSON.stringify(concat, null, 2), {}, () => {});
 
     const pngOut = path.resolve(
       __dirname,
-      `out/png/${process.env.id}_${i}.png`
+      `out/png/${id}.png`
     );
     spawnSync("yarn", ["vl2png", specOut, pngOut]);
 
