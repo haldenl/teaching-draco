@@ -16,6 +16,14 @@ const specPairs = {};
 let id = 0;
 const datas = {};
 
+if (!fs.existsSync(path.resolve(__dirname, "out/pairs"))) {
+  fs.mkdirSync(path.resolve(__dirname, "out/pairs"));
+}
+
+if (!fs.existsSync(path.resolve(__dirname, "out/png"))) {
+  fs.mkdirSync(path.resolve(__dirname, "out/png"));
+}
+
 let i = 0;
 for (const model of models) {
   process.stdout.clearLine();
@@ -60,7 +68,7 @@ for (const model of models) {
   };
 
   const specOut = path.resolve(__dirname, `out/pairs/${id}.json`);
-  fs.writeFileSync(specOut, JSON.stringify(concat, null, 2));
+  fs.writeFile(specOut, JSON.stringify(concat, null, 2));
 
   const pngOut = path.resolve(__dirname, `out/png/${id}.png`);
   spawnSync("vl2png", [specOut, pngOut]);
@@ -68,9 +76,9 @@ for (const model of models) {
 }
 
 const specPairsPath = path.resolve(__dirname, "out/pairs.json");
-fs.writeFileSync(specPairsPath, JSON.stringify(specPairs, null, 2));
+fs.writeFile(specPairsPath, JSON.stringify(specPairs, null, 2));
 
-for (const [hash, data] of Object.entries(datas)) {
-  const dataPath = path.resolve(__dirname, `out/data/${hash}.json`);
-  fs.writeFileSync(dataPath, JSON.stringify(data));
-}
+// for (const [hash, data] of Object.entries(datas)) {
+//   const dataPath = path.resolve(__dirname, `out/data/${hash}.json`);
+//   fs.writeFile(dataPath, JSON.stringify(data));
+// }
