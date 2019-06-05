@@ -104,9 +104,9 @@ function parseModels(models) {
     const data = facts2data(facts);
 
     const hash = stringHash(JSON.stringify(data));
-    if (!datas.hasOwnProperty(hash)) {
-      datas[hash] = data;
-    }
+    // if (!datas.hasOwnProperty(hash)) {
+    //   datas[hash] = data;
+    // }
 
     for (const [v, spec] of Object.entries(specs)) {
       spec.data = {
@@ -117,17 +117,17 @@ function parseModels(models) {
       // };
     }
 
-    specPairs[`${id}`] = {
-      type: c1,
-      c2,
-      comparator: "<",
-      left: {
-        vlSpec: specs["v1"]
-      },
-      right: {
-        vlSpec: specs["v2"]
-      }
-    };
+    // specPairs[`${id}`] = {
+    //   type: c1,
+    //   c2,
+    //   comparator: "<",
+    //   left: {
+    //     vlSpec: specs["v1"]
+    //   },
+    //   right: {
+    //     vlSpec: specs["v2"]
+    //   }
+    // };
 
     const concat = {
       hconcat: [specs["v1"], specs["v2"]]
