@@ -39,7 +39,7 @@ if (cluster.isMaster) {
   process.on("exit", (signal, code) => {
     if (signal) {
       for (const id in cluster.workers) {
-        cluster.workers[id].exit(1);
+        cluster.workers[id].kill();
       }
     }
   });
@@ -81,7 +81,7 @@ if (cluster.isMaster) {
     worker.on("exit", (signal, code) => {
       if (signal) {
         for (const id in cluster.workers) {
-          cluster.workers[id].exit(1);
+          cluster.workers[id].kill();
         }
       }
       workersFinished[i] = true;
