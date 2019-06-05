@@ -36,6 +36,14 @@ if (cluster.isMaster) {
 
   const workersFinished = [];
 
+  process.on("exit", (signal, code) => {
+    if (signal) {
+      for (const id in cluster.workers) {
+        cluster.workers[id].kill();
+      }
+    }
+  });
+
   setInterval(() => {
     if (workersFinished.every(i => i)) {
       console.log("all done");
@@ -70,7 +78,12 @@ if (cluster.isMaster) {
       cmd: "slice"
     });
 
-    worker.on("exit", () => {
+    worker.on("exit", (signal, code) => {
+      if (signal) {
+        for (const id in cluster.workers) {
+          cluster.workers[id].kill();
+        }
+      }
       workersFinished[i] = true;
     });
 
