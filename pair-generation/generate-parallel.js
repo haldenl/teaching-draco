@@ -24,6 +24,8 @@ if (cluster.isMaster) {
     }
   }
 
+  constraintPairs.sort(() => Math.random() - 0.5);
+
   // constraintPairs = constraintPairs.slice(0, 50);
 
   const cores = os.cpus().length;
@@ -47,6 +49,10 @@ if (cluster.isMaster) {
   setInterval(() => {
     if (workersFinished.every(i => i)) {
       console.log("all done");
+      if (!fs.existsSync(path.resolve(__dirname, "out"))) {
+        fs.mkdirSync(path.resolve(__dirname, "out"));
+      }
+
       fs.writeFileSync(
         path.join(__dirname, "out/models.json"),
         JSON.stringify(models, null, 2)
