@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const draco = require("ndraco-core");
 const stringHash = require("string-hash");
-const facts2data = require("./facts2data");
+const { facts2data } = require("./facts2data");
 const { spawnSync } = require("child_process");
 
 const { Draco, Result, Model, Facts, Constraint } = draco;
@@ -63,7 +63,7 @@ for (const model of models) {
   fs.writeFileSync(specOut, JSON.stringify(concat, null, 2));
 
   const pngOut = path.resolve(__dirname, `out/png/${id}.png`);
-  console.log(spawnSync("vl2png", [specOut, ">", pngOut]));
+  spawnSync("vl2png", [specOut, pngOut]);
   id += 1;
 }
 

@@ -1,13 +1,10 @@
 #!/usr/bin/env node
-const util = require("util");
 const draco = require("ndraco-core");
 const fs = require("fs");
 const path = require("path");
-const parallel = require("run-parallel");
 const os = require("os");
 const cluster = require("cluster");
 const { generatePairs } = require("./generate-pairs");
-const http = require("http");
 const { Draco, Result, Model, Constraint } = draco;
 
 function print(obj) {
@@ -30,6 +27,7 @@ if (cluster.isMaster) {
   // constraintPairs = constraintPairs.slice(0, 50);
 
   const cores = os.cpus().length;
+  // const cores = 1;
 
   const step = Math.floor(constraintPairs.length / cores);
 
@@ -63,10 +61,12 @@ if (cluster.isMaster) {
       slice = constraintPairs.slice(i * step);
     }
 
-    const worker = cluster.fork({
-      slice: JSON.stringify(slice)
-    });
+    const worker = cluster.fork();
     workersFinished.push(false);
+    worker.send({
+      slice: JSON.stringify(slice),
+      cmd: "slice"
+    });
 
     worker.on("exit", () => {
       workersFinished[i] = true;
@@ -82,10 +82,15 @@ if (cluster.isMaster) {
     });
   }
 } else {
-  const constraintPairs = JSON.parse(process.env.slice);
-  const result = JSON.stringify(generatePairs(constraintPairs));
+  process.on("message", msg => {
+    if (msg.cmd === "slice") {
+      const constraintPairs = JSON.parse(msg.slice);
 
-  process.send({ cmd: "results", result }, undefined, undefined, () =>
-    process.exit(0)
-  );
+      const result = JSON.stringify(generatePairs(constraintPairs));
+
+      process.send({ cmd: "results", result }, undefined, undefined, () =>
+        process.exit(0)
+      );
+    }
+  });
 }

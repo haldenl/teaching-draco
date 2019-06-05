@@ -1,3 +1,5 @@
+const randomWords = require("random-words");
+
 const DATA_FACT_REGEX = /data_fact\((\w+),(\w+)\)/;
 const DATA_FIELD_TYPE_REGEX = /fieldtype\((\w+),(\w+)\)/;
 
@@ -15,7 +17,11 @@ const PROP_ORDER = [
   "cardinality_very_very_low"
 ];
 
-export default function facts2data(facts) {
+function doesMatchRegex(s, r) {
+  return s.match(r) !== null;
+}
+
+function facts2data(facts) {
   // extract fields
   const fields = facts.reduce((dict, value) => {
     if (doesMatchRegex(value, DATA_FIELD_TYPE_REGEX)) {
@@ -217,3 +223,7 @@ export default function facts2data(facts) {
 
   return data;
 }
+
+module.exports = {
+  facts2data
+};

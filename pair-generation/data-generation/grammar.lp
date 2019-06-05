@@ -1,4 +1,4 @@
-fieldtype_type(number;string).
+fieldtype_type(number;string;integer;boolean;date).
 
 % rows
 data_fact_type(rows,rows_high).
@@ -17,6 +17,12 @@ data_fact_type(field,negative_or_zero_min).
 data_fact_type(field,cardinality_gt_8).
 
 data_fact_type(field,cardinality_gt_20).
+
+data_fact_type(field,cardinality_gt_30).
+
+data_fact_type(field,cardinality_gt_100).
+
+cardinality_type(cardinality_gt_8;cardinality_gt_20;cardinality_gt_30;cardinality_gt_100).
 
 data_fact_type(field,min_minus_max_gt_min_or_max_minus_zero).
 

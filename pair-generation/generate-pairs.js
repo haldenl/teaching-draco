@@ -13,7 +13,7 @@ function generatePairs(constraintPairs) {
     process.stdout.clearLine();
     process.stdout.cursorTo(0);
     process.stdout.write(
-      `\x1b[35m ${i} / ${constraintPairs.length} | ${c1.subtype}-${c1.name} : ${
+      `${i} / ${constraintPairs.length} | ${c1.subtype}-${c1.name} : ${
         c2.subtype
       }-${c2.name}`
     );
@@ -25,7 +25,10 @@ function generatePairs(constraintPairs) {
       c1: Constraint.getUniqueName(c1),
       c2: Constraint.getUniqueName(c2)
     };
-    const result = Draco.run(program, ["../pair-generation/query.lp"]);
+
+    const result = Draco.run(program, { optimize: false }, [
+      path.resolve(__dirname, "query.lp")
+    ]);
 
     if (!Result.isSat(result)) {
       info.push({
@@ -33,7 +36,7 @@ function generatePairs(constraintPairs) {
         info: "UNSAT"
       });
     } else {
-      const resultModels = Result.toModels(result);
+      const resultWitnesses = Result.toWitnesses(result);
 
       info.push({
         ...compObj,
@@ -42,7 +45,7 @@ function generatePairs(constraintPairs) {
 
       models.push({
         ...compObj,
-        model: resultModels[0]
+        model: resultWitnesses[0]
       });
     }
   });
