@@ -71,7 +71,7 @@ for (const model of models) {
   fs.writeFile(specOut, JSON.stringify(concat, null, 2), {}, () => {});
 
   const pngOut = path.resolve(__dirname, `out/png/${id}.png`);
-  spawnSync("vl2png", [specOut, pngOut]);
+  spawnSync("yarn vl2png", [specOut, pngOut]);
   id += 1;
 }
 

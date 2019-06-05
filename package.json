@@ -28,7 +28,8 @@
   "scripts": {
     "build": "rm -rf build && tsc && rollup -c",
     "format": "tslint -p . --fix && prettier --write '{src,test}/**/*.ts'",
-    "test": "jest"
+    "test": "jest",
+    "vl2png": "./node_modules/vega-lite/bin/vl2png"
   },
   "jest": {
     "transform": {
