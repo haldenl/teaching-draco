@@ -68,7 +68,7 @@ for (const model of models) {
   };
 
   const specOut = path.resolve(__dirname, `out/pairs/${id}.json`);
-  fs.writeFile(specOut, JSON.stringify(concat, null, 2));
+  fs.writeFile(specOut, JSON.stringify(concat, null, 2), {}, () => {});
 
   const pngOut = path.resolve(__dirname, `out/png/${id}.png`);
   spawnSync("vl2png", [specOut, pngOut]);
@@ -76,7 +76,7 @@ for (const model of models) {
 }
 
 const specPairsPath = path.resolve(__dirname, "out/pairs.json");
-fs.writeFile(specPairsPath, JSON.stringify(specPairs, null, 2));
+fs.writeFile(specPairsPath, JSON.stringify(specPairs, null, 2), {}, () => {});
 
 // for (const [hash, data] of Object.entries(datas)) {
 //   const dataPath = path.resolve(__dirname, `out/data/${hash}.json`);
