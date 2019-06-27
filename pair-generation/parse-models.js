@@ -103,25 +103,23 @@ if (cluster.isMaster) {
 function parseModels(models) {
   let i = 0;
   for (const { id, model } of models) {
-    // const c1 = model.c1;
-    // const c2 = model.c2;
     const facts = model.model.facts;
 
     const specs = Facts.toVegaLiteSpecDictionary(facts);
-    const data = facts2data(facts);
+    const { data, fieldMapping } = facts2data(facts);
 
-    // const hash = stringHash(JSON.stringify(data));
-    // if (!datas.hasOwnProperty(hash)) {
-    //   datas[hash] = data;
-    // }
-
+    // set data and field mapping
     for (const [v, spec] of Object.entries(specs)) {
       spec.data = {
         values: data
       };
-      // spec.data = {
-      //   url: `data/${hash}.json`
-      // };
+
+      for (const [channel, encoding] of Object.entries(spec)) {
+        const field = encoding["field"];
+        if (field) {
+          encoding["field"] = fieldMapping[field];
+        }
+      }
     }
 
     // specPairs[`${id}`] = {
