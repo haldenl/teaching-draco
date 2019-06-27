@@ -1,7 +1,4 @@
-#include "./data-generation/grammar.lp".
-#include "./data-generation/integrity.lp".
-#include "./data-generation/generate.lp".
-#include "../../draco/model/data/index.lp".
+% #include "../../draco/model/data/index.lp".
 
 % input is c1(type,constraint), c2(type,constraint).
 
