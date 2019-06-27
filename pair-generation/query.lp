@@ -6,8 +6,8 @@
 % input is c1(type,constraint), c2(type,constraint).
 
 % #const max_fields = 2.
-% c1(chart,c_d_temporal_agg_not_line).
-% c2(chart,only_x_over_only_y).
+% c1(aggregate,count).
+% c2(datatype,boolean_ordinal).
 
 view(v1).
 view(v2).
@@ -31,7 +31,7 @@ same_type(F,v1,E1,v2,E2) :- field(v1,E1,F), field(v2,E2,F), type(v1,E1,T1), type
 #minimize { 1@3,PROP: spec(PROP,V1,X), spec(PROP,V2,Y), V1 != V2, X < Y }.
 % #minimize { 1@4,F: field_id(F) }.
 
-:- field(V,E1,F1), field(V,E2,F2), E1 > E2, F1 <= F2.
+% :- field(V,E1,F1), field(V,E2,F2), E1 > E2, F1 <= F2.
 
 #show soft/4.
 #show hard/4.

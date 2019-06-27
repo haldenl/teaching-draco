@@ -2,6 +2,9 @@
   "name": "teaching-draco",
   "main": "./build/bundle.js",
   "dependencies": {
+    "chance": "^1.0.18",
+    "faker": "^4.1.0",
+    "mocker-data-generator": "^2.6.6",
     "random-words": "^1.1.0",
     "run-parallel": "^1.1.9",
     "string-hash": "^1.1.3",
