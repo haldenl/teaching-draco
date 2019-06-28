@@ -1,10 +1,12 @@
-const chance = require("chance");
+const Chance = require("chance");
 const faker = require("faker");
 
-const NUM_ROWS_REGEX = /num_rows\((\d+)\)./;
-const DATA_FIELD_TYPE_REGEX = /fieldtype\((\w+),(\w+)\)./;
-const CARDINALITY_REGEX = /cardinality\((\w+),(\d+)\)./;
-const EXTENT_REGEX = /cardinality\((\w+),(\d+),(\d+)\)./;
+const chance = new Chance();
+
+const NUM_ROWS_REGEX = /num_rows\((\d+)\)/;
+const DATA_FIELD_TYPE_REGEX = /fieldtype\((\d+),(\w+)\)/;
+const CARDINALITY_REGEX = /cardinality\((\d+),(\d+)\)/;
+const EXTENT_REGEX = /extent\((\d+),(\d+),(\d+)\)/;
 
 function doesMatchRegex(s, r) {
   return s.match(r) !== null;

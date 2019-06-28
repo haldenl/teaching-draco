@@ -26,7 +26,7 @@ if (cluster.isMaster) {
 
   constraintPairs.sort(() => Math.random() - 0.5);
 
-  // constraintPairs = constraintPairs.slice(0, 50);
+  constraintPairs = constraintPairs.slice(0, 5);
 
   const cores = os.cpus().length;
   // const cores = 1;

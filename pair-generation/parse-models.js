@@ -114,7 +114,7 @@ function parseModels(models) {
         values: data
       };
 
-      for (const [channel, encoding] of Object.entries(spec)) {
+      for (const [channel, encoding] of Object.entries(spec["encoding"])) {
         const field = encoding["field"];
         if (field) {
           encoding["field"] = fieldMapping[field];
