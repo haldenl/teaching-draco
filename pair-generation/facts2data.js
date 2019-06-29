@@ -86,7 +86,10 @@ function generateColumn(fieldName, descriptor, numRows) {
       break;
     case "date":
       options = chance.unique(
-        faker.date.between(new Date(min), new Date(max)),
+        faker.date.between(
+          new Date(min * 100000000000),
+          new Date(max * 100000000000)
+        ),
         n
       );
       name = "Date";
