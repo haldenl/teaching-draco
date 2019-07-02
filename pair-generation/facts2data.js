@@ -74,6 +74,11 @@ function generateColumn(fieldName, descriptor, numRows) {
   const n = descriptor.cardinality;
   const min = descriptor.min;
   const max = descriptor.max;
+
+  if (min > max) {
+    console.log(`min: ${min}, max: ${max}`);
+  }
+
   let name;
   switch (descriptor.type) {
     case "number":
