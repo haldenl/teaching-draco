@@ -30,14 +30,14 @@ function facts2data(facts) {
   facts.forEach(value => {
     if (doesMatchRegex(value, CARDINALITY_REGEX)) {
       const [fullMatch, field, cardinality] = CARDINALITY_REGEX.exec(value);
-      fields[field]["cardinality"] = cardinality;
+      fields[field]["cardinality"] = +cardinality;
     } else if (doesMatchRegex(value, EXTENT_REGEX)) {
       const [fullMatch, field, min, max] = EXTENT_REGEX.exec(value);
-      fields[field]["min"] = min;
-      fields[field]["max"] = max;
+      fields[field]["min"] = +min;
+      fields[field]["max"] = +max;
     } else if (doesMatchRegex(value, NUM_ROWS_REGEX)) {
       const [fullMatch, numRows] = NUM_ROWS_REGEX.exec(value);
-      rows = numRows;
+      rows = +numRows;
     }
   });
 
@@ -74,10 +74,6 @@ function generateColumn(fieldName, descriptor, numRows) {
   const n = descriptor.cardinality;
   const min = descriptor.min;
   const max = descriptor.max;
-
-  if (min > max) {
-    console.log(`min: ${min}, max: ${max}`);
-  }
 
   let name;
   switch (descriptor.type) {
