@@ -3,10 +3,10 @@ const faker = require("faker");
 
 const chance = new Chance();
 
-const NUM_ROWS_REGEX = /num_rows\((\d+)\)/;
-const DATA_FIELD_TYPE_REGEX = /fieldtype\((\d+),(\w+)\)/;
-const CARDINALITY_REGEX = /cardinality\((\d+),(\d+)\)/;
-const EXTENT_REGEX = /extent\((\d+),(\d+),(\d+)\)/;
+const NUM_ROWS_REGEX = /num_rows\((.*)\)/;
+const DATA_FIELD_TYPE_REGEX = /fieldtype\((.*),(.*)\)/;
+const CARDINALITY_REGEX = /cardinality\((.*),(.*)\)/;
+const EXTENT_REGEX = /extent\((.*),(.*),(.*)\)/;
 
 function doesMatchRegex(s, r) {
   return s.match(r) !== null;
