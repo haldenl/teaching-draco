@@ -19,7 +19,7 @@ function generatePairs(constraintPairs) {
 
     const result = Draco.run(
       program,
-      { optimize: false, generateData: true, randomFreq: 1 },
+      { optimize: false, generateData: true, randomFreq: 1, models: 1 },
       [path.resolve(__dirname, "query.lp")]
     );
 
