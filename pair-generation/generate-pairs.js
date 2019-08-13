@@ -17,9 +17,11 @@ function generatePairs(constraintPairs) {
       c2: Constraint.getUniqueName(c2)
     };
 
-    const result = Draco.run(program, { optimize: false, generateData: true }, [
-      path.resolve(__dirname, "query.lp")
-    ]);
+    const result = Draco.run(
+      program,
+      { optimize: false, generateData: true, randomFreq: 1 },
+      [path.resolve(__dirname, "query.lp")]
+    );
 
     if (!Result.isSat(result)) {
       info.push({
