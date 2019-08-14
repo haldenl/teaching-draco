@@ -116,10 +116,6 @@ function parseModels(models) {
         values: data
       };
 
-      spec.config = {
-        background: "white"
-      };
-
       if (v === "v1") {
         spec["title"] = c1;
       } else {
@@ -148,6 +144,10 @@ function parseModels(models) {
 
     const concat = {
       hconcat: [specs["v1"], specs["v2"]]
+    };
+
+    concat.config = {
+      background: "white"
     };
 
     const specOut = path.resolve(__dirname, `out/pairs/${id}.json`);
