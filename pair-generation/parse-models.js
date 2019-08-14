@@ -102,7 +102,7 @@ if (cluster.isMaster) {
 
 function parseModels(models) {
   let i = 0;
-  for (const { id, model } of models) {
+  for (const { id, c1, c2, model } of models) {
     const facts = model.model.facts;
 
     const specs = Facts.toVegaLiteSpecDictionary(facts);
@@ -113,6 +113,12 @@ function parseModels(models) {
       spec.data = {
         values: data
       };
+
+      if (v === "v1") {
+        spec["title"] = c1;
+      } else {
+        spec["title"] = c2;
+      }
 
       for (const [channel, encoding] of Object.entries(spec["encoding"])) {
         const field = encoding["field"];
