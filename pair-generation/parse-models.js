@@ -102,8 +102,10 @@ if (cluster.isMaster) {
 
 function parseModels(models) {
   let i = 0;
-  for (const { id, c1, c2, model } of models) {
+  for (const { id, model } of models) {
     const facts = model.model.facts;
+    const c1 = model.c1;
+    const c2 = model.c2;
 
     const specs = Facts.toVegaLiteSpecDictionary(facts);
     const { data, fieldMapping } = facts2data(facts);
