@@ -34,7 +34,8 @@
     "format": "tslint -p . --fix && prettier --write '{src,test}/**/*.ts'",
     "test": "jest",
     "vl2png": "./node_modules/vega-lite/bin/vl2png",
-    "generate": "node ./pair-generation/generate-parallel.js && node ./pair-generation/parse-models.js && tar -czvf ./pair-generation/out.tar.gz out"
+    "clean": "rm -r ./pair-generation/out",
+    "generate": "node ./pair-generation/generate-parallel.js && node ./pair-generation/parse-models.js && tar -czvf ./pair-generation/out.tar.gz ./pair-generation/out"
   },
   "jest": {
     "transform": {
