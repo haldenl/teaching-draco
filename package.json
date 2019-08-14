@@ -35,7 +35,8 @@
     "test": "jest",
     "vl2png": "./node_modules/vega-lite/bin/vl2png",
     "clean": "rm -r ./pair-generation/out",
-    "generate": "node ./pair-generation/generate-parallel.js && node ./pair-generation/parse-models.js && tar -czvf ./pair-generation/out.tar.gz ./pair-generation/out"
+    "generate": "node ./pair-generation/generate-parallel.js && node ./pair-generation/parse-models.js",
+    "pack": "--cwd ./pair-generation tar -czvf out.tar.gz out"
   },
   "jest": {
     "transform": {
