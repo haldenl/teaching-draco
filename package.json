@@ -36,7 +36,7 @@
     "vl2png": "./node_modules/vega-lite/bin/vl2png",
     "clean": "rm -r ./pair-generation/out",
     "generate": "node ./pair-generation/generate-parallel.js && node ./pair-generation/parse-models.js",
-    "compress": "--cwd ./pair-generation && tar -czvf out.tar.gz out"
+    "compress": "--cwd ./pair-generation tar -czvf out.tar.gz out"
   },
   "jest": {
     "transform": {
