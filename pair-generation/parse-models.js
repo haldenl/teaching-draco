@@ -116,6 +116,10 @@ function parseModels(models) {
         values: data
       };
 
+      spec.config = {
+        background: "white"
+      };
+
       if (v === "v1") {
         spec["title"] = c1;
       } else {
