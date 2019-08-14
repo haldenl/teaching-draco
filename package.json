@@ -33,7 +33,8 @@
     "build": "rm -rf build && tsc && rollup -c",
     "format": "tslint -p . --fix && prettier --write '{src,test}/**/*.ts'",
     "test": "jest",
-    "vl2png": "./node_modules/vega-lite/bin/vl2png"
+    "vl2png": "./node_modules/vega-lite/bin/vl2png",
+    "run-pipeline": "./generate-parallel.js && ./parse-models.js && tar -czvf out.tar.gz out"
   },
   "jest": {
     "transform": {
