@@ -9,11 +9,11 @@
 view(v1).
 view(v2).
 
-:- c1(TYPE,NAME), not soft(TYPE,NAME,v1,_).
-:- c1(TYPE,NAME), soft(TYPE,NAME,v2,_).
+:- c1(TYPE,NAME), soft(TYPE,NAME,v1,_).
+:- c1(TYPE,NAME), not soft(TYPE,NAME,v2,_).
 
-:- c2(TYPE,NAME), not soft(TYPE,NAME,v2,_).
-:- c2(TYPE,NAME), soft(TYPE,NAME,v1,_).
+:- c2(TYPE,NAME), soft(TYPE,NAME,v2,_).
+:- c2(TYPE,NAME), not soft(TYPE,NAME,v1,_).
 
 % same fields
 :- field(v1,_,F), not field(v2,_,F).
