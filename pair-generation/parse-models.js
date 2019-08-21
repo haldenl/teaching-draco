@@ -107,6 +107,9 @@ function parseModels(models) {
     const c1 = model.c1;
     const c2 = model.c2;
 
+    const v1Facts = facts.filter(f => !f.includes("v2"));
+    const v2Facts = facts.filter(f => !f.includes("v1"));
+
     const specs = Facts.toVegaLiteSpecDictionary(facts);
     const { data, fieldMapping } = facts2data(facts);
 
@@ -117,9 +120,9 @@ function parseModels(models) {
       };
 
       if (v === "v1") {
-        spec["title"] = c1;
+        spec["constraint"] = c1;
       } else {
-        spec["title"] = c2;
+        spec["constraint"] = c2;
       }
 
       for (const [channel, encoding] of Object.entries(spec["encoding"])) {
@@ -150,8 +153,27 @@ function parseModels(models) {
       background: "white"
     };
 
+    const pairToWrite = {
+      left: {
+        vegalite: specs["v1"],
+        draco: v1Facts,
+        valid: null
+      },
+      right: {
+        vegalite: specs["v2"],
+        draco: v2Facts,
+        valid: null
+      },
+      comparator: null
+    };
+
     const specOut = path.resolve(__dirname, `out/pairs/${id}.json`);
-    fs.writeFileSync(specOut, JSON.stringify(concat, null, 2), {}, () => {});
+    fs.writeFileSync(
+      specOut,
+      JSON.stringify(pairToWrite, null, 2),
+      {},
+      () => {}
+    );
 
     const pngOut = path.resolve(__dirname, `out/png/${id}.png`);
     spawnSync("sh", [
