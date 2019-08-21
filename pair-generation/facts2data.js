@@ -46,8 +46,8 @@ function facts2data(facts) {
     const descriptor = fields[field];
     let { newName, values } = generateColumn(field, descriptor, rows);
 
-    if (Object.hasOwnProperty(newName, fieldValues)) {
-      if (Object.hasOwnProperty(`${newName}_2`, fieldValues)) {
+    if (Object.hasOwnProperty(fieldValues, newName)) {
+      if (Object.hasOwnProperty(fieldValues, `${newName}_2`)) {
         newName = `${newName}_3`;
       } else {
         newName = `${newName}_2`;
