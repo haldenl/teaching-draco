@@ -20,7 +20,7 @@ view(v2).
 :- not field(v1,_,F), field(v2,_,F).
 
 % don't repeat fields (for small study)
-:- #count { field(V,_,F): fieldtype(_,F) } > 1.
+:- #count { field(V,_,F): view(V) } > 1.
 
 % fields have same types (too many useless combinations otherwise)
 % same_type(F,v1,E1,v2,E2) :- field(v1,E1,F), field(v2,E2,F), type(v1,E1,T), type(v2,E2,T).
