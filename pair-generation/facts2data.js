@@ -126,6 +126,8 @@ function generateColumn(fieldName, descriptor, numRows) {
 }
 
 function morphToRequiredValues(arr, values) {
+  const chance = new Chance();
+
   const shuffled = chance.shuffle(arr);
   for (let i = 0; i < values; i += 1) {
     arr[i] = values[i];
@@ -135,6 +137,8 @@ function morphToRequiredValues(arr, values) {
 }
 
 function populateToN(arr, n) {
+  const chance = new Chance();
+
   return chance.shuffle(
     arr.concat(chance.n(chance.pickone, n - arr.length, arr))
   );
