@@ -1,8 +1,6 @@
 const Chance = require("chance");
 const faker = require("faker");
 
-const chance = new Chance();
-
 const NUM_ROWS_REGEX = /num_rows\((.*)\)/;
 const DATA_FIELD_TYPE_REGEX = /fieldtype\((.*),(.*)\)/;
 const CARDINALITY_REGEX = /cardinality\((.*),(.*)\)/;
@@ -46,7 +44,16 @@ function facts2data(facts) {
 
   for (const field of Object.keys(fields)) {
     const descriptor = fields[field];
-    const { newName, values } = generateColumn(field, descriptor, rows);
+    let { newName, values } = generateColumn(field, descriptor, rows);
+
+    if (Object.hasOwnProperty(newName, fieldValues)) {
+      if (Object.hasOwnProperty(`${newName}_2`, fieldValues)) {
+        newName = `${newName}_3`;
+      } else {
+        newName = `${newName}_2`;
+      }
+    }
+
     fieldMapping[field] = newName;
     fieldValues[newName] = values;
   }
@@ -69,6 +76,8 @@ function facts2data(facts) {
 
 function generateColumn(fieldName, descriptor, numRows) {
   const seen = new Set();
+
+  const chance = new Chance();
 
   let options;
   const n = descriptor.cardinality;
