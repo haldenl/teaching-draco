@@ -74,8 +74,6 @@ function facts2data(facts) {
 }
 
 function generateColumn(fieldName, descriptor, numRows, seenFields) {
-  const seen = new Set();
-
   const chance = new Chance();
 
   let options;
@@ -123,7 +121,7 @@ function generateColumn(fieldName, descriptor, numRows, seenFields) {
     }
   }
 
-  seen.add(name);
+  seenFields.add(name);
 
   const values = populateToN(
     morphToRequiredValues(options, [min, max]),

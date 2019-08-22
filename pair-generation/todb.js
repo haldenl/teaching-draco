@@ -21,7 +21,6 @@ request
       .get({ uri: "http://localhost:3333/pairs/count" })
       .then(res => {
         const lastPair = res["count"];
-        console.log(lastChart);
 
         let nextChartId = lastChart + 1;
         let nextPairId = lastPair + 1;
@@ -58,7 +57,6 @@ request
           const chartsToAdd = [charts[2 * i], charts[2 * i + 1]];
           const pairsToAdd = [pairs[i]];
 
-          console.log(pairsToAdd);
           request
             .post({
               uri: "http://localhost:3333/charts/add",
@@ -76,7 +74,7 @@ request
                     pairs: pairsToAdd
                   }
                 })
-                .then(val => console.log("done"))
+                .then(() => {})
                 .catch(err => console.log(err));
             })
             .catch(err => console.log(err));
