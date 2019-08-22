@@ -42,17 +42,16 @@ function facts2data(facts) {
   const fieldMapping = {};
   const fieldValues = {};
 
+  const seenFields = new Set();
+
   for (const field of Object.keys(fields)) {
     const descriptor = fields[field];
-    let { newName, values } = generateColumn(field, descriptor, rows);
-
-    if (Object.hasOwnProperty(fieldValues, newName)) {
-      if (Object.hasOwnProperty(fieldValues, `${newName}_2`)) {
-        newName = `${newName}_3`;
-      } else {
-        newName = `${newName}_2`;
-      }
-    }
+    let { newName, values } = generateColumn(
+      field,
+      descriptor,
+      rows,
+      seenFields
+    );
 
     fieldMapping[field] = newName;
     fieldValues[newName] = values;
@@ -74,7 +73,7 @@ function facts2data(facts) {
   };
 }
 
-function generateColumn(fieldName, descriptor, numRows) {
+function generateColumn(fieldName, descriptor, numRows, seenFields) {
   const seen = new Set();
 
   const chance = new Chance();
@@ -85,14 +84,15 @@ function generateColumn(fieldName, descriptor, numRows) {
   const max = descriptor.max;
 
   let name;
+  let names;
   switch (descriptor.type) {
     case "number":
       options = chance.unique(chance.floating, n, { min, max });
-      name = "GDP";
+      names = ["GDP", "Land Area", "CO2 Emission Index", "Imports", "Exports"];
       break;
     case "integer":
       options = chance.unique(chance.integer, n, { min, max });
-      name = "Population";
+      names = ["Population", "Power Rank", "Housing Index", "Livability Index"];
       break;
     case "date":
       options = chance.unique(
@@ -106,12 +106,21 @@ function generateColumn(fieldName, descriptor, numRows) {
       break;
     case "string":
       options = chance.unique(chance.country, n, { full: true });
-      name = "Country";
+      names = ["Country", "Region", "Province", "State"];
       break;
     case "boolean":
       options = chance.unique(chance.bool, n);
-      name = "Island";
+      names = ["United Nations", "NATO", "OPEG", "Democracy", "Communist"];
       break;
+  }
+
+  for (const n in names) {
+    if (seenFields.has(n)) {
+      continue;
+    } else {
+      name = n;
+      break;
+    }
   }
 
   const values = populateToN(
