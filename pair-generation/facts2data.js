@@ -57,6 +57,8 @@ function facts2data(facts) {
     fieldValues[newName] = values;
   }
 
+  console.log(fieldMapping);
+
   const data = [];
   for (let i = 0; i < rows; i += 1) {
     const row = {};
@@ -114,7 +116,7 @@ function generateColumn(fieldName, descriptor, numRows, seenFields) {
       break;
   }
 
-  for (const n in names) {
+  for (const n of names) {
     if (seenFields.has(n)) {
       continue;
     } else {
