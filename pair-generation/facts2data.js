@@ -57,8 +57,6 @@ function facts2data(facts) {
     fieldValues[newName] = values;
   }
 
-  console.log(fieldMapping);
-
   const data = [];
   for (let i = 0; i < rows; i += 1) {
     const row = {};
@@ -124,6 +122,8 @@ function generateColumn(fieldName, descriptor, numRows, seenFields) {
       break;
     }
   }
+
+  seen.add(name);
 
   const values = populateToN(
     morphToRequiredValues(options, [min, max]),
