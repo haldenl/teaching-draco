@@ -44,11 +44,11 @@ c2(${c2.subtype},${c2.name}).`;
           model: resultWitnesses[0]
         });
       }
-
-      process.send({
-        cmd: "update"
-      });
     }
+
+    process.send({
+      cmd: "update"
+    });
   });
 
   return {
