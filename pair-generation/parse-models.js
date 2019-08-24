@@ -22,7 +22,7 @@ if (cluster.isMaster) {
     }
   }
 
-  models = Array.from(seen);
+  models = Array.from(seen).map(s => JSON.parse(s));
 
   models = models.map((m, i) => {
     return {
