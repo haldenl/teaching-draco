@@ -5,6 +5,7 @@ const path = require("path");
 const draco = require("ndraco-core");
 const stringHash = require("string-hash");
 const { facts2data } = require("./facts2data");
+const deepcopy = require("deepcopy");
 const { spawnSync } = require("child_process");
 const cluster = require("cluster");
 const os = require("os");
@@ -15,14 +16,17 @@ if (cluster.isMaster) {
   let models = JSON.parse(fs.readFileSync(modelsPath));
 
   const seen = new Set();
+
+  const unique = [];
   for (const model of models) {
-    const serialized = JSON.stringify(model);
+    const serialized = JSON.stringify(model.model);
     if (!seen.has(serialized)) {
-      seen.add(JSON.stringify(model));
+      seen.add(serialized);
+      unique.push(model);
     }
   }
 
-  models = Array.from(seen).map(s => JSON.parse(s));
+  models = unique;
 
   models = models.map((m, i) => {
     return {
