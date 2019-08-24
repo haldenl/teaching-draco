@@ -22,7 +22,13 @@ c2(${c2.subtype},${c2.name}).`;
 
       const result = Draco.run(
         program,
-        { optimize: false, generateData: true, randomFreq: 1, models: 1 },
+        {
+          optimize: false,
+          generateData: true,
+          randomFreq: 1,
+          models: 1,
+          randomSeed: new Date().getTime()
+        },
         [path.resolve(__dirname, "query.lp")]
       );
 
