@@ -14,6 +14,16 @@ if (cluster.isMaster) {
   const modelsPath = path.resolve(__dirname, "out/models.json");
   let models = JSON.parse(fs.readFileSync(modelsPath));
 
+  const seen = new Set();
+  for (const model of models) {
+    const serialized = JSON.stringify(model);
+    if (!seen.has(serialized)) {
+      seen.add(JSON.stringify(model));
+    }
+  }
+
+  models = Array.from(seen);
+
   models = models.map((m, i) => {
     return {
       id: i,
