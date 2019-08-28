@@ -9,10 +9,19 @@ const deepcopy = require("deepcopy");
 const { spawnSync } = require("child_process");
 const cluster = require("cluster");
 const os = require("os");
+const yargs = require("yargs");
 const { Draco, Result, Model, Facts, Constraint } = draco;
 
+const argv = yargs.argv;
+
+if (argv.input === undefined) {
+  console.log("Provide an input directory.");
+}
+
+const input = argv.input;
+
 if (cluster.isMaster) {
-  const modelsPath = path.resolve(__dirname, "out/models.json");
+  const modelsPath = `${input}/models.json`;
   let models = JSON.parse(fs.readFileSync(modelsPath));
 
   const seen = new Set();
@@ -37,12 +46,8 @@ if (cluster.isMaster) {
 
   models.sort(() => Math.random() - 0.5);
 
-  if (!fs.existsSync(path.resolve(__dirname, "out/pairs"))) {
-    fs.mkdirSync(path.resolve(__dirname, "out/pairs"));
-  }
-
-  if (!fs.existsSync(path.resolve(__dirname, "out/png"))) {
-    fs.mkdirSync(path.resolve(__dirname, "out/png"));
+  if (!fs.existsSync(path.resolve(__dirname, `${input}/pairs`))) {
+    fs.mkdirSync(path.resolve(__dirname, `${input}/pairs`));
   }
 
   const cores = os.cpus().length;
@@ -147,18 +152,6 @@ function parseModels(models) {
       }
     }
 
-    // specPairs[`${id}`] = {
-    //   type: c1,
-    //   c2,
-    //   comparator: "<",
-    //   left: {
-    //     vlSpec: specs["v1"]
-    //   },
-    //   right: {
-    //     vlSpec: specs["v2"]
-    //   }
-    // };
-
     const concat = {
       hconcat: [specs["v1"], specs["v2"]]
     };
@@ -188,13 +181,6 @@ function parseModels(models) {
       {},
       () => {}
     );
-
-    const pngOut = path.resolve(__dirname, `out/png/${id}.png`);
-    spawnSync("sh", [
-      path.resolve(__dirname, "../node_modules/vega-lite/bin/vl2png"),
-      specOut,
-      pngOut
-    ]);
 
     process.send({
       cmd: "update"

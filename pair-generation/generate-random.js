@@ -93,6 +93,8 @@ if (cluster.isMaster) {
       {
         optimize: false,
         generateData: true,
+        generate: true,
+        generateExtraEncodings: false,
         randomFreq: 1,
         models: 1,
         randomSeed: Math.floor(Math.random() * NUM * i * 1000)
