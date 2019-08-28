@@ -70,7 +70,7 @@ if (cluster.isMaster) {
         completed += 1;
         process.stdout.clearLine();
         process.stdout.cursorTo(0);
-        process.stdout.write(`${completed} / ${constraintPairs.length}`);
+        process.stdout.write(`${completed} / ${NUM}`);
       }
     });
   }
@@ -94,6 +94,10 @@ if (cluster.isMaster) {
 
     models.push({
       model: resultWitnesses[0]
+    });
+
+    process.send({
+      cmd: "update"
     });
   }
 
