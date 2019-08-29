@@ -62,6 +62,7 @@ if (cluster.isMaster) {
     workersFinished.push(false);
     worker.send({
       slice: JSON.stringify(slice),
+      pairsDir,
       cmd: "slice"
     });
 
@@ -99,7 +100,9 @@ if (cluster.isMaster) {
       const pairFiles = JSON.parse(msg.slice);
 
       for (const pairFile of pairFiles) {
-        const pair = JSON.parse(fs.readFileSync(pairFile));
+        const pair = JSON.parse(
+          fs.readFileSync(path.resolve(msg.pairsDir, pairFile))
+        );
         const left = pair.left;
         const right = pair.right;
 
