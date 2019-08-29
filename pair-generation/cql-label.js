@@ -38,9 +38,8 @@ if (cluster.isMaster) {
   setInterval(() => {
     if (workersFinished.every(i => i)) {
       if (!writing) {
-        console.log("all done");
+        console.log("writing...");
         writing = true;
-        console.log(labeledPairs.length);
         if (!fs.existsSync(path.resolve(__dirname, argv.input))) {
           fs.mkdirSync(path.resolve(__dirname, argv.input));
         }
@@ -58,8 +57,10 @@ if (cluster.isMaster) {
           fs.writeFileSync(outputFile, "[");
         }
 
+        let o = 0;
         for (const pair of labeledPairs) {
           fs.appendFileSync(outputFile, JSON.stringify(pair));
+          console.log(`Wrote ${o} of ${labeledPairs.length}`);
         }
 
         fs.appendFileSync(outputFile, "]");
