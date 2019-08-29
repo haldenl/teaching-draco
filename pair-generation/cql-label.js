@@ -54,12 +54,16 @@ if (cluster.isMaster) {
           `${argv.input}/labeledPairs.json`
         );
 
-        fs.writeFileSync(outputFile, JSON.stringify(labeledPairs));
+        if (!fs.existsSync(outputFile)) {
+          fs.writeFileSync(outputFile, "[");
+        }
 
+        for (const pair of labeledPairs) {
+          fs.appendFileSync(outputFile, JSON.stringify(pair));
+        }
+
+        fs.appendFileSync(outputFile, "]");
         console.log("done writing.");
-        // if (!fs.existsSync(outputFile)) {
-        //   fs.writeFileSync(outputFile, "");
-        // }
 
         // stream.on("data", chunk => {
         //   fs.appendFileSync(outputFile, chunk);
