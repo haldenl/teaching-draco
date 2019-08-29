@@ -98,7 +98,6 @@ if (cluster.isMaster) {
 
       const pairFiles = JSON.parse(msg.slice);
 
-      console.log(p);
       for (const pairFile of pairFiles) {
         const pair = JSON.parse(fs.readFileSync(pairFile));
         const left = pair.left;
