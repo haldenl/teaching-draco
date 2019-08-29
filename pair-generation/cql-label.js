@@ -79,7 +79,7 @@ if (cluster.isMaster) {
       if (msg.cmd === "results") {
         const result = JSON.parse(msg.result);
 
-        labeledPairs = labeledPairs.concat(result.labeled);
+        labeledPairs = labeledPairs.concat(result);
       }
     });
 
