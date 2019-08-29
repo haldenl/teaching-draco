@@ -63,6 +63,7 @@ if (cluster.isMaster) {
           process.stdout.clearLine();
           process.stdout.cursorTo(0);
           process.stdout.write(`Wrote ${o} of ${labeledPairs.length}`);
+          o += 1;
         }
 
         fs.appendFileSync(outputFile, "]");
