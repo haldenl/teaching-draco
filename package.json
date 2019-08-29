@@ -3,9 +3,12 @@
   "main": "./build/bundle.js",
   "dependencies": {
     "chance": "^1.0.18",
+    "deepcopy": "^2.0.0",
     "faker": "^4.1.0",
     "mocker-data-generator": "^2.6.6",
     "random-words": "^1.1.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
     "run-parallel": "^1.1.9",
     "string-hash": "^1.1.3",
     "tmp": "^0.1.0",
@@ -34,8 +37,10 @@
     "format": "tslint -p . --fix && prettier --write '{src,test}/**/*.ts'",
     "test": "jest",
     "vl2png": "./node_modules/vega-lite/bin/vl2png",
-    "clean": "rm -r ./pair-generation/out",
-    "generate": "node ./pair-generation/generate-parallel.js && node ./pair-generation/parse-models.js",
+    "clean-structured": "rm -r ./pair-generation/out-structured",
+    "clean-random": "rm -r ./pair-generation/out-random",
+    "generate-structured": "node ./pair-generation/generate-parallel.js && node ./pair-generation/parse-models.js --input='./pair-generation/out-structured'",
+    "generate-random": "node ./pair-generation/generate-random.js && node ./pair-generation/parse-models.js --input='./pair-generation/out-random' && node ./pair-generation/cql-label --input='./pair-generation/out-random'",
     "compress": "--cwd ./pair-generation && tar -czvf out.tar.gz out"
   },
   "jest": {
