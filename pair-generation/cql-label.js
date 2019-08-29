@@ -109,11 +109,14 @@ if (cluster.isMaster) {
         const cqlSpecLeft = vl2cql(left.vegalite);
         const cqlSpecRight = vl2cql(right.vegalite);
 
-        const score = cql.ranking.effectiveness(cqlSpecLeft).score;
+        const leftScore = cql.ranking.effectiveness(cqlSpecLeft).score;
+        const rightScore = cql.ranking.effectiveness(cqlSpecRight).score;
 
-        console.log(score);
+        comparator =
+          leftScore < rightScore ? "<" : leftScore === rightScore ? "=" : ">";
 
-        labeledPairs.push(score);
+        pair.comparator = comparator;
+        labeledPairs.push(pair);
       }
 
       const result = JSON.stringify(labeledPairs);
