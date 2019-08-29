@@ -6,7 +6,7 @@ const os = require("os");
 const cluster = require("cluster");
 const { Draco, Result, Model, Constraint } = draco;
 
-const NUM = 100;
+const NUM = 100000;
 
 if (cluster.isMaster) {
   const cores = os.cpus().length;
