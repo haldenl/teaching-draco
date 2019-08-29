@@ -96,13 +96,12 @@ if (cluster.isMaster) {
         generateExtraEncodings: false,
         randomFreq: 1,
         models: 1,
-        randomSeed: "echo $RANDOM"
+        randomSeed: Math.floor(Math.random() * 32767)
       },
       [path.resolve(__dirname, "random.lp")]
     );
 
     if (!Result.isSat(result)) {
-      console.log(program);
       // const hardViolations = Draco.runDebug(
       //   program,
       //   {
