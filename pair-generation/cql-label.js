@@ -109,8 +109,11 @@ if (cluster.isMaster) {
         const score = cql.ranking.effectiveness(cqlSpecLeft).score;
 
         console.log(score);
-        process.exit(1);
+
+        labeledPairs.push(score);
       }
+
+      const result = JSON.stringify(labeledPairs);
 
       process.send({ cmd: "results", result }, undefined, undefined, () =>
         process.exit(0)
