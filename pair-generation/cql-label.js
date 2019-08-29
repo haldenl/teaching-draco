@@ -1,4 +1,4 @@
-const cql = require("compassql/src");
+const cql = require("~/compassql/src");
 const path = require("path");
 const fs = require("fs");
 const cluster = require("cluster");

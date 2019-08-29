@@ -1,5 +1,5 @@
-const cql = require("compassql/src");
-const spec = require("compassql/src/spec");
+const cql = require("~/compassql/src");
+const spec = require("~/compassql/src/spec");
 
 export default function vl2cql(vlSpec) {
   const data = vlSpec.data.values;
