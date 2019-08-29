@@ -80,7 +80,7 @@ if (cluster.isMaster) {
     const numDimensions = Math.floor(Math.random() * 5);
 
     let program = "";
-    for (let d = 0; d < numDimensions; d += 1) {
+    for (let d = 1; d <= numDimensions; d += 1) {
       for (let v = 1; v <= 2; v += 1) {
         program += `encoding(v${v},e${d}).`;
         program += "\n";
