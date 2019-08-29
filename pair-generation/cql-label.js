@@ -36,6 +36,7 @@ if (cluster.isMaster) {
   setInterval(() => {
     if (workersFinished.every(i => i)) {
       console.log("all done");
+      console.log(labeledPairs.length);
       if (!fs.existsSync(path.resolve(__dirname, argv.input))) {
         fs.mkdirSync(path.resolve(__dirname, argv.input));
       }
