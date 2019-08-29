@@ -1,4 +1,4 @@
-const cql = require("compassql");
+const cql = require("compassql/src");
 const path = require("path");
 const fs = require("fs");
 const cluster = require("cluster");
@@ -106,7 +106,7 @@ if (cluster.isMaster) {
         const cqlSpecLeft = vl2cql(left.vegalite);
         const cqlSpecRight = vl2cql(right.vegalite);
 
-        const score = cql.effectiveness(cqlSpecLeft).score;
+        const score = cql.ranking.effectiveness(cqlSpecLeft).score;
 
         console.log(score);
         process.exit(1);
