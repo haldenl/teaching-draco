@@ -54,7 +54,7 @@ if (cluster.isMaster) {
       }
 
       stream.on("data", chunk => {
-        fs.appendFile(outputFile, chunk);
+        fs.appendFileSync(outputFile, chunk);
       });
 
       stream.on("end", () => {
