@@ -93,7 +93,7 @@ function generateColumn(fieldName, descriptor, numRows, seenFields) {
       names = ["Population", "Power Rank", "Housing Index", "Livability Index"];
       break;
     case "date":
-      options = chance.unique(() => faker.date.toString(), n);
+      options = chance.unique(() => faker.date.past(max - min).toString(), n);
       names = ["Date", "Founded", "Target", "Last Election"];
       break;
     case "string":
