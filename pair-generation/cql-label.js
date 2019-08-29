@@ -117,6 +117,8 @@ if (cluster.isMaster) {
 
         pair.comparator = comparator;
         labeledPairs.push(pair);
+
+        process.send({ cmd: "update" });
       }
 
       const result = JSON.stringify(labeledPairs);
