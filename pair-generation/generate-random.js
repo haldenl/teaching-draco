@@ -7,7 +7,7 @@ const cluster = require("cluster");
 const { generatePairs } = require("./generate-pairs");
 const { Draco, Result, Model, Constraint } = draco;
 
-const NUM = 10000;
+const NUM = 10;
 
 if (cluster.isMaster) {
   const cores = os.cpus().length;
@@ -101,6 +101,25 @@ if (cluster.isMaster) {
       },
       [path.resolve(__dirname, "random.lp")]
     );
+
+    if (!Result.isSat(result)) {
+      const hardViolations = Draco.runDebug(
+        program,
+        {
+          optimize: false,
+          generateData: true,
+          generate: true,
+          generateExtraEncodings: false,
+          randomFreq: 1,
+          models: 1,
+          randomSeed: Math.floor(Math.random() * NUM * i * 1000)
+        },
+        [path.resolve(__dirname, "random.lp")]
+      );
+
+      console.error(hardViolations);
+      process.exit(1);
+    }
 
     const resultWitnesses = Result.toWitnesses(result);
 
