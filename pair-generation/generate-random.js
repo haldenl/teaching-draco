@@ -77,7 +77,7 @@ if (cluster.isMaster) {
   const models = [];
 
   for (let i = 0; i < process.env.n; i += 1) {
-    const numDimensions = Math.floor(Math.random() * 5);
+    const numDimensions = Math.floor(Math.random() * 4) + 1;
 
     let program = "";
     for (let d = 1; d <= numDimensions; d += 1) {
@@ -102,21 +102,21 @@ if (cluster.isMaster) {
     );
 
     if (!Result.isSat(result)) {
-      const hardViolations = Draco.runDebug(
-        program,
-        {
-          optimize: false,
-          generateData: true,
-          generate: true,
-          generateExtraEncodings: false,
-          randomFreq: 1,
-          models: 1,
-          randomSeed: Math.floor(Math.random() * NUM * i * 1000)
-        },
-        [path.resolve(__dirname, "random.lp")]
-      );
+      console.log(program);
+      // const hardViolations = Draco.runDebug(
+      //   program,
+      //   {
+      //     optimize: false,
+      //     generateData: true,
+      //     generate: true,
+      //     generateExtraEncodings: false,
+      //     randomFreq: 1,
+      //     models: 1,
+      //     randomSeed: Math.floor(Math.random() * NUM * i * 1000)
+      //   },
+      //   [path.resolve(__dirname, "random.lp")]
+      // );
 
-      console.error(hardViolations);
       process.exit(1);
     }
 
