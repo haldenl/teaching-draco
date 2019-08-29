@@ -8,5 +8,6 @@ module.exports = function vl2cql(vlSpec) {
 
   const query = cql.model.SpecQueryModel.build(specQ, schema, {});
 
+  console.log(query);
   return query;
 };

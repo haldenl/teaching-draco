@@ -94,7 +94,7 @@ if (cluster.isMaster) {
 } else {
   process.on("message", msg => {
     if (msg.cmd === "slice") {
-      const result = [];
+      const labeledPairs = [];
 
       const pairFiles = JSON.parse(msg.slice);
 
