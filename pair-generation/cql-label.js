@@ -5,6 +5,7 @@ const cluster = require("cluster");
 const yargs = require("yargs");
 const os = require("os");
 const vl2cql = require("./vl2cql");
+const json = require("big-json");
 
 if (cluster.isMaster) {
   const argv = yargs.argv;
@@ -35,16 +36,28 @@ if (cluster.isMaster) {
   setInterval(() => {
     if (workersFinished.every(i => i)) {
       console.log("all done");
-      if (!fs.existsSync(path.resolve(__dirname, "out"))) {
-        fs.mkdirSync(path.resolve(__dirname, "out"));
+      if (!fs.existsSync(path.resolve(__dirname, argv.input))) {
+        fs.mkdirSync(path.resolve(__dirname, argv.input));
       }
 
-      fs.writeFileSync(
-        path.join(__dirname, "out/labeledPairs.json"),
-        JSON.stringify(labeledPairs, null, 2)
+      const stream = json.createStringifyStream({
+        body: labeledPairs
+      });
+
+      const outputFile = path.resolve(
+        __dirname,
+        `${argv.input}/labeledPairs.json`
       );
 
-      process.exit(0);
+      if (!fs.existsSync(outputFile)) {
+        fs.writeFileSync(outputFile, "");
+      }
+
+      stream.on("data", chunk => [fs.appendFile(outputFile, chunk)]);
+
+      stream.on("end", () => {
+        process.exit(0);
+      });
     }
   }, 1000);
 
