@@ -53,9 +53,9 @@ if (cluster.isMaster) {
   for (let i = 0; i < cores; i += 1) {
     let slice;
     if (i < cores - 1) {
-      slice = labeledPairs.slice(i * step, (i + 1) * step);
+      slice = pairFiles.slice(i * step, (i + 1) * step);
     } else {
-      slice = labeledPairs.slice(i * step);
+      slice = pairFiles.slice(i * step);
     }
 
     const worker = cluster.fork();
@@ -98,6 +98,7 @@ if (cluster.isMaster) {
 
       const pairFiles = JSON.parse(msg.slice);
 
+      console.log(p);
       for (const pairFile of pairFiles) {
         const pair = JSON.parse(fs.readFileSync(pairFile));
         const left = pair.left;
