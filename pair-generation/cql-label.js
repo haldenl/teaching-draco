@@ -88,7 +88,7 @@ if (cluster.isMaster) {
         completed += 1;
         process.stdout.clearLine();
         process.stdout.cursorTo(0);
-        process.stdout.write(`${completed} / ${labeledPairs.length}`);
+        process.stdout.write(`${completed} / ${pairFiles.length}`);
       }
     });
   }
