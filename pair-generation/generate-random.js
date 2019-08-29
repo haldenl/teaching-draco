@@ -96,7 +96,7 @@ if (cluster.isMaster) {
         generateExtraEncodings: false,
         randomFreq: 1,
         models: 1,
-        randomSeed: 1
+        randomSeed: "$RANDOM"
       },
       [path.resolve(__dirname, "random.lp")]
     );
