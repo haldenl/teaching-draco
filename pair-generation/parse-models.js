@@ -175,7 +175,7 @@ function parseModels(models) {
       comparator: null
     };
 
-    const specOut = path.resolve(__dirname, `${input}/pairs/${id}.json`);
+    const specOut = path.resolve(__dirname, `${input}ls/pairs/${id}.json`);
     fs.writeFileSync(
       specOut,
       JSON.stringify(pairToWrite, null, 2),
