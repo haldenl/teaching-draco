@@ -16,6 +16,7 @@ const argv = yargs.argv;
 
 if (argv.input === undefined) {
   console.log("Provide an input directory.");
+  exit(1);
 }
 
 const input = argv.input;
