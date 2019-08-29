@@ -4,10 +4,9 @@ const fs = require("fs");
 const path = require("path");
 const os = require("os");
 const cluster = require("cluster");
-const { generatePairs } = require("./generate-pairs");
 const { Draco, Result, Model, Constraint } = draco;
 
-const NUM = 10;
+const NUM = 100;
 
 if (cluster.isMaster) {
   const cores = os.cpus().length;
