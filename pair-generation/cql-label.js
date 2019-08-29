@@ -59,7 +59,7 @@ if (cluster.isMaster) {
 
         let o = 0;
         for (const pair of labeledPairs) {
-          fs.appendFileSync(outputFile, JSON.stringify(pair));
+          fs.appendFileSync(outputFile, JSON.stringify(pair) + ",");
           process.stdout.clearLine();
           process.stdout.cursorTo(0);
           process.stdout.write(`Wrote ${o} of ${labeledPairs.length}`);
