@@ -54,7 +54,7 @@ if (cluster.isMaster) {
           `${argv.input}/labeledPairs.json`
         );
 
-        fs.writeFileSync(outputFile, stringify(labeledPairs));
+        fs.writeFileSync(outputFile, JSON.stringify(labeledPairs));
 
         console.log("done writing.");
         // if (!fs.existsSync(outputFile)) {
