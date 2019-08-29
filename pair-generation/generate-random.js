@@ -77,8 +77,10 @@ if (cluster.isMaster) {
   const models = [];
 
   for (let i = 0; i < process.env.n; i += 1) {
-    const numDimensions = Math.floor(Math.random() * 4);
-
+    const numDimensions = Math.floor(Math.random() * 5);
+    if (numDimensions < 3) {
+      console.log("less than 3!");
+    }
     let program = "";
     for (let d = 0; d < numDimensions; d += 1) {
       for (let v = 1; v <= 2; v += 1) {
