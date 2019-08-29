@@ -33,34 +33,38 @@ if (cluster.isMaster) {
     }
   });
 
+  let writing = false;
   setInterval(() => {
     if (workersFinished.every(i => i)) {
-      console.log("all done");
-      console.log(labeledPairs.length);
-      if (!fs.existsSync(path.resolve(__dirname, argv.input))) {
-        fs.mkdirSync(path.resolve(__dirname, argv.input));
+      if (!writing) {
+        console.log("all done");
+        writing = true;
+        console.log(labeledPairs.length);
+        if (!fs.existsSync(path.resolve(__dirname, argv.input))) {
+          fs.mkdirSync(path.resolve(__dirname, argv.input));
+        }
+
+        const stream = json.createStringifyStream({
+          body: labeledPairs
+        });
+
+        const outputFile = path.resolve(
+          __dirname,
+          `${argv.input}/labeledPairs.json`
+        );
+
+        if (!fs.existsSync(outputFile)) {
+          fs.writeFileSync(outputFile, "");
+        }
+
+        stream.on("data", chunk => {
+          fs.appendFileSync(outputFile, chunk);
+        });
+
+        stream.on("end", () => {
+          process.exit(0);
+        });
       }
-
-      const stream = json.createStringifyStream({
-        body: labeledPairs
-      });
-
-      const outputFile = path.resolve(
-        __dirname,
-        `${argv.input}/labeledPairs.json`
-      );
-
-      if (!fs.existsSync(outputFile)) {
-        fs.writeFileSync(outputFile, "");
-      }
-
-      stream.on("data", chunk => {
-        fs.appendFileSync(outputFile, chunk);
-      });
-
-      stream.on("end", () => {
-        process.exit(0);
-      });
     }
   }, 1000);
 
