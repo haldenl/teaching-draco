@@ -6,6 +6,7 @@ const yargs = require("yargs");
 const os = require("os");
 const vl2cql = require("./vl2cql");
 const json = require("big-json");
+const stringify = require("fast-json-stringify");
 
 if (cluster.isMaster) {
   const argv = yargs.argv;
@@ -44,26 +45,30 @@ if (cluster.isMaster) {
           fs.mkdirSync(path.resolve(__dirname, argv.input));
         }
 
-        const stream = json.createStringifyStream({
-          body: labeledPairs
-        });
+        // const stream = json.createStringifyStream({
+        //   body: labeledPairs
+        // });
 
         const outputFile = path.resolve(
           __dirname,
           `${argv.input}/labeledPairs.json`
         );
 
-        if (!fs.existsSync(outputFile)) {
-          fs.writeFileSync(outputFile, "");
-        }
+        fs.writeFileSync(outputFile, stringify(labeledPairs));
 
-        stream.on("data", chunk => {
-          fs.appendFileSync(outputFile, chunk);
-        });
+        console.log("done writing.");
+        // if (!fs.existsSync(outputFile)) {
+        //   fs.writeFileSync(outputFile, "");
+        // }
 
-        stream.on("end", () => {
-          process.exit(0);
-        });
+        // stream.on("data", chunk => {
+        //   fs.appendFileSync(outputFile, chunk);
+        // });
+
+        // stream.on("end", () => {
+        //   process.exit(0);
+        // });
+        process.exit(0);
       }
     }
   }, 1000);
