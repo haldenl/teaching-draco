@@ -13,7 +13,7 @@ if (cluster.isMaster) {
 
   if (argv.input === undefined) {
     console.log("Provide an input directory.");
-    exit(1);
+    process.exit(1);
   }
 
   const pairsDir = `${argv.input}/pairs`;
@@ -53,21 +53,25 @@ if (cluster.isMaster) {
           `${argv.input}/labeledPairs.json`
         );
 
-        if (!fs.existsSync(outputFile)) {
-          fs.writeFileSync(outputFile, "[");
-        }
+        fs.writeFileSync(outputFile, JSON.stringify(labeledPairs));
 
-        let o = 0;
-        for (const pair of labeledPairs) {
-          fs.appendFileSync(outputFile, JSON.stringify(pair) + ",");
-          process.stdout.clearLine();
-          process.stdout.cursorTo(0);
-          process.stdout.write(`Wrote ${o} of ${labeledPairs.length}`);
-          o += 1;
-        }
+        console.log("done");
 
-        fs.appendFileSync(outputFile, "]");
-        console.log("done writing.");
+        // if (!fs.existsSync(outputFile)) {
+        //   fs.writeFileSync(outputFile, "[");
+        // }
+
+        // let o = 0;
+        // for (const pair of labeledPairs) {
+        //   fs.appendFileSync(outputFile, JSON.stringify(pair) + ",");
+        //   process.stdout.clearLine();
+        //   process.stdout.cursorTo(0);
+        //   process.stdout.write(`Wrote ${o} of ${labeledPairs.length}`);
+        //   o += 1;
+        // }
+
+        // fs.appendFileSync(outputFile, "]");
+        // console.log("done writing.");
 
         // stream.on("data", chunk => {
         //   fs.appendFileSync(outputFile, chunk);
@@ -147,6 +151,9 @@ if (cluster.isMaster) {
 
         comparator =
           leftScore < rightScore ? "<" : leftScore === rightScore ? "=" : ">";
+
+        delete pair.left.vegalite.data;
+        delete pair.right.vegalite.data;
 
         pair.comparator = comparator;
         labeledPairs.push(pair);
