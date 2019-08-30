@@ -27,7 +27,7 @@ c2(${c2.subtype},${c2.name}).`;
           generateData: true,
           randomFreq: 1,
           models: 1,
-          randomSeed: i
+          randomSeed: Math.floor(Math.random() * 32767)
         },
         [path.resolve(__dirname, "query.lp")]
       );
