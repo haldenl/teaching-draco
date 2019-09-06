@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const { Draco, Result, Model, Constraint } = draco;
 
-const NUM_DUPLICATES = 4;
+const NUM_DUPLICATES = 10;
 
 const LIMIT_TRIES = 10;
 
