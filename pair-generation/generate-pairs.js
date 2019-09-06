@@ -20,49 +20,69 @@ function generatePairs(constraintPairs) {
       c2: Constraint.getUniqueName(c2)
     };
 
-    for (let i = 0; i < NUM_DUPLICATES; i += 1) {
-      for (let j = 0; j < LIMIT_TRIES; j += 1) {
-        let program = `c1(${c1.subtype},${c1.name}).
+    let program = `c1(${c1.subtype},${c1.name}).
 c2(${c2.subtype},${c2.name}).
-        `;
+`;
 
-        const numDimensions = Math.floor(Math.random() * 4) + 1;
+    const result = Draco.run(
+      program,
+      {
+        optimize: false,
+        generateData: true,
+        randomFreq: 1,
+        models: 1,
+        randomSeed: Math.floor(Math.random() * 32767)
+      },
+      [path.resolve(__dirname, "query.lp")]
+    );
 
-        for (let d = 1; d <= numDimensions; d += 1) {
-          for (let v = 1; v <= 2; v += 1) {
-            program += `encoding(v${v},e${d}).`;
-            program += "\n";
+    if (Result.isSat(result)) {
+      success = true;
+      for (let i = 0; i < NUM_DUPLICATES; i += 1) {
+        for (let j = 0; j < LIMIT_TRIES; j += 1) {
+          let program = `c1(${c1.subtype},${c1.name}).
+c2(${c2.subtype},${c2.name}).
+`;
+
+          const numDimensions = Math.floor(Math.random() * 4) + 1;
+
+          for (let d = 1; d <= numDimensions; d += 1) {
+            for (let v = 1; v <= 2; v += 1) {
+              program += `encoding(v${v},e${d}).`;
+              program += "\n";
+            }
+          }
+
+          const result = Draco.run(
+            program,
+            {
+              optimize: false,
+              generateData: true,
+              generate: true,
+              generateExtraEncodings: false,
+              randomFreq: 1,
+              models: 1,
+              randomSeed: Math.floor(Math.random() * 32767)
+            },
+            [path.resolve(__dirname, "query.lp")]
+          );
+
+          if (!Result.isSat(result)) {
+            continue;
+          } else {
+            const resultWitnesses = Result.toWitnesses(result);
+
+            models.push({
+              ...compObj,
+              model: resultWitnesses[0]
+            });
+
+            break;
           }
         }
-
-        const result = Draco.run(
-          program,
-          {
-            optimize: false,
-            generateData: true,
-            generate: true,
-            generateExtraEncodings: false,
-            randomFreq: 1,
-            models: 1,
-            randomSeed: Math.floor(Math.random() * 32767)
-          },
-          [path.resolve(__dirname, "query.lp")]
-        );
-
-        if (!Result.isSat(result)) {
-          continue;
-        } else {
-          const resultWitnesses = Result.toWitnesses(result);
-
-          models.push({
-            ...compObj,
-            model: resultWitnesses[0]
-          });
-
-          success = true;
-          break;
-        }
       }
+    } else {
+      success = false;
     }
 
     info.push({
