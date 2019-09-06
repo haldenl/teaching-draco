@@ -20,7 +20,7 @@ view(v2).
 :- not field(v1,_,F), field(v2,_,F).
 
 % don't repeat fields (for small study)
-:- field(V,E1,F), field(V,E2,F), E1 != E2.
+% :- field(V,E1,F), field(V,E2,F), E1 != E2.
 
 % compassql constraints
 :- field(v1,_,F), not field(v2,_,F).

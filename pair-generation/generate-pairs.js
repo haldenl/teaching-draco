@@ -40,6 +40,8 @@ c2(${c2.subtype},${c2.name}).
           {
             optimize: false,
             generateData: true,
+            generate: true,
+            generateExtraEncodings: false,
             randomFreq: 1,
             models: 1,
             randomSeed: Math.floor(Math.random() * 32767)
