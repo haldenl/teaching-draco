@@ -6,6 +6,14 @@ const os = require("os");
 const cluster = require("cluster");
 const { generatePairs } = require("./generate-pairs");
 const { Draco, Result, Model, Constraint } = draco;
+const yargs = require("yargs");
+
+const argv = yargs.argv;
+
+if (argv.output === undefined) {
+  console.log("provide an output directory, --output");
+  process.exit(1);
+}
 
 function print(obj) {
   console.dir(obj, { depth: null, colors: true });
@@ -47,17 +55,17 @@ if (cluster.isMaster) {
   setInterval(() => {
     if (workersFinished.every(i => i)) {
       console.log("all done");
-      if (!fs.existsSync(path.resolve(__dirname, "out"))) {
-        fs.mkdirSync(path.resolve(__dirname, "out"));
+      if (!fs.existsSync(argv.output)) {
+        fs.mkdirSync(argv.output);
       }
 
       fs.writeFileSync(
-        path.join(__dirname, "out/models.json"),
+        `${argv.output}/models.json`,
         JSON.stringify(models, null, 2)
       );
 
       fs.writeFileSync(
-        path.join(__dirname, "out/info.json"),
+        `${argv.output}/info.json`,
         JSON.stringify(info, null, 2)
       );
 
