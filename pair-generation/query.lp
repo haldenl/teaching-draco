@@ -48,7 +48,7 @@ view(v2).
 % :- fieldtype(F1,T1), fieldtype(F2,T2), F1 < F2, T1 > T2.
 % :- field(V,E1,F1), field(V,E2,F2), E1 < E2, F1 > F2.
 
-% #minimize { 1@1,TYPE1,TYPE2,NAME1,NAME2,X1,X2: soft(TYPE1,NAME1,v1,X1), soft(TYPE2,NAME2,v2,X2), TYPE1 != TYPE2, NAME1 != NAME2 }.
+#minimize { 1@1,TYPE1,TYPE2,NAME1,NAME2,X1,X2: soft(TYPE1,NAME1,v1,X1), soft(TYPE2,NAME2,v2,X2), TYPE1 != TYPE2, NAME1 != NAME2 }.
 % #minimize { W@2,TYPE,NAME,VIEW: soft(TYPE,NAME,VIEW,X), soft_weight(TYPE,NAME,W) }.
 % #minimize { 1@2,PROP: spec(PROP,V1,X), spec(PROP,V2,Y), V1 != V2, X < Y }.
 % #minimize { 1@4,F: field_id(F) }.
