@@ -4,24 +4,25 @@ const fs = require("fs");
 const path = require("path");
 const { Draco, Result, Model, Constraint } = draco;
 
+const RANDOM_MAX = 32767;
+
 const NUM_DUPLICATES = 10;
 
 const LIMIT_TRIES = 10;
 
-function generatePairs(constraintPairs) {
+function generatePairs(softConstraints) {
   const models = [];
   const info = [];
 
-  constraintPairs.forEach(([c1, c2], i) => {
+  softConstraints.forEach(c, i) => {
     let success = false;
 
-    const compObj = {
-      c1: Constraint.getUniqueName(c1),
-      c2: Constraint.getUniqueName(c2)
-    };
+    // const compObj = {
+    //   c1: Constraint.getUniqueName(c1),
+    //   c2: Constraint.getUniqueName(c2)
+    // };
 
-    let program = `c1(${c1.subtype},${c1.name}).
-c2(${c2.subtype},${c2.name}).
+    let program = `c(${c.subtype},${c.name}).
 `;
 
     const result = Draco.run(
@@ -31,7 +32,7 @@ c2(${c2.subtype},${c2.name}).
         generateData: true,
         randomFreq: 1,
         models: 1,
-        randomSeed: Math.floor(Math.random() * 32767)
+        randomSeed: Math.floor(Math.random() * RANDOM_MAX)
       },
       [path.resolve(__dirname, "query.lp")]
     );
@@ -40,8 +41,7 @@ c2(${c2.subtype},${c2.name}).
       success = true;
       for (let i = 0; i < NUM_DUPLICATES; i += 1) {
         for (let j = 0; j < LIMIT_TRIES; j += 1) {
-          let program = `c1(${c1.subtype},${c1.name}).
-c2(${c2.subtype},${c2.name}).
+          let program = `c(${c.subtype},${c.name}).
 `;
 
           const numDimensions = Math.floor(Math.random() * 4) + 1;
@@ -73,7 +73,7 @@ c2(${c2.subtype},${c2.name}).
             const resultWitnesses = Result.toWitnesses(result);
 
             models.push({
-              ...compObj,
+              constraint: c,
               model: resultWitnesses[0]
             });
 

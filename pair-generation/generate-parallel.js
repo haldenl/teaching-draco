@@ -23,21 +23,21 @@ if (cluster.isMaster) {
   const softConstraints = Draco.getSoftConstraints();
 
   let constraintPairs = [];
-  for (const [key1, c1] of Object.entries(softConstraints)) {
-    for (const [key2, c2] of Object.entries(softConstraints)) {
-      // dont want them to be identical and also enforce order to reduce space by 2.
-      if (key1 < key2) {
-        constraintPairs.push([c1, c2]);
-      }
-    }
-  }
+  // for (const [key1, c1] of Object.entries(softConstraints)) {
+  //   for (const [key2, c2] of Object.entries(softConstraints)) {
+  //     // dont want them to be identical and also enforce order to reduce space by 2.
+  //     if (key1 < key2) {
+  //       constraintPairs.push([c1, c2]);
+  //     }
+  //   }
+  // }
 
-  constraintPairs.sort(() => Math.random() - 0.5);
+  softConstraints.sort(() => Math.random() - 0.5);
 
   const cores = os.cpus().length;
   // const cores = 1;
 
-  const step = Math.floor(constraintPairs.length / cores);
+  const step = Math.floor(softConstraints.length / cores);
 
   let models = [];
   let info = [];
@@ -78,9 +78,9 @@ if (cluster.isMaster) {
   for (let i = 0; i < cores; i += 1) {
     let slice;
     if (i < cores - 1) {
-      slice = constraintPairs.slice(i * step, (i + 1) * step);
+      slice = softConstraints.slice(i * step, (i + 1) * step);
     } else {
-      slice = constraintPairs.slice(i * step);
+      slice = softConstraints.slice(i * step);
     }
 
     const worker = cluster.fork();
@@ -113,16 +113,16 @@ if (cluster.isMaster) {
         completed += 1;
         process.stdout.clearLine();
         process.stdout.cursorTo(0);
-        process.stdout.write(`${completed} / ${constraintPairs.length}`);
+        process.stdout.write(`${completed} / ${softConstraints.length}`);
       }
     });
   }
 } else {
   process.on("message", msg => {
     if (msg.cmd === "slice") {
-      const constraintPairs = JSON.parse(msg.slice);
+      const softConstraints = JSON.parse(msg.slice);
 
-      const result = JSON.stringify(generatePairs(constraintPairs));
+      const result = JSON.stringify(generatePairs(softConstraints));
 
       process.send({ cmd: "results", result }, undefined, undefined, () =>
         process.exit(0)

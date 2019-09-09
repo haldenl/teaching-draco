@@ -5,7 +5,7 @@ const random = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "out-random/coverage.json"))
 );
 const structured = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, "out/labeledPairsMinCoverage.json"))
+  fs.readFileSync(path.resolve(__dirname, "out-structured-choose-dim-big/coverage.json"))
 );
 
 const result = [];
@@ -31,9 +31,9 @@ for (let i = 0; i < random.length; i += 1) {
 }
 
 for (let i = 0; i < structured.length; i += 1) {
-  const name = random[i].name;
-  const value = random[i].value;
-  const structuredPerc = random[i].count;
+  const name = structured[i].name;
+  const value = structured[i].value;
+  const structuredPerc = structured[i].count;
 
   let randomPerc = 0;
   for (const rec of random) {
