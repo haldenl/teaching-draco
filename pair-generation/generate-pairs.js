@@ -14,7 +14,7 @@ function generatePairs(softConstraints) {
   const models = [];
   const info = [];
 
-  softConstraints.forEach(c, i) => {
+  softConstraints.forEach((c, i) => {
     let success = false;
 
     // const compObj = {
