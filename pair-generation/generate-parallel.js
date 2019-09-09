@@ -20,7 +20,7 @@ function print(obj) {
 }
 
 if (cluster.isMaster) {
-  const softConstraints = Draco.getSoftConstraints();
+  const softConstraints = Object.values(Draco.getSoftConstraints());
 
   let constraintPairs = [];
   // for (const [key1, c1] of Object.entries(softConstraints)) {
