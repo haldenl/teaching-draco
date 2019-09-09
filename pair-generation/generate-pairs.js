@@ -86,7 +86,7 @@ function generatePairs(softConstraints) {
     }
 
     info.push({
-      ...compObj,
+      constraint: c,
       info: success ? "SAT" : "UNSAT"
     });
 
