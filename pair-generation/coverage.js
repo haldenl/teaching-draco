@@ -43,7 +43,7 @@ function getSoftConstraintsFromFacts(facts) {
 
 let i = 0;
 console.log("parsing...");
-for (const pair of pairs) {
+for (const pair of pairs.slice(0, 10000)) {
   i += 1;
   process.stdout.clearLine();
   process.stdout.cursorTo(0);
