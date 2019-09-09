@@ -2,3 +2,5 @@
 **/build
 **/out
 **/out.tar.gz
+out*
+test-splits

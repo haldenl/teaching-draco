@@ -7,6 +7,7 @@
     "deepcopy": "^2.0.0",
     "faker": "^4.1.0",
     "fast-json-stringify": "^1.15.4",
+    "lodash": "^4.17.15",
     "mocker-data-generator": "^2.6.6",
     "random-words": "^1.1.0",
     "request": "^2.88.0",

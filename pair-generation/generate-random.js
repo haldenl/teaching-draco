@@ -5,6 +5,19 @@ const path = require("path");
 const os = require("os");
 const cluster = require("cluster");
 const { Draco, Result, Model, Constraint } = draco;
+const yargs = require("yargs");
+
+const argv = yargs.argv;
+
+if (argv.output === undefined) {
+  console.log("Please provide an output directory.");
+  process.exit(1);
+}
+
+if (argv.queryfile === undefined) {
+  console.log("Please provide a query file.");
+  process.exit(1);
+}
 
 const NUM = 100000;
 
@@ -28,12 +41,12 @@ if (cluster.isMaster) {
   setInterval(() => {
     if (workersFinished.every(i => i)) {
       console.log("all done");
-      if (!fs.existsSync(path.resolve(__dirname, "out-random"))) {
-        fs.mkdirSync(path.resolve(__dirname, "out-random"));
+      if (!fs.existsSync(argv.output)) {
+        fs.mkdirSync(argv.output);
       }
 
       fs.writeFileSync(
-        path.join(__dirname, "out-random/models.json"),
+        path.join(__dirname, `${argv.output}/models.json`),
         JSON.stringify(models, null, 2)
       );
 
@@ -98,7 +111,7 @@ if (cluster.isMaster) {
         models: 1,
         randomSeed: Math.floor(Math.random() * 32767)
       },
-      [path.resolve(__dirname, "random.lp")]
+      [argv.queryfile]
     );
 
     if (!Result.isSat(result)) {
