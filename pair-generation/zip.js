@@ -5,7 +5,7 @@ const random = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "out-random/coverage.json"))
 );
 const structured = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, "out-structured-choose-dim-big/coverage.json"))
+  fs.readFileSync(path.resolve(__dirname, "out-a-not-a/coverage.json"))
 );
 
 const result = [];

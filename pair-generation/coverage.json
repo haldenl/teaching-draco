@@ -3,211 +3,211 @@
     "name": "aggregate-count",
     "value": 0,
     "random": 0.6844,
-    "structured": 0.5773
+    "structured": 0.6721082089552238
   },
   {
     "name": "aggregate-count",
     "value": 1,
     "random": 0.30535,
-    "structured": 0.41245
+    "structured": 0.3125
   },
   {
     "name": "aggregate-count",
     "value": 3,
     "random": 0.01025,
-    "structured": 0.01015
+    "structured": 0.014458955223880597
   },
   {
     "name": "aggregate-sum",
     "value": 0,
     "random": 0.9964,
-    "structured": 0.7914
+    "structured": 0.7910447761194029
   },
   {
     "name": "aggregate-sum",
     "value": 1,
     "random": 0.00225,
-    "structured": 0.16295
+    "structured": 0.15671641791044777
   },
   {
     "name": "aggregate-sum",
     "value": 2,
     "random": 0.0013,
-    "structured": 0.0369
+    "structured": 0.036380597014925374
   },
   {
     "name": "aggregate-sum",
     "value": 3,
     "random": 0.00005,
-    "structured": 0.00845
+    "structured": 0.01585820895522388
   },
   {
     "name": "aggregate-mean",
     "value": 0,
     "random": 0.8806,
-    "structured": 0.9438
+    "structured": 0.9291044776119403
   },
   {
     "name": "aggregate-mean",
     "value": 1,
     "random": 0.0912,
-    "structured": 0.04175
+    "structured": 0.0457089552238806
   },
   {
     "name": "aggregate-mean",
     "value": 2,
     "random": 0.02475,
-    "structured": 0.0115
+    "structured": 0.016791044776119403
   },
   {
     "name": "aggregate-mean",
     "value": 3,
     "random": 0.00315,
-    "structured": 0.0029
+    "structured": 0.00792910447761194
   },
   {
     "name": "aggregate-mean",
     "value": 4,
     "random": 0.0003,
-    "structured": 0.00005
+    "structured": 0.0004664179104477612
   },
   {
     "name": "aggregate-median",
     "value": 0,
     "random": 0.8501,
-    "structured": 0.7337
+    "structured": 0.7444029850746269
   },
   {
     "name": "aggregate-median",
     "value": 1,
     "random": 0.0822,
-    "structured": 0.1783
+    "structured": 0.15438432835820895
   },
   {
     "name": "aggregate-median",
     "value": 2,
     "random": 0.04635,
-    "structured": 0.0649
+    "structured": 0.06576492537313433
   },
   {
     "name": "aggregate-median",
     "value": 3,
     "random": 0.01805,
-    "structured": 0.02235
+    "structured": 0.033582089552238806
   },
   {
     "name": "aggregate-median",
     "value": 4,
     "random": 0.0033,
-    "structured": 0.00075
+    "structured": 0.0018656716417910447
   },
   {
     "name": "aggregate-min",
     "value": 0,
     "random": 0.9552,
-    "structured": 0.7836
+    "structured": 0.8404850746268657
   },
   {
     "name": "aggregate-min",
     "value": 1,
     "random": 0.02885,
-    "structured": 0.15325
+    "structured": 0.09748134328358209
   },
   {
     "name": "aggregate-min",
     "value": 2,
     "random": 0.0133,
-    "structured": 0.04635
+    "structured": 0.03917910447761194
   },
   {
     "name": "aggregate-min",
     "value": 3,
     "random": 0.00245,
-    "structured": 0.0158
+    "structured": 0.022388059701492536
   },
   {
     "name": "aggregate-min",
     "value": 4,
     "random": 0.0002,
-    "structured": 0.001
+    "structured": 0.0004664179104477612
   },
   {
     "name": "aggregate-max",
     "value": 0,
     "random": 0.9996,
-    "structured": 0.8875
+    "structured": 0.8936567164179104
   },
   {
     "name": "aggregate-max",
     "value": 1,
     "random": 0.0002,
-    "structured": 0.07705
+    "structured": 0.07276119402985075
   },
   {
     "name": "aggregate-max",
     "value": 2,
     "random": 0.00015,
-    "structured": 0.02685
+    "structured": 0.025186567164179104
   },
   {
     "name": "aggregate-max",
     "value": 3,
     "random": 0.00005,
-    "structured": 0.0081
+    "structured": 0.008395522388059701
   },
   {
     "name": "aggregate-stdev",
     "value": 0,
     "random": 1,
-    "structured": 0.9486
+    "structured": 0.9496268656716418
   },
   {
     "name": "chart-only_x_over_only_y",
     "value": 0,
     "random": 0.95505,
-    "structured": 0.9135
+    "structured": 0.9146455223880597
   },
   {
     "name": "chart-only_x_over_only_y",
     "value": 1,
     "random": 0.04495,
-    "structured": 0.0865
+    "structured": 0.0853544776119403
   },
   {
     "name": "chart-binned_one_dimensional",
     "value": 0,
     "random": 0.9786,
-    "structured": 0.9991
+    "structured": 0.9673507462686567
   },
   {
     "name": "chart-binned_one_dimensional",
     "value": 1,
     "random": 0.0214,
-    "structured": 0.0009
+    "structured": 0.03264925373134328
   },
   {
     "name": "chart-orientation_horizontal_binned",
     "value": 0,
     "random": 0.8581,
-    "structured": 0.833
+    "structured": 0.9151119402985075
   },
   {
     "name": "chart-orientation_horizontal_binned",
     "value": 1,
     "random": 0.1419,
-    "structured": 0.167
+    "structured": 0.08488805970149253
   },
   {
     "name": "chart-one_dim_raw_continuous_tick_over_rest",
     "value": 0,
     "random": 0.9588,
-    "structured": 0.99505
+    "structured": 0.9738805970149254
   },
   {
     "name": "chart-one_dim_raw_continuous_tick_over_rest",
     "value": 1,
     "random": 0.0412,
-    "structured": 0.00495
+    "structured": 0.026119402985074626
   },
   {
     "name": "datatype-string_quantitative",
@@ -219,61 +219,61 @@
     "name": "datatype-string_ordinal",
     "value": 0,
     "random": 0.754,
-    "structured": 0.8631
+    "structured": 0.8694029850746269
   },
   {
     "name": "datatype-string_ordinal",
     "value": 1,
     "random": 0.1393,
-    "structured": 0.0935
+    "structured": 0.08022388059701492
   },
   {
     "name": "datatype-string_ordinal",
     "value": 2,
     "random": 0.0665,
-    "structured": 0.03145
+    "structured": 0.032182835820895525
   },
   {
     "name": "datatype-string_ordinal",
     "value": 3,
     "random": 0.03345,
-    "structured": 0.0115
+    "structured": 0.017257462686567165
   },
   {
     "name": "datatype-string_ordinal",
     "value": 4,
     "random": 0.00675,
-    "structured": 0.00045
+    "structured": 0.0009328358208955224
   },
   {
     "name": "datatype-string_nominal",
     "value": 0,
     "random": 0.8764,
-    "structured": 0.8588
+    "structured": 0.9160447761194029
   },
   {
     "name": "datatype-string_nominal",
     "value": 1,
     "random": 0.0734,
-    "structured": 0.11145
+    "structured": 0.05783582089552239
   },
   {
     "name": "datatype-string_nominal",
     "value": 2,
     "random": 0.0362,
-    "structured": 0.0241
+    "structured": 0.022388059701492536
   },
   {
     "name": "datatype-string_nominal",
     "value": 3,
     "random": 0.0135,
-    "structured": 0.00555
+    "structured": 0.0037313432835820895
   },
   {
     "name": "datatype-string_nominal",
     "value": 4,
     "random": 0.0005,
-    "structured": 0.0001
+    "structured": 0
   },
   {
     "name": "datatype-string_temporal",
@@ -285,91 +285,91 @@
     "name": "datatype-number_quantitative",
     "value": 0,
     "random": 0.7662,
-    "structured": 0.7408
+    "structured": 0.792910447761194
   },
   {
     "name": "datatype-number_quantitative",
     "value": 1,
     "random": 0.1207,
-    "structured": 0.16965
+    "structured": 0.14039179104477612
   },
   {
     "name": "datatype-number_quantitative",
     "value": 2,
     "random": 0.07155,
-    "structured": 0.0668
+    "structured": 0.0457089552238806
   },
   {
     "name": "datatype-number_quantitative",
     "value": 3,
     "random": 0.0328,
-    "structured": 0.0206
+    "structured": 0.02005597014925373
   },
   {
     "name": "datatype-number_quantitative",
     "value": 4,
     "random": 0.00875,
-    "structured": 0.00215
+    "structured": 0.0009328358208955224
   },
   {
     "name": "datatype-number_ordinal",
     "value": 0,
     "random": 0.9019,
-    "structured": 0.901
+    "structured": 0.9123134328358209
   },
   {
     "name": "datatype-number_ordinal",
     "value": 1,
     "random": 0.0636,
-    "structured": 0.0695
+    "structured": 0.049906716417910446
   },
   {
     "name": "datatype-number_ordinal",
     "value": 2,
     "random": 0.02695,
-    "structured": 0.0233
+    "structured": 0.025186567164179104
   },
   {
     "name": "datatype-number_ordinal",
     "value": 3,
     "random": 0.00705,
-    "structured": 0.006
+    "structured": 0.012593283582089552
   },
   {
     "name": "datatype-number_ordinal",
     "value": 4,
     "random": 0.0005,
-    "structured": 0.0002
+    "structured": 0
   },
   {
     "name": "datatype-number_nominal",
     "value": 0,
     "random": 0.8911,
-    "structured": 0.8934
+    "structured": 0.941231343283582
   },
   {
     "name": "datatype-number_nominal",
     "value": 1,
     "random": 0.07025,
-    "structured": 0.08175
+    "structured": 0.041044776119402986
   },
   {
     "name": "datatype-number_nominal",
     "value": 2,
     "random": 0.0287,
-    "structured": 0.0199
+    "structured": 0.015391791044776119
   },
   {
     "name": "datatype-number_nominal",
     "value": 3,
     "random": 0.00945,
-    "structured": 0.00475
+    "structured": 0.0023320895522388058
   },
   {
     "name": "datatype-number_nominal",
     "value": 4,
     "random": 0.0005,
-    "structured": 0.0002
+    "structured": 0
   },
   {
     "name": "datatype-number_temporal",
@@ -381,91 +381,91 @@
     "name": "datatype-integer_quantitative",
     "value": 0,
     "random": 0.9344,
-    "structured": 0.8154
+    "structured": 0.8339552238805971
   },
   {
     "name": "datatype-integer_quantitative",
     "value": 1,
     "random": 0.03915,
-    "structured": 0.1152
+    "structured": 0.1044776119402985
   },
   {
     "name": "datatype-integer_quantitative",
     "value": 2,
     "random": 0.0183,
-    "structured": 0.04815
+    "structured": 0.03917910447761194
   },
   {
     "name": "datatype-integer_quantitative",
     "value": 3,
     "random": 0.0073,
-    "structured": 0.0185
+    "structured": 0.020988805970149255
   },
   {
     "name": "datatype-integer_quantitative",
     "value": 4,
     "random": 0.00085,
-    "structured": 0.00275
+    "structured": 0.0013992537313432835
   },
   {
     "name": "datatype-integer_ordinal",
     "value": 0,
     "random": 0.9562,
-    "structured": 0.9082
+    "structured": 0.9123134328358209
   },
   {
     "name": "datatype-integer_ordinal",
     "value": 1,
     "random": 0.0305,
-    "structured": 0.06095
+    "structured": 0.055970149253731345
   },
   {
     "name": "datatype-integer_ordinal",
     "value": 2,
     "random": 0.0111,
-    "structured": 0.02205
+    "structured": 0.02378731343283582
   },
   {
     "name": "datatype-integer_ordinal",
     "value": 3,
     "random": 0.00215,
-    "structured": 0.00875
+    "structured": 0.00792910447761194
   },
   {
     "name": "datatype-integer_ordinal",
     "value": 4,
     "random": 0.00005,
-    "structured": 0.00005
+    "structured": 0
   },
   {
     "name": "datatype-integer_nominal",
     "value": 0,
     "random": 0.9545,
-    "structured": 0.9053
+    "structured": 0.9365671641791045
   },
   {
     "name": "datatype-integer_nominal",
     "value": 1,
     "random": 0.0312,
-    "structured": 0.0692
+    "structured": 0.044309701492537316
   },
   {
     "name": "datatype-integer_nominal",
     "value": 2,
     "random": 0.0113,
-    "structured": 0.0202
+    "structured": 0.013992537313432836
   },
   {
     "name": "datatype-integer_nominal",
     "value": 3,
     "random": 0.00275,
-    "structured": 0.00515
+    "structured": 0.005130597014925373
   },
   {
     "name": "datatype-integer_nominal",
     "value": 4,
     "random": 0.00025,
-    "structured": 0.00015
+    "structured": 0
   },
   {
     "name": "datatype-integer_temporal",
@@ -483,61 +483,61 @@
     "name": "datatype-boolean_ordinal",
     "value": 0,
     "random": 0.9706,
-    "structured": 0.9171
+    "structured": 0.9365671641791045
   },
   {
     "name": "datatype-boolean_ordinal",
     "value": 1,
     "random": 0.01865,
-    "structured": 0.05035
+    "structured": 0.029384328358208957
   },
   {
     "name": "datatype-boolean_ordinal",
     "value": 2,
     "random": 0.0082,
-    "structured": 0.02305
+    "structured": 0.018190298507462687
   },
   {
     "name": "datatype-boolean_ordinal",
     "value": 3,
     "random": 0.00245,
-    "structured": 0.00915
+    "structured": 0.015391791044776119
   },
   {
     "name": "datatype-boolean_ordinal",
     "value": 4,
     "random": 0.0001,
-    "structured": 0.00035
+    "structured": 0.0004664179104477612
   },
   {
     "name": "datatype-boolean_nominal",
     "value": 0,
     "random": 0.9793,
-    "structured": 0.9454
+    "structured": 0.9598880597014925
   },
   {
     "name": "datatype-boolean_nominal",
     "value": 1,
     "random": 0.01335,
-    "structured": 0.0387
+    "structured": 0.024253731343283583
   },
   {
     "name": "datatype-boolean_nominal",
     "value": 2,
     "random": 0.00565,
-    "structured": 0.01175
+    "structured": 0.010727611940298507
   },
   {
     "name": "datatype-boolean_nominal",
     "value": 3,
     "random": 0.00165,
-    "structured": 0.00405
+    "structured": 0.005130597014925373
   },
   {
     "name": "datatype-boolean_nominal",
     "value": 4,
     "random": 0.00005,
-    "structured": 0.0001
+    "structured": 0
   },
   {
     "name": "datatype-boolean_temporal",
@@ -549,85 +549,85 @@
     "name": "datatype-date_quantitative",
     "value": 0,
     "random": 0.873,
-    "structured": 0.735
+    "structured": 0.8013059701492538
   },
   {
     "name": "datatype-date_quantitative",
     "value": 1,
     "random": 0.07385,
-    "structured": 0.1721
+    "structured": 0.1333955223880597
   },
   {
     "name": "datatype-date_quantitative",
     "value": 2,
     "random": 0.0365,
-    "structured": 0.0659
+    "structured": 0.04477611940298507
   },
   {
     "name": "datatype-date_quantitative",
     "value": 3,
     "random": 0.01445,
-    "structured": 0.0248
+    "structured": 0.016791044776119403
   },
   {
     "name": "datatype-date_quantitative",
     "value": 4,
     "random": 0.0022,
-    "structured": 0.0022
+    "structured": 0.0037313432835820895
   },
   {
     "name": "datatype-date_ordinal",
     "value": 0,
     "random": 0.9286,
-    "structured": 0.8898
+    "structured": 0.8964552238805971
   },
   {
     "name": "datatype-date_ordinal",
     "value": 1,
     "random": 0.04585,
-    "structured": 0.074
+    "structured": 0.0708955223880597
   },
   {
     "name": "datatype-date_ordinal",
     "value": 2,
     "random": 0.01995,
-    "structured": 0.0275
+    "structured": 0.025186567164179104
   },
   {
     "name": "datatype-date_ordinal",
     "value": 3,
     "random": 0.00535,
-    "structured": 0.0085
+    "structured": 0.007462686567164179
   },
   {
     "name": "datatype-date_ordinal",
     "value": 4,
     "random": 0.00025,
-    "structured": 0.0002
+    "structured": 0
   },
   {
     "name": "datatype-date_nominal",
     "value": 0,
     "random": 0.9191,
-    "structured": 0.8879
+    "structured": 0.9458955223880597
   },
   {
     "name": "datatype-date_nominal",
     "value": 1,
     "random": 0.05435,
-    "structured": 0.0846
+    "structured": 0.03917910447761194
   },
   {
     "name": "datatype-date_nominal",
     "value": 2,
     "random": 0.0219,
-    "structured": 0.0228
+    "structured": 0.009794776119402986
   },
   {
     "name": "datatype-date_nominal",
     "value": 3,
     "random": 0.0044,
-    "structured": 0.0047
+    "structured": 0.005130597014925373
   },
   {
     "name": "datatype-date_nominal",
@@ -639,91 +639,91 @@
     "name": "datatype-date_temporal",
     "value": 0,
     "random": 0.8824,
-    "structured": 0.7888
+    "structured": 0.8871268656716418
   },
   {
     "name": "datatype-date_temporal",
     "value": 1,
     "random": 0.08215,
-    "structured": 0.16255
+    "structured": 0.08488805970149253
   },
   {
     "name": "datatype-date_temporal",
     "value": 2,
     "random": 0.0295,
-    "structured": 0.03765
+    "structured": 0.021921641791044777
   },
   {
     "name": "datatype-date_temporal",
     "value": 3,
     "random": 0.00565,
-    "structured": 0.01
+    "structured": 0.006063432835820896
   },
   {
     "name": "datatype-date_temporal",
     "value": 4,
     "random": 0.0003,
-    "structured": 0.001
+    "structured": 0
   },
   {
     "name": "datatype-high_cardinality_ordinal",
     "value": 0,
     "random": 0.7763,
-    "structured": 0.7604
+    "structured": 0.7481343283582089
   },
   {
     "name": "datatype-high_cardinality_ordinal",
     "value": 1,
     "random": 0.13195,
-    "structured": 0.15995
+    "structured": 0.1609141791044776
   },
   {
     "name": "datatype-high_cardinality_ordinal",
     "value": 2,
     "random": 0.0668,
-    "structured": 0.0613
+    "structured": 0.0648320895522388
   },
   {
     "name": "datatype-high_cardinality_ordinal",
     "value": 3,
     "random": 0.02195,
-    "structured": 0.01795
+    "structured": 0.025186567164179104
   },
   {
     "name": "datatype-high_cardinality_ordinal",
     "value": 4,
     "random": 0.003,
-    "structured": 0.0004
+    "structured": 0.0009328358208955224
   },
   {
     "name": "datatype-high_cardinality_nominal",
     "value": 0,
     "random": 0.7705,
-    "structured": 0.7212
+    "structured": 0.8022388059701493
   },
   {
     "name": "datatype-high_cardinality_nominal",
     "value": 1,
     "random": 0.1451,
-    "structured": 0.20655
+    "structured": 0.1394589552238806
   },
   {
     "name": "datatype-high_cardinality_nominal",
     "value": 2,
     "random": 0.0629,
-    "structured": 0.05935
+    "structured": 0.04757462686567164
   },
   {
     "name": "datatype-high_cardinality_nominal",
     "value": 3,
     "random": 0.0202,
-    "structured": 0.0127
+    "structured": 0.010727611940298507
   },
   {
     "name": "datatype-high_cardinality_nominal",
     "value": 4,
     "random": 0.0013,
-    "structured": 0.0002
+    "structured": 0
   },
   {
     "name": "datatype-high_cardinality_nominal_color",
@@ -741,391 +741,391 @@
     "name": "encoding-encoding",
     "value": 1,
     "random": 0.2531,
-    "structured": 0.0174
+    "structured": 0.25279850746268656
   },
   {
     "name": "encoding-encoding",
     "value": 2,
     "random": 0.2504,
-    "structured": 0.2071
+    "structured": 0.26026119402985076
   },
   {
     "name": "encoding-encoding",
     "value": 3,
     "random": 0.2505,
-    "structured": 0.382
+    "structured": 0.24067164179104478
   },
   {
     "name": "encoding-encoding",
     "value": 4,
     "random": 0.246,
-    "structured": 0.3935
+    "structured": 0.2462686567164179
   },
   {
     "name": "encoding-encoding_field",
     "value": 0,
     "random": 0.0064,
-    "structured": 0.001
+    "structured": 0.013992537313432836
   },
   {
     "name": "encoding-encoding_field",
     "value": 1,
     "random": 0.314,
-    "structured": 0.06905
+    "structured": 0.31296641791044777
   },
   {
     "name": "encoding-encoding_field",
     "value": 2,
     "random": 0.2981,
-    "structured": 0.33125
+    "structured": 0.3069029850746269
   },
   {
     "name": "encoding-encoding_field",
     "value": 3,
     "random": 0.2829,
-    "structured": 0.41805
+    "structured": 0.27052238805970147
   },
   {
     "name": "encoding-encoding_field",
     "value": 4,
     "random": 0.0986,
-    "structured": 0.18065
+    "structured": 0.09561567164179105
   },
   {
     "name": "encoding-aggregate",
     "value": 0,
     "random": 0.45725,
-    "structured": 0.1361
+    "structured": 0.1669776119402985
   },
   {
     "name": "encoding-aggregate",
     "value": 1,
     "random": 0.3789,
-    "structured": 0.34745
+    "structured": 0.38152985074626866
   },
   {
     "name": "encoding-aggregate",
     "value": 2,
     "random": 0.0909,
-    "structured": 0.27735
+    "structured": 0.2080223880597015
   },
   {
     "name": "encoding-aggregate",
     "value": 3,
     "random": 0.05355,
-    "structured": 0.1753
+    "structured": 0.166044776119403
   },
   {
     "name": "encoding-aggregate",
     "value": 4,
     "random": 0.0194,
-    "structured": 0.0638
+    "structured": 0.07742537313432836
   },
   {
     "name": "encoding-bin",
     "value": 0,
     "random": 0.7935,
-    "structured": 0.6335
+    "structured": 0.7705223880597015
   },
   {
     "name": "encoding-bin",
     "value": 1,
     "random": 0.12535,
-    "structured": 0.24865
+    "structured": 0.1525186567164179
   },
   {
     "name": "encoding-bin",
     "value": 2,
     "random": 0.0595,
-    "structured": 0.0871
+    "structured": 0.05457089552238806
   },
   {
     "name": "encoding-bin",
     "value": 3,
     "random": 0.0196,
-    "structured": 0.0297
+    "structured": 0.021921641791044777
   },
   {
     "name": "encoding-bin",
     "value": 4,
     "random": 0.00205,
-    "structured": 0.00105
+    "structured": 0.0004664179104477612
   },
   {
     "name": "encoding-same_field_2",
     "value": 0,
     "random": 0.60415,
-    "structured": 0.61965
+    "structured": 0.6930970149253731
   },
   {
     "name": "encoding-same_field_2",
     "value": 1,
     "random": 0.3791,
-    "structured": 0.3644
+    "structured": 0.2891791044776119
   },
   {
     "name": "encoding-same_field_2",
     "value": 2,
     "random": 0.01675,
-    "structured": 0.01595
+    "structured": 0.017723880597014924
   },
   {
     "name": "encoding-same_field_gte3",
     "value": 0,
     "random": 0.9263,
-    "structured": 0.88565
+    "structured": 0.8656716417910447
   },
   {
     "name": "encoding-same_field_gte3",
     "value": 1,
     "random": 0.0737,
-    "structured": 0.11435
+    "structured": 0.13432835820895522
   },
   {
     "name": "encoding-count_twice",
     "value": 0,
     "random": 0.98975,
-    "structured": 0.98975
+    "structured": 0.9846082089552238
   },
   {
     "name": "encoding-count_twice",
     "value": 1,
     "random": 0.01025,
-    "structured": 0.01025
+    "structured": 0.015391791044776119
   },
   {
     "name": "encoding-quant_bin",
     "value": 0,
     "random": 0.9678,
-    "structured": 0.8283
+    "structured": 0.8703358208955224
   },
   {
     "name": "encoding-quant_bin",
     "value": 1,
     "random": 0.02035,
-    "structured": 0.1184
+    "structured": 0.07835820895522388
   },
   {
     "name": "encoding-quant_bin",
     "value": 2,
     "random": 0.0093,
-    "structured": 0.04075
+    "structured": 0.036380597014925374
   },
   {
     "name": "encoding-quant_bin",
     "value": 3,
     "random": 0.00245,
-    "structured": 0.0121
+    "structured": 0.014925373134328358
   },
   {
     "name": "encoding-quant_bin",
     "value": 4,
     "random": 0.0001,
-    "structured": 0.00045
+    "structured": 0
   },
   {
     "name": "encoding-non_positional_pref",
     "value": 0,
     "random": 0.7971,
-    "structured": 0.7459
+    "structured": 0.6749067164179104
   },
   {
     "name": "encoding-non_positional_pref",
     "value": 1,
     "random": 0.2029,
-    "structured": 0.2541
+    "structured": 0.32509328358208955
   },
   {
     "name": "encoding-multiple_non_pos",
     "value": 0,
     "random": 0.82535,
-    "structured": 0.6456
+    "structured": 0.738339552238806
   },
   {
     "name": "encoding-multiple_non_pos",
     "value": 1,
     "random": 0.17465,
-    "structured": 0.3544
+    "structured": 0.261660447761194
   },
   {
     "name": "encoding-aggregate_group_by_raw_non_temporal",
     "value": 0,
     "random": 0.9021,
-    "structured": 0.898
+    "structured": 0.9598880597014925
   },
   {
     "name": "encoding-aggregate_group_by_raw_non_temporal",
     "value": 1,
     "random": 0.05265,
-    "structured": 0.08255
+    "structured": 0.03264925373134328
   },
   {
     "name": "encoding-aggregate_group_by_raw_non_temporal",
     "value": 2,
     "random": 0.03375,
-    "structured": 0.0167
+    "structured": 0.004197761194029851
   },
   {
     "name": "encoding-aggregate_group_by_raw_non_temporal",
     "value": 3,
     "random": 0.0115,
-    "structured": 0.00275
+    "structured": 0.0032649253731343282
   },
   {
     "name": "encoding-agg_dim",
     "value": 0,
     "random": 0.9168,
-    "structured": 0.912
+    "structured": 0.7667910447761194
   },
   {
     "name": "encoding-agg_dim",
     "value": 1,
     "random": 0.0832,
-    "structured": 0.088
+    "structured": 0.2332089552238806
   },
   {
     "name": "encoding-x_y_raw",
     "value": 0,
     "random": 0.9939,
-    "structured": 0.9789
+    "structured": 0.9981343283582089
   },
   {
     "name": "encoding-x_y_raw",
     "value": 1,
     "random": 0.00515,
-    "structured": 0.02
+    "structured": 0.0018656716417910447
   },
   {
     "name": "encoding-x_y_raw",
     "value": 2,
     "random": 0.00095,
-    "structured": 0.0011
+    "structured": 0
   },
   {
     "name": "encoding-stack_zero",
     "value": 0,
     "random": 0.99665,
-    "structured": 0.9653
+    "structured": 0.9902052238805971
   },
   {
     "name": "encoding-stack_zero",
     "value": 1,
     "random": 0.00335,
-    "structured": 0.0347
+    "structured": 0.009794776119402986
   },
   {
     "name": "encoding-stack_normalize",
     "value": 0,
     "random": 0.9953,
-    "structured": 0.9829
+    "structured": 0.9981343283582089
   },
   {
     "name": "encoding-stack_normalize",
     "value": 1,
     "random": 0.0047,
-    "structured": 0.0171
+    "structured": 0.0018656716417910447
   },
   {
     "name": "encoding-type_quantitative",
     "value": 0,
     "random": 0.39885,
-    "structured": 0.1418
+    "structured": 0.24720149253731344
   },
   {
     "name": "encoding-type_quantitative",
     "value": 1,
     "random": 0.3396,
-    "structured": 0.43095
+    "structured": 0.4701492537313433
   },
   {
     "name": "encoding-type_quantitative",
     "value": 2,
     "random": 0.1322,
-    "structured": 0.26225
+    "structured": 0.15671641791044777
   },
   {
     "name": "encoding-type_quantitative",
     "value": 3,
     "random": 0.08805,
-    "structured": 0.1334
+    "structured": 0.09235074626865672
   },
   {
     "name": "encoding-type_quantitative",
     "value": 4,
     "random": 0.0413,
-    "structured": 0.0316
+    "structured": 0.033582089552238806
   },
   {
     "name": "encoding-type_ordinal",
     "value": 0,
     "random": 0.5327,
-    "structured": 0.4963
+    "structured": 0.5410447761194029
   },
   {
     "name": "encoding-type_ordinal",
     "value": 1,
     "random": 0.268,
-    "structured": 0.3191
+    "structured": 0.2635261194029851
   },
   {
     "name": "encoding-type_ordinal",
     "value": 2,
     "random": 0.1304,
-    "structured": 0.1348
+    "structured": 0.1287313432835821
   },
   {
     "name": "encoding-type_ordinal",
     "value": 3,
     "random": 0.05915,
-    "structured": 0.0482
+    "structured": 0.0648320895522388
   },
   {
     "name": "encoding-type_ordinal",
     "value": 4,
     "random": 0.00975,
-    "structured": 0.0016
+    "structured": 0.0018656716417910447
   },
   {
     "name": "encoding-type_nominal",
     "value": 0,
     "random": 0.6359,
-    "structured": 0.5025
+    "structured": 0.7089552238805971
   },
   {
     "name": "encoding-type_nominal",
     "value": 1,
     "random": 0.2209,
-    "structured": 0.3651
+    "structured": 0.19029850746268656
   },
   {
     "name": "encoding-type_nominal",
     "value": 2,
     "random": 0.10195,
-    "structured": 0.1051
+    "structured": 0.07695895522388059
   },
   {
     "name": "encoding-type_nominal",
     "value": 3,
     "random": 0.0383,
-    "structured": 0.0265
+    "structured": 0.02378731343283582
   },
   {
     "name": "encoding-type_nominal",
     "value": 4,
     "random": 0.00295,
-    "structured": 0.0008
+    "structured": 0
   },
   {
     "name": "mark_type-c_c_point",
     "value": 0,
     "random": 0.94855,
-    "structured": 0.93605
+    "structured": 0.9482276119402985
   },
   {
     "name": "mark_type-c_c_point",
     "value": 1,
     "random": 0.05145,
-    "structured": 0.06395
+    "structured": 0.05177238805970149
   },
   {
     "name": "mark_type-c_c_circle",
@@ -1143,13 +1143,13 @@
     "name": "mark_type-c_c_line",
     "value": 0,
     "random": 0.97895,
-    "structured": 0.97515
+    "structured": 0.9897388059701493
   },
   {
     "name": "mark_type-c_c_line",
     "value": 1,
     "random": 0.02105,
-    "structured": 0.02485
+    "structured": 0.010261194029850746
   },
   {
     "name": "mark_type-c_c_area",
@@ -1161,13 +1161,13 @@
     "name": "mark_type-c_c_text",
     "value": 0,
     "random": 0.99145,
-    "structured": 0.96165
+    "structured": 0.9822761194029851
   },
   {
     "name": "mark_type-c_c_text",
     "value": 1,
     "random": 0.00855,
-    "structured": 0.03835
+    "structured": 0.017723880597014924
   },
   {
     "name": "mark_type-c_c_tick",
@@ -1179,13 +1179,13 @@
     "name": "mark_type-c_d_point",
     "value": 0,
     "random": 0.8932,
-    "structured": 0.89195
+    "structured": 0.9039179104477612
   },
   {
     "name": "mark_type-c_d_point",
     "value": 1,
     "random": 0.1068,
-    "structured": 0.10805
+    "structured": 0.0960820895522388
   },
   {
     "name": "mark_type-c_d_bar",
@@ -1197,13 +1197,13 @@
     "name": "mark_type-c_d_line",
     "value": 0,
     "random": 0.9978,
-    "structured": 0.9657
+    "structured": 0.9715485074626866
   },
   {
     "name": "mark_type-c_d_line",
     "value": 1,
     "random": 0.0022,
-    "structured": 0.0343
+    "structured": 0.02845149253731343
   },
   {
     "name": "mark_type-c_d_area",
@@ -1215,121 +1215,121 @@
     "name": "mark_type-c_d_text",
     "value": 0,
     "random": 0.9857,
-    "structured": 0.94485
+    "structured": 0.9659514925373134
   },
   {
     "name": "mark_type-c_d_text",
     "value": 1,
     "random": 0.0143,
-    "structured": 0.05515
+    "structured": 0.03404850746268657
   },
   {
     "name": "mark_type-c_d_tick",
     "value": 0,
     "random": 0.9982,
-    "structured": 0.9689
+    "structured": 0.9841417910447762
   },
   {
     "name": "mark_type-c_d_tick",
     "value": 1,
     "random": 0.0018,
-    "structured": 0.0311
+    "structured": 0.01585820895522388
   },
   {
     "name": "mark_type-c_d_no_overlap_point",
     "value": 0,
     "random": 0.84725,
-    "structured": 0.92205
+    "structured": 0.9090485074626866
   },
   {
     "name": "mark_type-c_d_no_overlap_point",
     "value": 1,
     "random": 0.15275,
-    "structured": 0.07795
+    "structured": 0.09095149253731344
   },
   {
     "name": "mark_type-c_d_no_overlap_bar",
     "value": 0,
     "random": 0.984,
-    "structured": 0.9428
+    "structured": 0.9799440298507462
   },
   {
     "name": "mark_type-c_d_no_overlap_bar",
     "value": 1,
     "random": 0.016,
-    "structured": 0.0572
+    "structured": 0.02005597014925373
   },
   {
     "name": "mark_type-c_d_no_overlap_line",
     "value": 0,
     "random": 0.99745,
-    "structured": 0.97255
+    "structured": 0.9827425373134329
   },
   {
     "name": "mark_type-c_d_no_overlap_line",
     "value": 1,
     "random": 0.00255,
-    "structured": 0.02745
+    "structured": 0.017257462686567165
   },
   {
     "name": "mark_type-c_d_no_overlap_area",
     "value": 0,
     "random": 0.9965,
-    "structured": 0.97205
+    "structured": 0.9836753731343284
   },
   {
     "name": "mark_type-c_d_no_overlap_area",
     "value": 1,
     "random": 0.0035,
-    "structured": 0.02795
+    "structured": 0.01632462686567164
   },
   {
     "name": "mark_type-c_d_no_overlap_text",
     "value": 0,
     "random": 0.9963,
-    "structured": 0.96215
+    "structured": 0.9836753731343284
   },
   {
     "name": "mark_type-c_d_no_overlap_text",
     "value": 1,
     "random": 0.0037,
-    "structured": 0.03785
+    "structured": 0.01632462686567164
   },
   {
     "name": "mark_type-c_d_no_overlap_tick",
     "value": 0,
     "random": 0.99755,
-    "structured": 0.97085
+    "structured": 0.9696828358208955
   },
   {
     "name": "mark_type-c_d_no_overlap_tick",
     "value": 1,
     "random": 0.00245,
-    "structured": 0.02915
+    "structured": 0.03031716417910448
   },
   {
     "name": "mark_type-d_d_point",
     "value": 0,
     "random": 0.85095,
-    "structured": 0.9403
+    "structured": 0.9682835820895522
   },
   {
     "name": "mark_type-d_d_point",
     "value": 1,
     "random": 0.14905,
-    "structured": 0.0597
+    "structured": 0.03171641791044776
   },
   {
     "name": "mark_type-d_d_text",
     "value": 0,
     "random": 0.97985,
-    "structured": 0.96285
+    "structured": 0.9864738805970149
   },
   {
     "name": "mark_type-d_d_text",
     "value": 1,
     "random": 0.02015,
-    "structured": 0.03715
+    "structured": 0.013526119402985074
   },
   {
     "name": "mark_type-d_d_rect",
@@ -1341,37 +1341,37 @@
     "name": "scale-log",
     "value": 0,
     "random": 1,
-    "structured": 0.39265
+    "structured": 0.4962686567164179
   },
   {
     "name": "scale-zero",
     "value": 0,
     "random": 0.5153,
-    "structured": 0.2477
+    "structured": 0.3666044776119403
   },
   {
     "name": "scale-zero",
     "value": 1,
     "random": 0.3424,
-    "structured": 0.4481
+    "structured": 0.4155783582089552
   },
   {
     "name": "scale-zero",
     "value": 2,
     "random": 0.0854,
-    "structured": 0.2145
+    "structured": 0.1394589552238806
   },
   {
     "name": "scale-zero",
     "value": 3,
     "random": 0.0471,
-    "structured": 0.079
+    "structured": 0.06669776119402986
   },
   {
     "name": "scale-zero",
     "value": 4,
     "random": 0.0098,
-    "structured": 0.0107
+    "structured": 0.01166044776119403
   },
   {
     "name": "scale-zero_bin",
@@ -1383,325 +1383,325 @@
     "name": "scale-zero_size",
     "value": 0,
     "random": 0.87605,
-    "structured": 0.74455
+    "structured": 0.7765858208955224
   },
   {
     "name": "scale-zero_size",
     "value": 1,
     "random": 0.12395,
-    "structured": 0.25545
+    "structured": 0.2234141791044776
   },
   {
     "name": "scale-zero_positional",
     "value": 0,
     "random": 0.65125,
-    "structured": 0.4242
+    "structured": 0.46828358208955223
   },
   {
     "name": "scale-zero_positional",
     "value": 1,
     "random": 0.34875,
-    "structured": 0.5758
+    "structured": 0.5317164179104478
   },
   {
     "name": "scale-zero_skew",
     "value": 0,
     "random": 0.92915,
-    "structured": 0.8733
+    "structured": 0.894589552238806
   },
   {
     "name": "scale-zero_skew",
     "value": 1,
     "random": 0.07085,
-    "structured": 0.1267
+    "structured": 0.10541044776119403
   },
   {
     "name": "scale-includes_zero",
     "value": 0,
     "random": 0.9407,
-    "structured": 0.89905
+    "structured": 0.882929104477612
   },
   {
     "name": "scale-includes_zero",
     "value": 1,
     "random": 0.0506,
-    "structured": 0.0886
+    "structured": 0.10401119402985075
   },
   {
     "name": "scale-includes_zero",
     "value": 2,
     "random": 0.00745,
-    "structured": 0.0115
+    "structured": 0.012126865671641791
   },
   {
     "name": "scale-includes_zero",
     "value": 3,
     "random": 0.00125,
-    "structured": 0.0008
+    "structured": 0.0009328358208955224
   },
   {
     "name": "type_channel-continuous_x",
     "value": 0,
     "random": 0.6206,
-    "structured": 0.4395
+    "structured": 0.4505597014925373
   },
   {
     "name": "type_channel-continuous_x",
     "value": 1,
     "random": 0.3794,
-    "structured": 0.5605
+    "structured": 0.5494402985074627
   },
   {
     "name": "type_channel-continuous_y",
     "value": 0,
     "random": 0.8208,
-    "structured": 0.66985
+    "structured": 0.7835820895522388
   },
   {
     "name": "type_channel-continuous_y",
     "value": 1,
     "random": 0.1792,
-    "structured": 0.33015
+    "structured": 0.21641791044776118
   },
   {
     "name": "type_channel-continuous_color",
     "value": 0,
     "random": 0.773,
-    "structured": 0.68105
+    "structured": 0.7677238805970149
   },
   {
     "name": "type_channel-continuous_color",
     "value": 1,
     "random": 0.227,
-    "structured": 0.31895
+    "structured": 0.23227611940298507
   },
   {
     "name": "type_channel-continuous_size",
     "value": 0,
     "random": 0.9056,
-    "structured": 0.8616
+    "structured": 0.8997201492537313
   },
   {
     "name": "type_channel-continuous_size",
     "value": 1,
     "random": 0.0944,
-    "structured": 0.1384
+    "structured": 0.10027985074626866
   },
   {
     "name": "type_channel-continuous_text",
     "value": 0,
     "random": 0.952,
-    "structured": 0.87225
+    "structured": 0.8899253731343284
   },
   {
     "name": "type_channel-continuous_text",
     "value": 1,
     "random": 0.048,
-    "structured": 0.12775
+    "structured": 0.11007462686567164
   },
   {
     "name": "type_channel-ordered_x",
     "value": 0,
     "random": 0.6638,
-    "structured": 0.79755
+    "structured": 0.832089552238806
   },
   {
     "name": "type_channel-ordered_x",
     "value": 1,
     "random": 0.3362,
-    "structured": 0.20245
+    "structured": 0.16791044776119404
   },
   {
     "name": "type_channel-ordered_y",
     "value": 0,
     "random": 0.72065,
-    "structured": 0.7039
+    "structured": 0.7532649253731343
   },
   {
     "name": "type_channel-ordered_y",
     "value": 1,
     "random": 0.27935,
-    "structured": 0.2961
+    "structured": 0.24673507462686567
   },
   {
     "name": "type_channel-ordered_color",
     "value": 0,
     "random": 0.9296,
-    "structured": 0.87085
+    "structured": 0.9109141791044776
   },
   {
     "name": "type_channel-ordered_color",
     "value": 1,
     "random": 0.0704,
-    "structured": 0.12915
+    "structured": 0.08908582089552239
   },
   {
     "name": "type_channel-ordered_size",
     "value": 0,
     "random": 0.95195,
-    "structured": 0.86725
+    "structured": 0.8703358208955224
   },
   {
     "name": "type_channel-ordered_size",
     "value": 1,
     "random": 0.04805,
-    "structured": 0.13275
+    "structured": 0.1296641791044776
   },
   {
     "name": "type_channel-ordered_text",
     "value": 0,
     "random": 0.9381,
-    "structured": 0.89795
+    "structured": 0.8880597014925373
   },
   {
     "name": "type_channel-ordered_text",
     "value": 1,
     "random": 0.0619,
-    "structured": 0.10205
+    "structured": 0.11194029850746269
   },
   {
     "name": "type_channel-ordered_row",
     "value": 0,
     "random": 0.88745,
-    "structured": 0.89355
+    "structured": 0.9253731343283582
   },
   {
     "name": "type_channel-ordered_row",
     "value": 1,
     "random": 0.11255,
-    "structured": 0.10645
+    "structured": 0.07462686567164178
   },
   {
     "name": "type_channel-ordered_column",
     "value": 0,
     "random": 0.89855,
-    "structured": 0.9511
+    "structured": 0.9636194029850746
   },
   {
     "name": "type_channel-ordered_column",
     "value": 1,
     "random": 0.10145,
-    "structured": 0.0489
+    "structured": 0.036380597014925374
   },
   {
     "name": "type_channel-nominal_x",
     "value": 0,
     "random": 0.8118,
-    "structured": 0.88245
+    "structured": 0.9137126865671642
   },
   {
     "name": "type_channel-nominal_x",
     "value": 1,
     "random": 0.1882,
-    "structured": 0.11755
+    "structured": 0.08628731343283583
   },
   {
     "name": "type_channel-nominal_y",
     "value": 0,
     "random": 0.8573,
-    "structured": 0.8296
+    "structured": 0.8871268656716418
   },
   {
     "name": "type_channel-nominal_y",
     "value": 1,
     "random": 0.1427,
-    "structured": 0.1704
+    "structured": 0.11287313432835822
   },
   {
     "name": "type_channel-nominal_color",
     "value": 0,
     "random": 0.96955,
-    "structured": 0.9059
+    "structured": 0.9430970149253731
   },
   {
     "name": "type_channel-nominal_color",
     "value": 1,
     "random": 0.03045,
-    "structured": 0.0941
+    "structured": 0.05690298507462686
   },
   {
     "name": "type_channel-nominal_shape",
     "value": 0,
     "random": 0.9812,
-    "structured": 0.9601
+    "structured": 0.9794776119402985
   },
   {
     "name": "type_channel-nominal_shape",
     "value": 1,
     "random": 0.0188,
-    "structured": 0.0399
+    "structured": 0.020522388059701493
   },
   {
     "name": "type_channel-nominal_text",
     "value": 0,
     "random": 0.9665,
-    "structured": 0.91775
+    "structured": 0.9291044776119403
   },
   {
     "name": "type_channel-nominal_text",
     "value": 1,
     "random": 0.0335,
-    "structured": 0.08225
+    "structured": 0.0708955223880597
   },
   {
     "name": "type_channel-nominal_row",
     "value": 0,
     "random": 0.94705,
-    "structured": 0.9249
+    "structured": 0.9626865671641791
   },
   {
     "name": "type_channel-nominal_row",
     "value": 1,
     "random": 0.05295,
-    "structured": 0.0751
+    "structured": 0.03731343283582089
   },
   {
     "name": "type_channel-nominal_column",
     "value": 0,
     "random": 0.94705,
-    "structured": 0.9487
+    "structured": 0.9780783582089553
   },
   {
     "name": "type_channel-nominal_column",
     "value": 1,
     "random": 0.05295,
-    "structured": 0.0513
+    "structured": 0.021921641791044777
   },
   {
     "name": "type_channel-temporal_x",
     "value": 0,
     "random": 0.92675,
-    "structured": 0.9077
+    "structured": 0.9347014925373134
   },
   {
     "name": "type_channel-temporal_x",
     "value": 1,
     "random": 0.07325,
-    "structured": 0.0923
+    "structured": 0.06529850746268656
   },
   {
     "name": "type_channel-temporal_y",
     "value": 0,
     "random": 0.97005,
-    "structured": 0.9421
+    "structured": 0.9776119402985075
   },
   {
     "name": "type_channel-temporal_y",
     "value": 1,
     "random": 0.02995,
-    "structured": 0.0579
+    "structured": 0.022388059701492536
   },
   {
     "name": "type_channel-temporal_color",
     "value": 0,
     "random": 0.96935,
-    "structured": 0.9373
+    "structured": 0.972481343283582
   },
   {
     "name": "type_channel-temporal_color",
     "value": 1,
     "random": 0.03065,
-    "structured": 0.0627
+    "structured": 0.02751865671641791
   },
   {
     "name": "type_channel-temporal_shape",
@@ -1713,13 +1713,13 @@
     "name": "type_channel-temporal_text",
     "value": 0,
     "random": 0.98365,
-    "structured": 0.95955
+    "structured": 0.9757462686567164
   },
   {
     "name": "type_channel-temporal_text",
     "value": 1,
     "random": 0.01635,
-    "structured": 0.04045
+    "structured": 0.024253731343283583
   },
   {
     "name": "type_channel-temporal_row",
@@ -1737,253 +1737,241 @@
     "name": "aggregate-count",
     "value": 0,
     "random": 0.6844,
-    "structured": 0.5773
+    "structured": 0.6721082089552238
   },
   {
     "name": "aggregate-count",
     "value": 1,
     "random": 0.30535,
-    "structured": 0.41245
+    "structured": 0.3125
   },
   {
     "name": "aggregate-count",
     "value": 3,
     "random": 0.01025,
-    "structured": 0.01015
+    "structured": 0.014458955223880597
   },
   {
     "name": "aggregate-count",
     "value": 4,
     "random": 0,
-    "structured": 0.0001
+    "structured": 0.0009328358208955224
   },
   {
     "name": "aggregate-sum",
     "value": 0,
     "random": 0.9964,
-    "structured": 0.7914
+    "structured": 0.7910447761194029
   },
   {
     "name": "aggregate-sum",
     "value": 1,
     "random": 0.00225,
-    "structured": 0.16295
+    "structured": 0.15671641791044777
   },
   {
     "name": "aggregate-sum",
     "value": 2,
     "random": 0.0013,
-    "structured": 0.0369
+    "structured": 0.036380597014925374
   },
   {
     "name": "aggregate-sum",
     "value": 3,
     "random": 0.00005,
-    "structured": 0.00845
-  },
-  {
-    "name": "aggregate-sum",
-    "value": 4,
-    "random": 0,
-    "structured": 0.0003
+    "structured": 0.01585820895522388
   },
   {
     "name": "aggregate-mean",
     "value": 0,
     "random": 0.8806,
-    "structured": 0.9438
+    "structured": 0.9291044776119403
   },
   {
     "name": "aggregate-mean",
     "value": 1,
     "random": 0.0912,
-    "structured": 0.04175
+    "structured": 0.0457089552238806
   },
   {
     "name": "aggregate-mean",
     "value": 2,
     "random": 0.02475,
-    "structured": 0.0115
+    "structured": 0.016791044776119403
   },
   {
     "name": "aggregate-mean",
     "value": 3,
     "random": 0.00315,
-    "structured": 0.0029
+    "structured": 0.00792910447761194
   },
   {
     "name": "aggregate-mean",
     "value": 4,
     "random": 0.0003,
-    "structured": 0.00005
+    "structured": 0.0004664179104477612
   },
   {
     "name": "aggregate-median",
     "value": 0,
     "random": 0.8501,
-    "structured": 0.7337
+    "structured": 0.7444029850746269
   },
   {
     "name": "aggregate-median",
     "value": 1,
     "random": 0.0822,
-    "structured": 0.1783
+    "structured": 0.15438432835820895
   },
   {
     "name": "aggregate-median",
     "value": 2,
     "random": 0.04635,
-    "structured": 0.0649
+    "structured": 0.06576492537313433
   },
   {
     "name": "aggregate-median",
     "value": 3,
     "random": 0.01805,
-    "structured": 0.02235
+    "structured": 0.033582089552238806
   },
   {
     "name": "aggregate-median",
     "value": 4,
     "random": 0.0033,
-    "structured": 0.00075
+    "structured": 0.0018656716417910447
   },
   {
     "name": "aggregate-min",
     "value": 0,
     "random": 0.9552,
-    "structured": 0.7836
+    "structured": 0.8404850746268657
   },
   {
     "name": "aggregate-min",
     "value": 1,
     "random": 0.02885,
-    "structured": 0.15325
+    "structured": 0.09748134328358209
   },
   {
     "name": "aggregate-min",
     "value": 2,
     "random": 0.0133,
-    "structured": 0.04635
+    "structured": 0.03917910447761194
   },
   {
     "name": "aggregate-min",
     "value": 3,
     "random": 0.00245,
-    "structured": 0.0158
+    "structured": 0.022388059701492536
   },
   {
     "name": "aggregate-min",
     "value": 4,
     "random": 0.0002,
-    "structured": 0.001
+    "structured": 0.0004664179104477612
   },
   {
     "name": "aggregate-max",
     "value": 0,
     "random": 0.9996,
-    "structured": 0.8875
+    "structured": 0.8936567164179104
   },
   {
     "name": "aggregate-max",
     "value": 1,
     "random": 0.0002,
-    "structured": 0.07705
+    "structured": 0.07276119402985075
   },
   {
     "name": "aggregate-max",
     "value": 2,
     "random": 0.00015,
-    "structured": 0.02685
+    "structured": 0.025186567164179104
   },
   {
     "name": "aggregate-max",
     "value": 3,
     "random": 0.00005,
-    "structured": 0.0081
-  },
-  {
-    "name": "aggregate-max",
-    "value": 4,
-    "random": 0,
-    "structured": 0.0005
+    "structured": 0.008395522388059701
   },
   {
     "name": "aggregate-stdev",
     "value": 0,
     "random": 1,
-    "structured": 0.9486
+    "structured": 0.9496268656716418
   },
   {
     "name": "aggregate-stdev",
     "value": 1,
     "random": 0,
-    "structured": 0.0365
+    "structured": 0.03125
   },
   {
     "name": "aggregate-stdev",
     "value": 2,
     "random": 0,
-    "structured": 0.011
+    "structured": 0.012593283582089552
   },
   {
     "name": "aggregate-stdev",
     "value": 3,
     "random": 0,
-    "structured": 0.00365
+    "structured": 0.006063432835820896
   },
   {
     "name": "aggregate-stdev",
     "value": 4,
     "random": 0,
-    "structured": 0.00025
+    "structured": 0.0004664179104477612
   },
   {
     "name": "chart-only_x_over_only_y",
     "value": 0,
     "random": 0.95505,
-    "structured": 0.9135
+    "structured": 0.9146455223880597
   },
   {
     "name": "chart-only_x_over_only_y",
     "value": 1,
     "random": 0.04495,
-    "structured": 0.0865
+    "structured": 0.0853544776119403
   },
   {
     "name": "chart-binned_one_dimensional",
     "value": 0,
     "random": 0.9786,
-    "structured": 0.9991
+    "structured": 0.9673507462686567
   },
   {
     "name": "chart-binned_one_dimensional",
     "value": 1,
     "random": 0.0214,
-    "structured": 0.0009
+    "structured": 0.03264925373134328
   },
   {
     "name": "chart-orientation_horizontal_binned",
     "value": 0,
     "random": 0.8581,
-    "structured": 0.833
+    "structured": 0.9151119402985075
   },
   {
     "name": "chart-orientation_horizontal_binned",
     "value": 1,
     "random": 0.1419,
-    "structured": 0.167
+    "structured": 0.08488805970149253
   },
   {
     "name": "chart-one_dim_raw_continuous_tick_over_rest",
     "value": 0,
     "random": 0.9588,
-    "structured": 0.99505
+    "structured": 0.9738805970149254
   },
   {
     "name": "chart-one_dim_raw_continuous_tick_over_rest",
     "value": 1,
     "random": 0.0412,
-    "structured": 0.00495
+    "structured": 0.026119402985074626
   },
   {
     "name": "datatype-string_quantitative",
@@ -1995,61 +1983,55 @@
     "name": "datatype-string_ordinal",
     "value": 0,
     "random": 0.754,
-    "structured": 0.8631
+    "structured": 0.8694029850746269
   },
   {
     "name": "datatype-string_ordinal",
     "value": 1,
     "random": 0.1393,
-    "structured": 0.0935
+    "structured": 0.08022388059701492
   },
   {
     "name": "datatype-string_ordinal",
     "value": 2,
     "random": 0.0665,
-    "structured": 0.03145
+    "structured": 0.032182835820895525
   },
   {
     "name": "datatype-string_ordinal",
     "value": 3,
     "random": 0.03345,
-    "structured": 0.0115
+    "structured": 0.017257462686567165
   },
   {
     "name": "datatype-string_ordinal",
     "value": 4,
     "random": 0.00675,
-    "structured": 0.00045
+    "structured": 0.0009328358208955224
   },
   {
     "name": "datatype-string_nominal",
     "value": 0,
     "random": 0.8764,
-    "structured": 0.8588
+    "structured": 0.9160447761194029
   },
   {
     "name": "datatype-string_nominal",
     "value": 1,
     "random": 0.0734,
-    "structured": 0.11145
+    "structured": 0.05783582089552239
   },
   {
     "name": "datatype-string_nominal",
     "value": 2,
     "random": 0.0362,
-    "structured": 0.0241
+    "structured": 0.022388059701492536
   },
   {
     "name": "datatype-string_nominal",
     "value": 3,
     "random": 0.0135,
-    "structured": 0.00555
-  },
-  {
-    "name": "datatype-string_nominal",
-    "value": 4,
-    "random": 0.0005,
-    "structured": 0.0001
+    "structured": 0.0037313432835820895
   },
   {
     "name": "datatype-string_temporal",
@@ -2061,91 +2043,79 @@
     "name": "datatype-number_quantitative",
     "value": 0,
     "random": 0.7662,
-    "structured": 0.7408
+    "structured": 0.792910447761194
   },
   {
     "name": "datatype-number_quantitative",
     "value": 1,
     "random": 0.1207,
-    "structured": 0.16965
+    "structured": 0.14039179104477612
   },
   {
     "name": "datatype-number_quantitative",
     "value": 2,
     "random": 0.07155,
-    "structured": 0.0668
+    "structured": 0.0457089552238806
   },
   {
     "name": "datatype-number_quantitative",
     "value": 3,
     "random": 0.0328,
-    "structured": 0.0206
+    "structured": 0.02005597014925373
   },
   {
     "name": "datatype-number_quantitative",
     "value": 4,
     "random": 0.00875,
-    "structured": 0.00215
+    "structured": 0.0009328358208955224
   },
   {
     "name": "datatype-number_ordinal",
     "value": 0,
     "random": 0.9019,
-    "structured": 0.901
+    "structured": 0.9123134328358209
   },
   {
     "name": "datatype-number_ordinal",
     "value": 1,
     "random": 0.0636,
-    "structured": 0.0695
+    "structured": 0.049906716417910446
   },
   {
     "name": "datatype-number_ordinal",
     "value": 2,
     "random": 0.02695,
-    "structured": 0.0233
+    "structured": 0.025186567164179104
   },
   {
     "name": "datatype-number_ordinal",
     "value": 3,
     "random": 0.00705,
-    "structured": 0.006
-  },
-  {
-    "name": "datatype-number_ordinal",
-    "value": 4,
-    "random": 0.0005,
-    "structured": 0.0002
+    "structured": 0.012593283582089552
   },
   {
     "name": "datatype-number_nominal",
     "value": 0,
     "random": 0.8911,
-    "structured": 0.8934
+    "structured": 0.941231343283582
   },
   {
     "name": "datatype-number_nominal",
     "value": 1,
     "random": 0.07025,
-    "structured": 0.08175
+    "structured": 0.041044776119402986
   },
   {
     "name": "datatype-number_nominal",
     "value": 2,
     "random": 0.0287,
-    "structured": 0.0199
+    "structured": 0.015391791044776119
   },
   {
     "name": "datatype-number_nominal",
     "value": 3,
     "random": 0.00945,
-    "structured": 0.00475
-  },
-  {
-    "name": "datatype-number_nominal",
-    "value": 4,
-    "random": 0.0005,
-    "structured": 0.0002
+    "structured": 0.0023320895522388058
   },
   {
     "name": "datatype-number_temporal",
@@ -2157,91 +2127,79 @@
     "name": "datatype-integer_quantitative",
     "value": 0,
     "random": 0.9344,
-    "structured": 0.8154
+    "structured": 0.8339552238805971
   },
   {
     "name": "datatype-integer_quantitative",
     "value": 1,
     "random": 0.03915,
-    "structured": 0.1152
+    "structured": 0.1044776119402985
   },
   {
     "name": "datatype-integer_quantitative",
     "value": 2,
     "random": 0.0183,
-    "structured": 0.04815
+    "structured": 0.03917910447761194
   },
   {
     "name": "datatype-integer_quantitative",
     "value": 3,
     "random": 0.0073,
-    "structured": 0.0185
+    "structured": 0.020988805970149255
   },
   {
     "name": "datatype-integer_quantitative",
     "value": 4,
     "random": 0.00085,
-    "structured": 0.00275
+    "structured": 0.0013992537313432835
   },
   {
     "name": "datatype-integer_ordinal",
     "value": 0,
     "random": 0.9562,
-    "structured": 0.9082
+    "structured": 0.9123134328358209
   },
   {
     "name": "datatype-integer_ordinal",
     "value": 1,
     "random": 0.0305,
-    "structured": 0.06095
+    "structured": 0.055970149253731345
   },
   {
     "name": "datatype-integer_ordinal",
     "value": 2,
     "random": 0.0111,
-    "structured": 0.02205
+    "structured": 0.02378731343283582
   },
   {
     "name": "datatype-integer_ordinal",
     "value": 3,
     "random": 0.00215,
-    "structured": 0.00875
-  },
-  {
-    "name": "datatype-integer_ordinal",
-    "value": 4,
-    "random": 0.00005,
-    "structured": 0.00005
+    "structured": 0.00792910447761194
   },
   {
     "name": "datatype-integer_nominal",
     "value": 0,
     "random": 0.9545,
-    "structured": 0.9053
+    "structured": 0.9365671641791045
   },
   {
     "name": "datatype-integer_nominal",
     "value": 1,
     "random": 0.0312,
-    "structured": 0.0692
+    "structured": 0.044309701492537316
   },
   {
     "name": "datatype-integer_nominal",
     "value": 2,
     "random": 0.0113,
-    "structured": 0.0202
+    "structured": 0.013992537313432836
   },
   {
     "name": "datatype-integer_nominal",
     "value": 3,
     "random": 0.00275,
-    "structured": 0.00515
-  },
-  {
-    "name": "datatype-integer_nominal",
-    "value": 4,
-    "random": 0.00025,
-    "structured": 0.00015
+    "structured": 0.005130597014925373
   },
   {
     "name": "datatype-integer_temporal",
@@ -2259,61 +2217,55 @@
     "name": "datatype-boolean_ordinal",
     "value": 0,
     "random": 0.9706,
-    "structured": 0.9171
+    "structured": 0.9365671641791045
   },
   {
     "name": "datatype-boolean_ordinal",
     "value": 1,
     "random": 0.01865,
-    "structured": 0.05035
+    "structured": 0.029384328358208957
   },
   {
     "name": "datatype-boolean_ordinal",
     "value": 2,
     "random": 0.0082,
-    "structured": 0.02305
+    "structured": 0.018190298507462687
   },
   {
     "name": "datatype-boolean_ordinal",
     "value": 3,
     "random": 0.00245,
-    "structured": 0.00915
+    "structured": 0.015391791044776119
   },
   {
     "name": "datatype-boolean_ordinal",
     "value": 4,
     "random": 0.0001,
-    "structured": 0.00035
+    "structured": 0.0004664179104477612
   },
   {
     "name": "datatype-boolean_nominal",
     "value": 0,
     "random": 0.9793,
-    "structured": 0.9454
+    "structured": 0.9598880597014925
   },
   {
     "name": "datatype-boolean_nominal",
     "value": 1,
     "random": 0.01335,
-    "structured": 0.0387
+    "structured": 0.024253731343283583
   },
   {
     "name": "datatype-boolean_nominal",
     "value": 2,
     "random": 0.00565,
-    "structured": 0.01175
+    "structured": 0.010727611940298507
   },
   {
     "name": "datatype-boolean_nominal",
     "value": 3,
     "random": 0.00165,
-    "structured": 0.00405
-  },
-  {
-    "name": "datatype-boolean_nominal",
-    "value": 4,
-    "random": 0.00005,
-    "structured": 0.0001
+    "structured": 0.005130597014925373
   },
   {
     "name": "datatype-boolean_temporal",
@@ -2325,175 +2277,157 @@
     "name": "datatype-date_quantitative",
     "value": 0,
     "random": 0.873,
-    "structured": 0.735
+    "structured": 0.8013059701492538
   },
   {
     "name": "datatype-date_quantitative",
     "value": 1,
     "random": 0.07385,
-    "structured": 0.1721
+    "structured": 0.1333955223880597
   },
   {
     "name": "datatype-date_quantitative",
     "value": 2,
     "random": 0.0365,
-    "structured": 0.0659
+    "structured": 0.04477611940298507
   },
   {
     "name": "datatype-date_quantitative",
     "value": 3,
     "random": 0.01445,
-    "structured": 0.0248
+    "structured": 0.016791044776119403
   },
   {
     "name": "datatype-date_quantitative",
     "value": 4,
     "random": 0.0022,
-    "structured": 0.0022
+    "structured": 0.0037313432835820895
   },
   {
     "name": "datatype-date_ordinal",
     "value": 0,
     "random": 0.9286,
-    "structured": 0.8898
+    "structured": 0.8964552238805971
   },
   {
     "name": "datatype-date_ordinal",
     "value": 1,
     "random": 0.04585,
-    "structured": 0.074
+    "structured": 0.0708955223880597
   },
   {
     "name": "datatype-date_ordinal",
     "value": 2,
     "random": 0.01995,
-    "structured": 0.0275
+    "structured": 0.025186567164179104
   },
   {
     "name": "datatype-date_ordinal",
     "value": 3,
     "random": 0.00535,
-    "structured": 0.0085
-  },
-  {
-    "name": "datatype-date_ordinal",
-    "value": 4,
-    "random": 0.00025,
-    "structured": 0.0002
+    "structured": 0.007462686567164179
   },
   {
     "name": "datatype-date_nominal",
     "value": 0,
     "random": 0.9191,
-    "structured": 0.8879
+    "structured": 0.9458955223880597
   },
   {
     "name": "datatype-date_nominal",
     "value": 1,
     "random": 0.05435,
-    "structured": 0.0846
+    "structured": 0.03917910447761194
   },
   {
     "name": "datatype-date_nominal",
     "value": 2,
     "random": 0.0219,
-    "structured": 0.0228
+    "structured": 0.009794776119402986
   },
   {
     "name": "datatype-date_nominal",
     "value": 3,
     "random": 0.0044,
-    "structured": 0.0047
+    "structured": 0.005130597014925373
   },
   {
     "name": "datatype-date_temporal",
     "value": 0,
     "random": 0.8824,
-    "structured": 0.7888
+    "structured": 0.8871268656716418
   },
   {
     "name": "datatype-date_temporal",
     "value": 1,
     "random": 0.08215,
-    "structured": 0.16255
+    "structured": 0.08488805970149253
   },
   {
     "name": "datatype-date_temporal",
     "value": 2,
     "random": 0.0295,
-    "structured": 0.03765
+    "structured": 0.021921641791044777
   },
   {
     "name": "datatype-date_temporal",
     "value": 3,
     "random": 0.00565,
-    "structured": 0.01
-  },
-  {
-    "name": "datatype-date_temporal",
-    "value": 4,
-    "random": 0.0003,
-    "structured": 0.001
+    "structured": 0.006063432835820896
   },
   {
     "name": "datatype-high_cardinality_ordinal",
     "value": 0,
     "random": 0.7763,
-    "structured": 0.7604
+    "structured": 0.7481343283582089
   },
   {
     "name": "datatype-high_cardinality_ordinal",
     "value": 1,
     "random": 0.13195,
-    "structured": 0.15995
+    "structured": 0.1609141791044776
   },
   {
     "name": "datatype-high_cardinality_ordinal",
     "value": 2,
     "random": 0.0668,
-    "structured": 0.0613
+    "structured": 0.0648320895522388
   },
   {
     "name": "datatype-high_cardinality_ordinal",
     "value": 3,
     "random": 0.02195,
-    "structured": 0.01795
+    "structured": 0.025186567164179104
   },
   {
     "name": "datatype-high_cardinality_ordinal",
     "value": 4,
     "random": 0.003,
-    "structured": 0.0004
+    "structured": 0.0009328358208955224
   },
   {
     "name": "datatype-high_cardinality_nominal",
     "value": 0,
     "random": 0.7705,
-    "structured": 0.7212
+    "structured": 0.8022388059701493
   },
   {
     "name": "datatype-high_cardinality_nominal",
     "value": 1,
     "random": 0.1451,
-    "structured": 0.20655
+    "structured": 0.1394589552238806
   },
   {
     "name": "datatype-high_cardinality_nominal",
     "value": 2,
     "random": 0.0629,
-    "structured": 0.05935
+    "structured": 0.04757462686567164
   },
   {
     "name": "datatype-high_cardinality_nominal",
     "value": 3,
     "random": 0.0202,
-    "structured": 0.0127
-  },
-  {
-    "name": "datatype-high_cardinality_nominal",
-    "value": 4,
-    "random": 0.0013,
-    "structured": 0.0002
+    "structured": 0.010727611940298507
   },
   {
     "name": "datatype-high_cardinality_nominal_color",
@@ -2511,391 +2445,373 @@
     "name": "encoding-encoding",
     "value": 1,
     "random": 0.2531,
-    "structured": 0.0174
+    "structured": 0.25279850746268656
   },
   {
     "name": "encoding-encoding",
     "value": 2,
     "random": 0.2504,
-    "structured": 0.2071
+    "structured": 0.26026119402985076
   },
   {
     "name": "encoding-encoding",
     "value": 3,
     "random": 0.2505,
-    "structured": 0.382
+    "structured": 0.24067164179104478
   },
   {
     "name": "encoding-encoding",
     "value": 4,
     "random": 0.246,
-    "structured": 0.3935
+    "structured": 0.2462686567164179
   },
   {
     "name": "encoding-encoding_field",
     "value": 0,
     "random": 0.0064,
-    "structured": 0.001
+    "structured": 0.013992537313432836
   },
   {
     "name": "encoding-encoding_field",
     "value": 1,
     "random": 0.314,
-    "structured": 0.06905
+    "structured": 0.31296641791044777
   },
   {
     "name": "encoding-encoding_field",
     "value": 2,
     "random": 0.2981,
-    "structured": 0.33125
+    "structured": 0.3069029850746269
   },
   {
     "name": "encoding-encoding_field",
     "value": 3,
     "random": 0.2829,
-    "structured": 0.41805
+    "structured": 0.27052238805970147
   },
   {
     "name": "encoding-encoding_field",
     "value": 4,
     "random": 0.0986,
-    "structured": 0.18065
+    "structured": 0.09561567164179105
   },
   {
     "name": "encoding-aggregate",
     "value": 0,
     "random": 0.45725,
-    "structured": 0.1361
+    "structured": 0.1669776119402985
   },
   {
     "name": "encoding-aggregate",
     "value": 1,
     "random": 0.3789,
-    "structured": 0.34745
+    "structured": 0.38152985074626866
   },
   {
     "name": "encoding-aggregate",
     "value": 2,
     "random": 0.0909,
-    "structured": 0.27735
+    "structured": 0.2080223880597015
   },
   {
     "name": "encoding-aggregate",
     "value": 3,
     "random": 0.05355,
-    "structured": 0.1753
+    "structured": 0.166044776119403
   },
   {
     "name": "encoding-aggregate",
     "value": 4,
     "random": 0.0194,
-    "structured": 0.0638
+    "structured": 0.07742537313432836
   },
   {
     "name": "encoding-bin",
     "value": 0,
     "random": 0.7935,
-    "structured": 0.6335
+    "structured": 0.7705223880597015
   },
   {
     "name": "encoding-bin",
     "value": 1,
     "random": 0.12535,
-    "structured": 0.24865
+    "structured": 0.1525186567164179
   },
   {
     "name": "encoding-bin",
     "value": 2,
     "random": 0.0595,
-    "structured": 0.0871
+    "structured": 0.05457089552238806
   },
   {
     "name": "encoding-bin",
     "value": 3,
     "random": 0.0196,
-    "structured": 0.0297
+    "structured": 0.021921641791044777
   },
   {
     "name": "encoding-bin",
     "value": 4,
     "random": 0.00205,
-    "structured": 0.00105
+    "structured": 0.0004664179104477612
   },
   {
     "name": "encoding-same_field_2",
     "value": 0,
     "random": 0.60415,
-    "structured": 0.61965
+    "structured": 0.6930970149253731
   },
   {
     "name": "encoding-same_field_2",
     "value": 1,
     "random": 0.3791,
-    "structured": 0.3644
+    "structured": 0.2891791044776119
   },
   {
     "name": "encoding-same_field_2",
     "value": 2,
     "random": 0.01675,
-    "structured": 0.01595
+    "structured": 0.017723880597014924
   },
   {
     "name": "encoding-same_field_gte3",
     "value": 0,
     "random": 0.9263,
-    "structured": 0.88565
+    "structured": 0.8656716417910447
   },
   {
     "name": "encoding-same_field_gte3",
     "value": 1,
     "random": 0.0737,
-    "structured": 0.11435
+    "structured": 0.13432835820895522
   },
   {
     "name": "encoding-count_twice",
     "value": 0,
     "random": 0.98975,
-    "structured": 0.98975
+    "structured": 0.9846082089552238
   },
   {
     "name": "encoding-count_twice",
     "value": 1,
     "random": 0.01025,
-    "structured": 0.01025
+    "structured": 0.015391791044776119
   },
   {
     "name": "encoding-quant_bin",
     "value": 0,
     "random": 0.9678,
-    "structured": 0.8283
+    "structured": 0.8703358208955224
   },
   {
     "name": "encoding-quant_bin",
     "value": 1,
     "random": 0.02035,
-    "structured": 0.1184
+    "structured": 0.07835820895522388
   },
   {
     "name": "encoding-quant_bin",
     "value": 2,
     "random": 0.0093,
-    "structured": 0.04075
+    "structured": 0.036380597014925374
   },
   {
     "name": "encoding-quant_bin",
     "value": 3,
     "random": 0.00245,
-    "structured": 0.0121
-  },
-  {
-    "name": "encoding-quant_bin",
-    "value": 4,
-    "random": 0.0001,
-    "structured": 0.00045
+    "structured": 0.014925373134328358
   },
   {
     "name": "encoding-non_positional_pref",
     "value": 0,
     "random": 0.7971,
-    "structured": 0.7459
+    "structured": 0.6749067164179104
   },
   {
     "name": "encoding-non_positional_pref",
     "value": 1,
     "random": 0.2029,
-    "structured": 0.2541
+    "structured": 0.32509328358208955
   },
   {
     "name": "encoding-multiple_non_pos",
     "value": 0,
     "random": 0.82535,
-    "structured": 0.6456
+    "structured": 0.738339552238806
   },
   {
     "name": "encoding-multiple_non_pos",
     "value": 1,
     "random": 0.17465,
-    "structured": 0.3544
+    "structured": 0.261660447761194
   },
   {
     "name": "encoding-aggregate_group_by_raw_non_temporal",
     "value": 0,
     "random": 0.9021,
-    "structured": 0.898
+    "structured": 0.9598880597014925
   },
   {
     "name": "encoding-aggregate_group_by_raw_non_temporal",
     "value": 1,
     "random": 0.05265,
-    "structured": 0.08255
+    "structured": 0.03264925373134328
   },
   {
     "name": "encoding-aggregate_group_by_raw_non_temporal",
     "value": 2,
     "random": 0.03375,
-    "structured": 0.0167
+    "structured": 0.004197761194029851
   },
   {
     "name": "encoding-aggregate_group_by_raw_non_temporal",
     "value": 3,
     "random": 0.0115,
-    "structured": 0.00275
+    "structured": 0.0032649253731343282
   },
   {
     "name": "encoding-agg_dim",
     "value": 0,
     "random": 0.9168,
-    "structured": 0.912
+    "structured": 0.7667910447761194
   },
   {
     "name": "encoding-agg_dim",
     "value": 1,
     "random": 0.0832,
-    "structured": 0.088
+    "structured": 0.2332089552238806
   },
   {
     "name": "encoding-x_y_raw",
     "value": 0,
     "random": 0.9939,
-    "structured": 0.9789
+    "structured": 0.9981343283582089
   },
   {
     "name": "encoding-x_y_raw",
     "value": 1,
     "random": 0.00515,
-    "structured": 0.02
-  },
-  {
-    "name": "encoding-x_y_raw",
-    "value": 2,
-    "random": 0.00095,
-    "structured": 0.0011
+    "structured": 0.0018656716417910447
   },
   {
     "name": "encoding-stack_zero",
     "value": 0,
     "random": 0.99665,
-    "structured": 0.9653
+    "structured": 0.9902052238805971
   },
   {
     "name": "encoding-stack_zero",
     "value": 1,
     "random": 0.00335,
-    "structured": 0.0347
+    "structured": 0.009794776119402986
   },
   {
     "name": "encoding-stack_normalize",
     "value": 0,
     "random": 0.9953,
-    "structured": 0.9829
+    "structured": 0.9981343283582089
   },
   {
     "name": "encoding-stack_normalize",
     "value": 1,
     "random": 0.0047,
-    "structured": 0.0171
+    "structured": 0.0018656716417910447
   },
   {
     "name": "encoding-type_quantitative",
     "value": 0,
     "random": 0.39885,
-    "structured": 0.1418
+    "structured": 0.24720149253731344
   },
   {
     "name": "encoding-type_quantitative",
     "value": 1,
     "random": 0.3396,
-    "structured": 0.43095
+    "structured": 0.4701492537313433
   },
   {
     "name": "encoding-type_quantitative",
     "value": 2,
     "random": 0.1322,
-    "structured": 0.26225
+    "structured": 0.15671641791044777
   },
   {
     "name": "encoding-type_quantitative",
     "value": 3,
     "random": 0.08805,
-    "structured": 0.1334
+    "structured": 0.09235074626865672
   },
   {
     "name": "encoding-type_quantitative",
     "value": 4,
     "random": 0.0413,
-    "structured": 0.0316
+    "structured": 0.033582089552238806
   },
   {
     "name": "encoding-type_ordinal",
     "value": 0,
     "random": 0.5327,
-    "structured": 0.4963
+    "structured": 0.5410447761194029
   },
   {
     "name": "encoding-type_ordinal",
     "value": 1,
     "random": 0.268,
-    "structured": 0.3191
+    "structured": 0.2635261194029851
   },
   {
     "name": "encoding-type_ordinal",
     "value": 2,
     "random": 0.1304,
-    "structured": 0.1348
+    "structured": 0.1287313432835821
   },
   {
     "name": "encoding-type_ordinal",
     "value": 3,
     "random": 0.05915,
-    "structured": 0.0482
+    "structured": 0.0648320895522388
   },
   {
     "name": "encoding-type_ordinal",
     "value": 4,
     "random": 0.00975,
-    "structured": 0.0016
+    "structured": 0.0018656716417910447
   },
   {
     "name": "encoding-type_nominal",
     "value": 0,
     "random": 0.6359,
-    "structured": 0.5025
+    "structured": 0.7089552238805971
   },
   {
     "name": "encoding-type_nominal",
     "value": 1,
     "random": 0.2209,
-    "structured": 0.3651
+    "structured": 0.19029850746268656
   },
   {
     "name": "encoding-type_nominal",
     "value": 2,
     "random": 0.10195,
-    "structured": 0.1051
+    "structured": 0.07695895522388059
   },
   {
     "name": "encoding-type_nominal",
     "value": 3,
     "random": 0.0383,
-    "structured": 0.0265
-  },
-  {
-    "name": "encoding-type_nominal",
-    "value": 4,
-    "random": 0.00295,
-    "structured": 0.0008
+    "structured": 0.02378731343283582
   },
   {
     "name": "mark_type-c_c_point",
     "value": 0,
     "random": 0.94855,
-    "structured": 0.93605
+    "structured": 0.9482276119402985
   },
   {
     "name": "mark_type-c_c_point",
     "value": 1,
     "random": 0.05145,
-    "structured": 0.06395
+    "structured": 0.05177238805970149
   },
   {
     "name": "mark_type-c_c_circle",
@@ -2913,13 +2829,13 @@
     "name": "mark_type-c_c_line",
     "value": 0,
     "random": 0.97895,
-    "structured": 0.97515
+    "structured": 0.9897388059701493
   },
   {
     "name": "mark_type-c_c_line",
     "value": 1,
     "random": 0.02105,
-    "structured": 0.02485
+    "structured": 0.010261194029850746
   },
   {
     "name": "mark_type-c_c_area",
@@ -2931,13 +2847,13 @@
     "name": "mark_type-c_c_text",
     "value": 0,
     "random": 0.99145,
-    "structured": 0.96165
+    "structured": 0.9822761194029851
   },
   {
     "name": "mark_type-c_c_text",
     "value": 1,
     "random": 0.00855,
-    "structured": 0.03835
+    "structured": 0.017723880597014924
   },
   {
     "name": "mark_type-c_c_tick",
@@ -2949,13 +2865,13 @@
     "name": "mark_type-c_d_point",
     "value": 0,
     "random": 0.8932,
-    "structured": 0.89195
+    "structured": 0.9039179104477612
   },
   {
     "name": "mark_type-c_d_point",
     "value": 1,
     "random": 0.1068,
-    "structured": 0.10805
+    "structured": 0.0960820895522388
   },
   {
     "name": "mark_type-c_d_bar",
@@ -2967,13 +2883,13 @@
     "name": "mark_type-c_d_line",
     "value": 0,
     "random": 0.9978,
-    "structured": 0.9657
+    "structured": 0.9715485074626866
   },
   {
     "name": "mark_type-c_d_line",
     "value": 1,
     "random": 0.0022,
-    "structured": 0.0343
+    "structured": 0.02845149253731343
   },
   {
     "name": "mark_type-c_d_area",
@@ -2985,121 +2901,121 @@
     "name": "mark_type-c_d_text",
     "value": 0,
     "random": 0.9857,
-    "structured": 0.94485
+    "structured": 0.9659514925373134
   },
   {
     "name": "mark_type-c_d_text",
     "value": 1,
     "random": 0.0143,
-    "structured": 0.05515
+    "structured": 0.03404850746268657
   },
   {
     "name": "mark_type-c_d_tick",
     "value": 0,
     "random": 0.9982,
-    "structured": 0.9689
+    "structured": 0.9841417910447762
   },
   {
     "name": "mark_type-c_d_tick",
     "value": 1,
     "random": 0.0018,
-    "structured": 0.0311
+    "structured": 0.01585820895522388
   },
   {
     "name": "mark_type-c_d_no_overlap_point",
     "value": 0,
     "random": 0.84725,
-    "structured": 0.92205
+    "structured": 0.9090485074626866
   },
   {
     "name": "mark_type-c_d_no_overlap_point",
     "value": 1,
     "random": 0.15275,
-    "structured": 0.07795
+    "structured": 0.09095149253731344
   },
   {
     "name": "mark_type-c_d_no_overlap_bar",
     "value": 0,
     "random": 0.984,
-    "structured": 0.9428
+    "structured": 0.9799440298507462
   },
   {
     "name": "mark_type-c_d_no_overlap_bar",
     "value": 1,
     "random": 0.016,
-    "structured": 0.0572
+    "structured": 0.02005597014925373
   },
   {
     "name": "mark_type-c_d_no_overlap_line",
     "value": 0,
     "random": 0.99745,
-    "structured": 0.97255
+    "structured": 0.9827425373134329
   },
   {
     "name": "mark_type-c_d_no_overlap_line",
     "value": 1,
     "random": 0.00255,
-    "structured": 0.02745
+    "structured": 0.017257462686567165
   },
   {
     "name": "mark_type-c_d_no_overlap_area",
     "value": 0,
     "random": 0.9965,
-    "structured": 0.97205
+    "structured": 0.9836753731343284
   },
   {
     "name": "mark_type-c_d_no_overlap_area",
     "value": 1,
     "random": 0.0035,
-    "structured": 0.02795
+    "structured": 0.01632462686567164
   },
   {
     "name": "mark_type-c_d_no_overlap_text",
     "value": 0,
     "random": 0.9963,
-    "structured": 0.96215
+    "structured": 0.9836753731343284
   },
   {
     "name": "mark_type-c_d_no_overlap_text",
     "value": 1,
     "random": 0.0037,
-    "structured": 0.03785
+    "structured": 0.01632462686567164
   },
   {
     "name": "mark_type-c_d_no_overlap_tick",
     "value": 0,
     "random": 0.99755,
-    "structured": 0.97085
+    "structured": 0.9696828358208955
   },
   {
     "name": "mark_type-c_d_no_overlap_tick",
     "value": 1,
     "random": 0.00245,
-    "structured": 0.02915
+    "structured": 0.03031716417910448
   },
   {
     "name": "mark_type-d_d_point",
     "value": 0,
     "random": 0.85095,
-    "structured": 0.9403
+    "structured": 0.9682835820895522
   },
   {
     "name": "mark_type-d_d_point",
     "value": 1,
     "random": 0.14905,
-    "structured": 0.0597
+    "structured": 0.03171641791044776
   },
   {
     "name": "mark_type-d_d_text",
     "value": 0,
     "random": 0.97985,
-    "structured": 0.96285
+    "structured": 0.9864738805970149
   },
   {
     "name": "mark_type-d_d_text",
     "value": 1,
     "random": 0.02015,
-    "structured": 0.03715
+    "structured": 0.013526119402985074
   },
   {
     "name": "mark_type-d_d_rect",
@@ -3111,61 +3027,61 @@
     "name": "scale-log",
     "value": 0,
     "random": 1,
-    "structured": 0.39265
+    "structured": 0.4962686567164179
   },
   {
     "name": "scale-log",
     "value": 1,
     "random": 0,
-    "structured": 0.39815
+    "structured": 0.36007462686567165
   },
   {
     "name": "scale-log",
     "value": 2,
     "random": 0,
-    "structured": 0.14175
+    "structured": 0.08908582089552239
   },
   {
     "name": "scale-log",
     "value": 3,
     "random": 0,
-    "structured": 0.0592
+    "structured": 0.04710820895522388
   },
   {
     "name": "scale-log",
     "value": 4,
     "random": 0,
-    "structured": 0.00825
+    "structured": 0.007462686567164179
   },
   {
     "name": "scale-zero",
     "value": 0,
     "random": 0.5153,
-    "structured": 0.2477
+    "structured": 0.3666044776119403
   },
   {
     "name": "scale-zero",
     "value": 1,
     "random": 0.3424,
-    "structured": 0.4481
+    "structured": 0.4155783582089552
   },
   {
     "name": "scale-zero",
     "value": 2,
     "random": 0.0854,
-    "structured": 0.2145
+    "structured": 0.1394589552238806
   },
   {
     "name": "scale-zero",
     "value": 3,
     "random": 0.0471,
-    "structured": 0.079
+    "structured": 0.06669776119402986
   },
   {
     "name": "scale-zero",
     "value": 4,
     "random": 0.0098,
-    "structured": 0.0107
+    "structured": 0.01166044776119403
   },
   {
     "name": "scale-zero_bin",
@@ -3177,331 +3093,325 @@
     "name": "scale-zero_size",
     "value": 0,
     "random": 0.87605,
-    "structured": 0.74455
+    "structured": 0.7765858208955224
   },
   {
     "name": "scale-zero_size",
     "value": 1,
     "random": 0.12395,
-    "structured": 0.25545
+    "structured": 0.2234141791044776
   },
   {
     "name": "scale-zero_positional",
     "value": 0,
     "random": 0.65125,
-    "structured": 0.4242
+    "structured": 0.46828358208955223
   },
   {
     "name": "scale-zero_positional",
     "value": 1,
     "random": 0.34875,
-    "structured": 0.5758
+    "structured": 0.5317164179104478
   },
   {
     "name": "scale-zero_skew",
     "value": 0,
     "random": 0.92915,
-    "structured": 0.8733
+    "structured": 0.894589552238806
   },
   {
     "name": "scale-zero_skew",
     "value": 1,
     "random": 0.07085,
-    "structured": 0.1267
+    "structured": 0.10541044776119403
   },
   {
     "name": "scale-includes_zero",
     "value": 0,
     "random": 0.9407,
-    "structured": 0.89905
+    "structured": 0.882929104477612
   },
   {
     "name": "scale-includes_zero",
     "value": 1,
     "random": 0.0506,
-    "structured": 0.0886
+    "structured": 0.10401119402985075
   },
   {
     "name": "scale-includes_zero",
     "value": 2,
     "random": 0.00745,
-    "structured": 0.0115
+    "structured": 0.012126865671641791
   },
   {
     "name": "scale-includes_zero",
     "value": 3,
     "random": 0.00125,
-    "structured": 0.0008
-  },
-  {
-    "name": "scale-includes_zero",
-    "value": 4,
-    "random": 0,
-    "structured": 0.00005
+    "structured": 0.0009328358208955224
   },
   {
     "name": "type_channel-continuous_x",
     "value": 0,
     "random": 0.6206,
-    "structured": 0.4395
+    "structured": 0.4505597014925373
   },
   {
     "name": "type_channel-continuous_x",
     "value": 1,
     "random": 0.3794,
-    "structured": 0.5605
+    "structured": 0.5494402985074627
   },
   {
     "name": "type_channel-continuous_y",
     "value": 0,
     "random": 0.8208,
-    "structured": 0.66985
+    "structured": 0.7835820895522388
   },
   {
     "name": "type_channel-continuous_y",
     "value": 1,
     "random": 0.1792,
-    "structured": 0.33015
+    "structured": 0.21641791044776118
   },
   {
     "name": "type_channel-continuous_color",
     "value": 0,
     "random": 0.773,
-    "structured": 0.68105
+    "structured": 0.7677238805970149
   },
   {
     "name": "type_channel-continuous_color",
     "value": 1,
     "random": 0.227,
-    "structured": 0.31895
+    "structured": 0.23227611940298507
   },
   {
     "name": "type_channel-continuous_size",
     "value": 0,
     "random": 0.9056,
-    "structured": 0.8616
+    "structured": 0.8997201492537313
   },
   {
     "name": "type_channel-continuous_size",
     "value": 1,
     "random": 0.0944,
-    "structured": 0.1384
+    "structured": 0.10027985074626866
   },
   {
     "name": "type_channel-continuous_text",
     "value": 0,
     "random": 0.952,
-    "structured": 0.87225
+    "structured": 0.8899253731343284
   },
   {
     "name": "type_channel-continuous_text",
     "value": 1,
     "random": 0.048,
-    "structured": 0.12775
+    "structured": 0.11007462686567164
   },
   {
     "name": "type_channel-ordered_x",
     "value": 0,
     "random": 0.6638,
-    "structured": 0.79755
+    "structured": 0.832089552238806
   },
   {
     "name": "type_channel-ordered_x",
     "value": 1,
     "random": 0.3362,
-    "structured": 0.20245
+    "structured": 0.16791044776119404
   },
   {
     "name": "type_channel-ordered_y",
     "value": 0,
     "random": 0.72065,
-    "structured": 0.7039
+    "structured": 0.7532649253731343
   },
   {
     "name": "type_channel-ordered_y",
     "value": 1,
     "random": 0.27935,
-    "structured": 0.2961
+    "structured": 0.24673507462686567
   },
   {
     "name": "type_channel-ordered_color",
     "value": 0,
     "random": 0.9296,
-    "structured": 0.87085
+    "structured": 0.9109141791044776
   },
   {
     "name": "type_channel-ordered_color",
     "value": 1,
     "random": 0.0704,
-    "structured": 0.12915
+    "structured": 0.08908582089552239
   },
   {
     "name": "type_channel-ordered_size",
     "value": 0,
     "random": 0.95195,
-    "structured": 0.86725
+    "structured": 0.8703358208955224
   },
   {
     "name": "type_channel-ordered_size",
     "value": 1,
     "random": 0.04805,
-    "structured": 0.13275
+    "structured": 0.1296641791044776
   },
   {
     "name": "type_channel-ordered_text",
     "value": 0,
     "random": 0.9381,
-    "structured": 0.89795
+    "structured": 0.8880597014925373
   },
   {
     "name": "type_channel-ordered_text",
     "value": 1,
     "random": 0.0619,
-    "structured": 0.10205
+    "structured": 0.11194029850746269
   },
   {
     "name": "type_channel-ordered_row",
     "value": 0,
     "random": 0.88745,
-    "structured": 0.89355
+    "structured": 0.9253731343283582
   },
   {
     "name": "type_channel-ordered_row",
     "value": 1,
     "random": 0.11255,
-    "structured": 0.10645
+    "structured": 0.07462686567164178
   },
   {
     "name": "type_channel-ordered_column",
     "value": 0,
     "random": 0.89855,
-    "structured": 0.9511
+    "structured": 0.9636194029850746
   },
   {
     "name": "type_channel-ordered_column",
     "value": 1,
     "random": 0.10145,
-    "structured": 0.0489
+    "structured": 0.036380597014925374
   },
   {
     "name": "type_channel-nominal_x",
     "value": 0,
     "random": 0.8118,
-    "structured": 0.88245
+    "structured": 0.9137126865671642
   },
   {
     "name": "type_channel-nominal_x",
     "value": 1,
     "random": 0.1882,
-    "structured": 0.11755
+    "structured": 0.08628731343283583
   },
   {
     "name": "type_channel-nominal_y",
     "value": 0,
     "random": 0.8573,
-    "structured": 0.8296
+    "structured": 0.8871268656716418
   },
   {
     "name": "type_channel-nominal_y",
     "value": 1,
     "random": 0.1427,
-    "structured": 0.1704
+    "structured": 0.11287313432835822
   },
   {
     "name": "type_channel-nominal_color",
     "value": 0,
     "random": 0.96955,
-    "structured": 0.9059
+    "structured": 0.9430970149253731
   },
   {
     "name": "type_channel-nominal_color",
     "value": 1,
     "random": 0.03045,
-    "structured": 0.0941
+    "structured": 0.05690298507462686
   },
   {
     "name": "type_channel-nominal_shape",
     "value": 0,
     "random": 0.9812,
-    "structured": 0.9601
+    "structured": 0.9794776119402985
   },
   {
     "name": "type_channel-nominal_shape",
     "value": 1,
     "random": 0.0188,
-    "structured": 0.0399
+    "structured": 0.020522388059701493
   },
   {
     "name": "type_channel-nominal_text",
     "value": 0,
     "random": 0.9665,
-    "structured": 0.91775
+    "structured": 0.9291044776119403
   },
   {
     "name": "type_channel-nominal_text",
     "value": 1,
     "random": 0.0335,
-    "structured": 0.08225
+    "structured": 0.0708955223880597
   },
   {
     "name": "type_channel-nominal_row",
     "value": 0,
     "random": 0.94705,
-    "structured": 0.9249
+    "structured": 0.9626865671641791
   },
   {
     "name": "type_channel-nominal_row",
     "value": 1,
     "random": 0.05295,
-    "structured": 0.0751
+    "structured": 0.03731343283582089
   },
   {
     "name": "type_channel-nominal_column",
     "value": 0,
     "random": 0.94705,
-    "structured": 0.9487
+    "structured": 0.9780783582089553
   },
   {
     "name": "type_channel-nominal_column",
     "value": 1,
     "random": 0.05295,
-    "structured": 0.0513
+    "structured": 0.021921641791044777
   },
   {
     "name": "type_channel-temporal_x",
     "value": 0,
     "random": 0.92675,
-    "structured": 0.9077
+    "structured": 0.9347014925373134
   },
   {
     "name": "type_channel-temporal_x",
     "value": 1,
     "random": 0.07325,
-    "structured": 0.0923
+    "structured": 0.06529850746268656
   },
   {
     "name": "type_channel-temporal_y",
     "value": 0,
     "random": 0.97005,
-    "structured": 0.9421
+    "structured": 0.9776119402985075
   },
   {
     "name": "type_channel-temporal_y",
     "value": 1,
     "random": 0.02995,
-    "structured": 0.0579
+    "structured": 0.022388059701492536
   },
   {
     "name": "type_channel-temporal_color",
     "value": 0,
     "random": 0.96935,
-    "structured": 0.9373
+    "structured": 0.972481343283582
   },
   {
     "name": "type_channel-temporal_color",
     "value": 1,
     "random": 0.03065,
-    "structured": 0.0627
+    "structured": 0.02751865671641791
   },
   {
     "name": "type_channel-temporal_shape",
@@ -3513,13 +3423,13 @@
     "name": "type_channel-temporal_text",
     "value": 0,
     "random": 0.98365,
-    "structured": 0.95955
+    "structured": 0.9757462686567164
   },
   {
     "name": "type_channel-temporal_text",
     "value": 1,
     "random": 0.01635,
-    "structured": 0.04045
+    "structured": 0.024253731343283583
   },
   {
     "name": "type_channel-temporal_row",

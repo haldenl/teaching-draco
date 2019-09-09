@@ -9,7 +9,8 @@
 view(v1).
 view(v2).
 
-:- c1(TYPE,NAME), not soft(TYPE,NAME,v1,_).
+:- c(TYPE,NAME), not soft(TYPE,NAME,v1,_).
+:- c(TYPE,NAME), soft(TYPE,NAME,v2,_).
 
 % :- c1(TYPE,NAME), soft(TYPE,NAME,v2,_).
 % :- c1(TYPE,NAME), not soft(TYPE,NAME,v1,_).  % v1 must violate c1
@@ -18,8 +19,8 @@ view(v2).
 % :- c2(TYPE,NAME), not soft(TYPE,NAME,v2,_). % v1 must violate c2
 
 % same fields
-:- field(v1,_,F), not field(v2,_,F).
-:- not field(v1,_,F), field(v2,_,F).
+% :- field(v1,_,F), not field(v2,_,F).
+% :- not field(v1,_,F), field(v2,_,F).
 
 % don't repeat fields (for small study)
 % :- field(V,E1,F), field(V,E2,F), E1 != E2.
