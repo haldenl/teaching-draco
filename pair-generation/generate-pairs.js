@@ -6,7 +6,7 @@ const { Draco, Result, Model, Constraint } = draco;
 
 const RANDOM_MAX = 32767;
 
-const NUM_DUPLICATES = 10;
+const NUM_DUPLICATES = 100;
 
 const LIMIT_TRIES = 10;
 

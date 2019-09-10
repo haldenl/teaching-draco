@@ -90,15 +90,15 @@ if (cluster.isMaster) {
   const models = [];
 
   for (let i = 0; i < process.env.n; i += 1) {
-    // const numDimensions = Math.floor(Math.random() * 4) + 1;
+    const numDimensions = Math.floor(Math.random() * 4) + 1;
 
-    // let program = "";
-    // for (let d = 1; d <= numDimensions; d += 1) {
-    //   for (let v = 1; v <= 2; v += 1) {
-    //     program += `encoding(v${v},e${d}).`;
-    //     program += "\n";
-    //   }
-    // }
+    let program = "";
+    for (let d = 1; d <= numDimensions; d += 1) {
+      for (let v = 1; v <= 2; v += 1) {
+        program += `encoding(v${v},e${d}).`;
+        program += "\n";
+      }
+    }
 
     const result = Draco.run(
       program,
@@ -106,7 +106,7 @@ if (cluster.isMaster) {
         optimize: false,
         generateData: true,
         generate: true,
-        generateExtraEncodings: true,
+        generateExtraEncodings: false,
         randomFreq: 1,
         models: 1,
         randomSeed: Math.floor(Math.random() * 32767)
