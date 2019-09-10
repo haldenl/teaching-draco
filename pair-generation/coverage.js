@@ -21,7 +21,7 @@ const constraints = Draco.getSoftConstraints();
 const coverage = {};
 
 for (const name of Object.keys(constraints)) {
-  coverage[name] = {};
+  coverage[name] = 0;
 }
 
 let total = 0;
@@ -43,7 +43,7 @@ function getSoftConstraintsFromFacts(facts) {
 
 let i = 0;
 console.log("parsing...");
-for (const pair of pairs.slice(0, 10000)) {
+for (const pair of pairs.slice(0, 1000)) {
   i += 1;
   process.stdout.clearLine();
   process.stdout.cursorTo(0);
@@ -53,38 +53,53 @@ for (const pair of pairs.slice(0, 10000)) {
   const rightSoft = getSoftConstraintsFromFacts(pair.right.draco);
 
   for (const name of Object.keys(coverage)) {
-    for (const soft of [leftSoft, rightSoft]) {
-      const value = soft.filter(s => s === name).length;
+    if ((leftSoft.includes(name) && !rightSoft.includes(name)) ||
+        (!leftSoft.includes(name) && rightSoft.includes(name))) {
 
-      // if (value !== 0) {
-      if (coverage[name][value] === undefined) {
-        coverage[name][value] = 0;
-      }
-
-      coverage[name][value] += 1;
-      // }
+        coverage[name] += 1;
     }
+
+    // for (const [soft, multiplier] of [[leftSoft, 1], [rightSoft, -1]]) {
+    //   const value = soft.filter(s => s === name).length;
+
+    //   // if (value !== 0) {
+    //   if (coverage[name][value] === undefined) {
+    //     coverage[name][value] = 0;
+    //   }
+
+    //   coverage[name][value] += 1 * multiplier;
+    //   // }
+    // }
   }
 
   // leftSoft.forEach(name => (coverage[name] += 1));
   // rightSoft.forEach(name => (coverage[name] += 1));
 }
 
+console.log(coverage);
+
 const out = [];
 
-for (const name of Object.keys(coverage)) {
-  let total = 0;
-  for (const value of Object.keys(coverage[name])) {
-    total += coverage[name][value];
-  }
-
-  for (const value of Object.keys(coverage[name])) {
-    out.push({
-      name: name.substring(5),
-      value: +value,
-      count: coverage[name][value] / total
-    });
-  }
+for (const [name, value] of Object.entries(coverage)) {
+  out.push({
+    name: name.substring(5),
+    appearance: value / pairs.length
+  });
 }
+
+// for (const name of Object.keys(coverage)) {
+//   let total = 0;
+//   for (const value of Object.keys(coverage[name])) {
+//     total += coverage[name][value];
+//   }
+
+//   for (const value of Object.keys(coverage[name])) {
+//     out.push({
+//       name: name.substring(5),
+//       value: +value,
+//       count: coverage[name][value] / total
+//     });
+//   }
+// }
 
 fs.writeFileSync(argv.output, JSON.stringify(out, null, 2));
