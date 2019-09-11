@@ -4,6 +4,8 @@ view(v2).
 #show soft/4.
 #show hard/4.
 
+:- task(v1,T1), task(v2,T2), T1 != T2.
+
 :- field(v1,_,F), not field(v2,_,F).
 :- not field(v1,_,F), field(v2,_,F).
 
