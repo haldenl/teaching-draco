@@ -19,7 +19,7 @@ if (argv.queryfile === undefined) {
   process.exit(1);
 }
 
-const NUM = 100000;
+const NUM = 1000;
 
 if (cluster.isMaster) {
   const cores = os.cpus().length;
