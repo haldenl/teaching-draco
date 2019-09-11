@@ -3,6 +3,7 @@
   "main": "./build/bundle.js",
   "dependencies": {
     "big-json": "^3.0.0",
+    "cartesian-product": "^2.1.2",
     "chance": "^1.0.18",
     "deepcopy": "^2.0.0",
     "faker": "^4.1.0",

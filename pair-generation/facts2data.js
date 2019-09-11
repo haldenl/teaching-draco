@@ -1,5 +1,6 @@
 const Chance = require("chance");
 const faker = require("faker");
+const product = require("cartesian-product");
 
 const NUM_ROWS_REGEX = /num_rows\((.*)\)/;
 const DATA_FIELD_TYPE_REGEX = /fieldtype\((.*),(.*)\)/;
@@ -58,14 +59,33 @@ function facts2data(facts) {
   }
 
   const data = [];
-  for (let i = 0; i < rows; i += 1) {
-    const row = {};
-    for (const [f, d] of Object.entries(fieldValues)) {
-      row[f] = d[i];
-    }
 
-    data.push(row);
+  const fieldArr = [];
+  for (const [field, values] of Object.entries(fieldValues)) {
+    fieldArr.push(values);
   }
+
+  const arrData = product(fieldArr);
+
+  for (const arr of arrData) {
+    let i = 0;
+    for (const field of Object.keys(fieldValues)) {
+      data.push({
+        [field]: arr[i]
+      });
+
+      i += 1;
+    }
+  }
+
+  // for (let i = 0; i < rows; i += 1) {
+  //   const row = {};
+  //   for (const [f, d] of Object.entries(fieldValues)) {
+  //     row[f] = d[i];
+  //   }
+
+  //   data.push(row);
+  // }
 
   return {
     data,
@@ -117,14 +137,15 @@ function generateColumn(fieldName, descriptor, numRows, seenFields) {
 
   seenFields.add(name);
 
-  const values = populateToN(
-    morphToRequiredValues(options, [min, max]),
-    numRows
-  );
+  // DONT NEED THIS IF WE ARE GENERATING UNIQUE TUPLES
+  // const values = populateToN(
+  //   morphToRequiredValues(options, [min, max]),
+  //   numRows
+  // );
 
   return {
     newName: name,
-    values
+    values: options
   };
 }
 
