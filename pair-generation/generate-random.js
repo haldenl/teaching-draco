@@ -128,7 +128,7 @@ if (cluster.isMaster) {
       //   },
       //   [path.resolve(__dirname, "random.lp")]
       // );
-
+      console.log("unsat");
       process.exit(1);
     }
 
