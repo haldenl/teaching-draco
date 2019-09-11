@@ -130,6 +130,9 @@ function parseModels(models) {
     const v1Facts = facts.filter(f => !f.includes("v2"));
     const v2Facts = facts.filter(f => !f.includes("v1"));
 
+    const taskFact = facts.filter(f => f.startsWith("task("))[0];
+    const [_, task] = /task\(\w+,(\w+)\)/.exec(taskFact);
+
     const specs = Facts.toVegaLiteSpecDictionary(facts);
     const { data, fieldMapping } = facts2data(facts);
 
@@ -162,6 +165,7 @@ function parseModels(models) {
     };
 
     const pairToWrite = {
+      task,
       left: {
         vegalite: specs["v1"],
         draco: v1Facts,
