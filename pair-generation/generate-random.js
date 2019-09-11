@@ -90,7 +90,7 @@ if (cluster.isMaster) {
   const models = [];
 
   for (let i = 0; i < process.env.n; i += 1) {
-    const numDimensions = Math.floor(Math.random() * 4) + 1;
+    const numDimensions = Math.floor(Math.random() * 3) + 1;
 
     let program = "";
     for (let d = 1; d <= numDimensions; d += 1) {
